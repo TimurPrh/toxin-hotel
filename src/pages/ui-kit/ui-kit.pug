@@ -1,0 +1,65 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title ui-kit
+    body 
+        section.color-and-types 
+            include ../blocks/kit-section-name/kit-section-name.pug
+            .color-and-types__header 
+                +kit-section-name("Color & Type")
+            .container
+                .color-and-types__wrapper 
+                    .color-and-types__palette
+                        - var colorsListName = ["Dark Shade 100%", "Dark Shade 75%", "Dark Shade 50%", "Dark Shade 25", "Dark Shade 5%", "Purple", "Green"]
+                        - var colorsListDesc = ["#1F2041", "#1F2041", "#1F2041", "#1F2041", "#1F2041", "#BC9CFF", "#6FCF97"]
+                        - var colorsListRef = ["#1F2041", "rgba(31, 32, 65, 0.75)", "rgba(31, 32, 65, 0.5)", "rgba(31, 32, 65, 0.25)", "rgba(31, 32, 65, 0.05)", "#BC9CFF", "#6FCF97"]
+                        include ../blocks/color-palette/color-palette.pug
+                        - for (var x = 0; x < 7; x++)
+                            .color-and-types__palette-item
+                                +color-palette(colorsListName[x], colorsListDesc[x], colorsListRef[x])
+                    
+                    .color-and-types__text-types 
+                        .color-and-types__text-types-header.text-h1 H1
+                        .color-and-types__text-types-desc.text-h1 This one is the sub-section or 
+                                        br
+                                        |widget title
+                        .color-and-types__text-types-header.text-h2 H2
+                        .color-and-types__text-types-desc.text-h2 Next one is the item title inside 
+                                        br
+                                        |widgets
+                        .color-and-types__text-types-header.text-h3 H3
+                        .color-and-types__text-types-desc.text-h3 This is a label or CTA text
+                        .color-and-types__text-types-header.text-body body
+                        .color-and-types__text-types-desc.text-body This is the body text which is used for most
+                                        br
+                                        |of the design, like paragraphs, lists, etc.
+
+        .section.form-elements 
+            .form-elements__header 
+                +kit-section-name("Form Elements")
+            .container
+                include ../blocks/text-field/text-field.pug
+                include ../blocks/dropdown/dropdown.pug
+                .form-elements__wrapper 
+                    .form-elements__fst-col
+                        .form-elements__text-field
+                            //- width, label, desc, placeholder, text, mask, arrow
+                            +text-field("320px", "text field", "default", "Email")
+                        .form-elements__text-field
+                            +text-field("320px", "text field", "hover / focus", "", "This is pretty awesome")
+                        .form-elements__text-field
+                            +text-field("320px", "masked text field", "default", "", "", "mask-date")
+                        .form-elements__text-field
+                            +text-field("267px", "subscription text field", "", "Email", "", "", "with-arrow")
+                        .form-elements__dropdown
+                            +dropdown("320px", "guests", "dropdown")
+                        .form-elements__dropdown
+                            +dropdown("320px", "guests", "dropdown")
+                        .form-elements__dropdown
+                            +dropdown("320px", "room", "dropdown", "default")
+                        .form-elements__dropdown
+                            +dropdown("320px", "room", "dropdown", "expanded")
+

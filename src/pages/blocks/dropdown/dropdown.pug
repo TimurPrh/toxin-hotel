@@ -1,0 +1,91 @@
+// type: guests, room
+mixin dropdown(width, type, label, desc)
+    if (type == "guests") 
+        .dropdown.dropdown_guests(style="width:" + width) 
+
+            .dropdown__header.text-h3= label
+            .dropdown__desc.text-h3_50= desc
+            .dropdown__wrapper 
+                .dropdown__input
+                    .dropdown__arrow
+                        .dropdown__arrow-line 
+                    input.text-body_25(placeholder=placeholder value=text readonly)
+                .dropdown__list 
+                    .dropdown__item 
+                        if (type == "guests") 
+                            .dropdown__item-title.text-h3 взрослые 
+                        else if (type == "room")
+                            .dropdown__item-title.text-h3 спальни 
+                        .dropdown__item-counter 
+                            .dropdown__item-minus 
+                            .dropdown__item-count.text-h3 0
+                            .dropdown__item-plus
+                    .dropdown__item 
+                        if (type == "guests") 
+                            .dropdown__item-title.text-h3 дети 
+                        else if (type == "room")
+                            .dropdown__item-title.text-h3 кровати
+                        .dropdown__item-counter 
+                            .dropdown__item-minus 
+                            .dropdown__item-count.text-h3 0 
+                            .dropdown__item-plus
+                    .dropdown__item 
+                        if (type == "guests") 
+                            .dropdown__item-title.text-h3 младенцы 
+                        else if (type == "room")
+                            .dropdown__item-title.text-h3 ванные комнаты 
+                        .dropdown__item-counter 
+                            .dropdown__item-minus 
+                                .dropdown__item-minus-line 
+                            .dropdown__item-count.text-h3 0 
+                            .dropdown__item-plus
+                    .dropdown__btns
+                        .dropdown__btns-reset
+                            button.text-h3 
+                        .dropdown__btns-apply
+                            button.text-h3 Применить
+         
+    else if (type == "room")
+        .dropdown.dropdown_room(style="width:" + width) 
+
+            .dropdown__header.text-h3= label
+            .dropdown__desc.text-h3_50= desc
+            .dropdown__wrapper 
+                .dropdown__input
+                    .dropdown__arrow
+                        .dropdown__arrow-line 
+                    input.text-body_25(placeholder=placeholder value=text readonly)
+                .dropdown__list 
+                    .dropdown__item 
+                        if (type == "guests") 
+                            .dropdown__item-title.text-h3 взрослые 
+                        else if (type == "room")
+                            .dropdown__item-title.text-h3 спальни 
+                        .dropdown__item-counter 
+                            .dropdown__item-minus 
+                            .dropdown__item-count.text-h3 0
+                            .dropdown__item-plus
+                    .dropdown__item 
+                        if (type == "guests") 
+                            .dropdown__item-title.text-h3 дети 
+                        else if (type == "room")
+                            .dropdown__item-title.text-h3 кровати
+                        .dropdown__item-counter 
+                            .dropdown__item-minus 
+                            .dropdown__item-count.text-h3 0 
+                            .dropdown__item-plus
+                    .dropdown__item 
+                        if (type == "guests") 
+                            .dropdown__item-title.text-h3 младенцы 
+                        else if (type == "room")
+                            .dropdown__item-title.text-h3 ванные комнаты 
+                        .dropdown__item-counter 
+                            .dropdown__item-minus 
+                                .dropdown__item-minus-line 
+                            .dropdown__item-count.text-h3 0 
+                            .dropdown__item-plus
+                    .dropdown__btns
+                        .dropdown__btns-reset
+                            button.text-h3 
+                        .dropdown__btns-apply
+                            button.text-h3 Применить
