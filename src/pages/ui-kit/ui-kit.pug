@@ -43,23 +43,53 @@ html(lang="en")
             .container
                 include ../blocks/text-field/text-field.pug
                 include ../blocks/dropdown/dropdown.pug
+                include ../blocks/date-dropdown/date-dropdown.pug
+                include ../blocks/input-button/input-button.pug
+                include ../blocks/expandable-checkbox-list/expandable-checkbox-list.pug
                 .form-elements__wrapper 
                     .form-elements__fst-col
                         .form-elements__text-field
-                            //- width, label, desc, placeholder, text, mask, arrow
-                            +text-field("320px", "text field", "default", "Email")
+                            +text-field({width: "320px", label: "text field", desc: "default", placeholder: "Email"})
                         .form-elements__text-field
-                            +text-field("320px", "text field", "hover / focus", "", "This is pretty awesome")
+                            +text-field({width: "320px", label: "text field", desc: "hover / focus", text: "This is pretty awesome"})
                         .form-elements__text-field
-                            +text-field("320px", "masked text field", "default", "", "", "mask-date")
+                            +text-field({width: "320px", label: "masked text field", desc: "default", mask: true})
                         .form-elements__text-field
-                            +text-field("267px", "subscription text field", "", "Email", "", "", "with-arrow")
+                            +text-field({width: "267px", label: "subscription text field", placeholder: "Email", arrow: true})
                         .form-elements__dropdown
-                            +dropdown("320px", "guests", "dropdown")
+                            +dropdown({width: "320px", type: "guests", label: "dropdown"})
                         .form-elements__dropdown
-                            +dropdown("320px", "guests", "dropdown")
+                            +dropdown({width: "320px", type: "guests", label: "dropdown"})
                         .form-elements__dropdown
-                            +dropdown("320px", "room", "dropdown", "default")
+                            +dropdown({width: "320px", type: "room", label: "dropdown", desc: "default"})
                         .form-elements__dropdown
-                            +dropdown("320px", "room", "dropdown", "expanded")
+                            +dropdown({width: "320px", type: "room", label: "dropdown", desc: "expanded"})
+                        .form-elements__date-dropdown
+                            +date-dropdown({width: "320px", type: "split", label: "date Dropdown", labelTo: "date Dropdown"})
+                        .form-elements__date-dropdown
+                            +date-dropdown({width: "267px", type: "filter", label: "filter date dropdown"})
+                        
+                        .form-elements__checkbox-buttons
+                            .text-h3 Checkbox Buttons
+                            .form-elements__checkbox-buttons-list   
+                                +input-button({type: "checkbox", id: "smoking", label: "Можно курить"})
+                                +input-button({type: "checkbox", id: "pets", label: "Можно с питомцами"})
+                                +input-button({type: "checkbox", id: "guests", label: "Можно пригласить гостей (до 10 человек)"})
 
+                        .form-elements__radio-buttons
+                            .text-h3 Radio Buttons
+                            .form-elements__radio-buttons-list
+                                +input-button({type: "radio", name:"gender", id:"gender_male", label: "Мужчина"})
+                                +input-button({type: "radio", name:"gender", id:"gender_female", label: "Женщина"})
+
+                        .form-elements__toggle-buttons
+                            .text-h3 Toggle
+                            .form-elements__toggle-buttons-list
+                                +input-button({type: "switch", id:"special_offer_1", label: "Получать спецпредложения"})
+                                +input-button({type: "switch", id:"special_offer_2", label: "Получать спецпредложения"})
+
+                        .form-elements__like-buttons
+                            .text-h3 like button
+                            .form-elements__like-buttons-list
+                                +input-button({type: "like", id: "like_1", label: "2"})
+                                +input-button({type: "like", id: "like_2", label: "12"})

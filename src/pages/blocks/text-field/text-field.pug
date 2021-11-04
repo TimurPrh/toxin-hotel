@@ -1,19 +1,19 @@
-mixin text-field(width, label, desc, placeholder, text, mask, arrow)
+mixin text-field({width: width, label: label, desc: desc, placeholder: placeholder, text: text, mask: mask, arrow: arrow})
     .text-field(style="width:" + width)
         .text-field__header.text-h3= label
         .text-field__desc.text-h3_50= desc
-        if (arrow == "with-arrow") 
+        if (arrow) 
             .text-field__input.text-field__input_with-arrow
                 .text-field__arrow
                     .text-field__arrow-line
                     .text-field__arrow-line
-                if (mask == "mask-date")
+                if (mask)
                     input.text-body_25.text-field__input-date(placeholder="ДД.ММ.ГГГГ" value=text) 
                 else 
                     input.text-body_25(placeholder=placeholder value=text)
         else 
             .text-field__input
-                if (mask == "mask-date")
+                if (mask)
                     input.text-body_25.text-field__input-date(placeholder="ДД.ММ.ГГГГ" value=text) 
                 else 
                     input.text-body_25(placeholder=placeholder value=text)

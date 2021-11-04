@@ -1,0 +1,48 @@
+// type: guests, room
+mixin date-dropdown({width: width, type: type, label: label, labelTo: labelTo, desc: desc})
+    if (type == "split")
+        .date-dropdown.date-dropdown_split( data-date-type = "split" style="width:" + width ) 
+
+            .date-dropdown__half
+                .date-dropdown__header.text-h3= label
+                .date-dropdown__desc.text-h3_50= desc
+                .date-dropdown__wrapper 
+                    .date-dropdown__input
+                        .date-dropdown__arrow
+                            .date-dropdown__arrow-line 
+                        input.date-dropdown__calendar-input.text-body_25(data-date = "from" placeholder="ДД.ММ.ГГГГ" value=text readonly)
+            .date-dropdown__half
+                .date-dropdown__header.text-h3= labelTo
+                .date-dropdown__desc.text-h3_50= desc
+                .date-dropdown__wrapper 
+                    .date-dropdown__input
+                        .date-dropdown__arrow
+                            .date-dropdown__arrow-line 
+                        input.date-dropdown__calendar-input.text-body_25(data-date = "to" placeholder="ДД.ММ.ГГГГ" value=text readonly)
+            .date-dropdown__list 
+                .date-dropdown__calendar
+                .date-dropdown__btns
+                    .date-dropdown__btns-reset
+                        button.text-h3 
+                    .date-dropdown__btns-apply
+                        button.text-h3 Применить
+
+    if (type == "filter")
+        .date-dropdown.date-dropdown_filter( data-date-type = "filter" style="width:" + width ) 
+
+            .date-dropdown__header.text-h3= label
+            .date-dropdown__desc.text-h3_50= desc
+            .date-dropdown__wrapper 
+                .date-dropdown__input
+                    .date-dropdown__arrow
+                        .date-dropdown__arrow-line 
+                    input.date-dropdown__calendar-input.text-body_25(data-date = "range" placeholder="Выберите даты" value=text readonly)
+                .date-dropdown__list 
+                    .date-dropdown__calendar
+                    .date-dropdown__btns
+                        .date-dropdown__btns-reset
+                            button.text-h3 
+                        .date-dropdown__btns-apply
+                            button.text-h3 Применить
+
+            

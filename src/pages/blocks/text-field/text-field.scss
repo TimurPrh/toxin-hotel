@@ -16,16 +16,16 @@
             width: 100%;
             height: 100%;
             background: #FFFFFF;
-            border: 1px solid $dark-shade-25;
+            border: 1px solid var(--dark-shade-25);
             border-radius: 4px;
             outline:none;
             &:hover, &:focus, &:focus-visible {
-                border: 1px solid $dark-shade-50;
+                border: 1px solid var(--dark-shade-50);
                 border-radius: 4px;
-                color: $dark-shade-75;
+                color: var(--dark-shade-75);
             }
             &::placeholder {
-                color: $dark-shade-25;
+                color: var(--dark-shade-25);
             }
         }
     }
@@ -46,14 +46,14 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background-color: $purple-color;
+                background-color: var(--purple-color);
             }
             &:nth-child(2) {
                 position: absolute;
                 top: 50%;
                 left: 54%;
                 transform: translate(-50%, -50%) rotate(-45deg);
-                border: solid $purple-color;
+                border: solid var(--purple-color);
                 border-width: 0 2px 2px 0;
                 padding: 4px;
             }

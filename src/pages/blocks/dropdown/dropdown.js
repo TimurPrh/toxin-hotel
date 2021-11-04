@@ -1,4 +1,5 @@
 import * as $ from 'jquery';
+import 'jquery-mask-plugin';
 import './dropdown.scss';
 
 (function dropdown() {
@@ -46,7 +47,6 @@ import './dropdown.scss';
             let bedrooms = parseInt($(item).find('.dropdown__item-count').eq(0).html());
             let beds = parseInt($(item).find('.dropdown__item-count').eq(1).html());
             let bathrooms = parseInt($(item).find('.dropdown__item-count').eq(2).html());
-            let inputString = '';
             let inputArray = [];
 
             let sum = 0;
