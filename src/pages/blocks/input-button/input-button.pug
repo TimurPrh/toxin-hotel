@@ -1,22 +1,23 @@
-mixin input-button({type: type, label: label, id: id, name: name, value: value})
+mixin input-button({type: type, label: label, labelHeader: labelHeader, id: id, value: value, name: name})
     if (type == "checkbox") 
         .input-button
-            input.input-button__input(id=id, type="checkbox")
-            label.input-button__label.text-body_50(for=id)= label
+            input.input-button__input(id= id name= name type="checkbox")
+            .input-button__label-wrapper 
+                if labelHeader
+                    label.input-button__label-header.text-body(for=id)= labelHeader 
+                    br
+                    label.input-button__label-subheader.text-body_50(for=id)= label
+                else    
+                    label.input-button__label.text-body_50(for=id)= label
     else if (type == "radio")
         .input-button
-            input.input-button__input(id=id, type="radio", name=name, value=value)
+            input.input-button__input(id= id name= name type="radio" value=value)
             label.input-button__label.text-body_50(for=id)= label
     else if (type == "switch")
         .input-button.input-button_wide
-            input.input-button__input.input-button_switch(id=id, type="checkbox")
+            input.input-button__input.input-button_switch(id= id name= name type="checkbox")
             label.input-button__label.text-body(for=id)= label
     else if (type == "like")
         .input-button.input-button_one-col
-            input.input-button__input.input-button_like.text-body_25(id=id, type="number", value= label readonly)
+            input.input-button__input.input-button_like.text-body_25(id= id name= name type="number" value= label readonly)
             include ../../../assets/icons/favorite_black_24dp.svg
-
-            
-            //- label.checkbox-button__label.text-body_25(for=id)= label
-            //- svg.like-img( width="20" height="15")
-            //-     use(xlink:href=require("../../assets/icons/favorite_black_24dp.svg"))

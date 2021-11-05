@@ -1,3 +1,10 @@
-mixin expandable-checkbox-list() 
+include ../input-button/input-button.pug
+mixin expandable-checkbox-list({name: name, header: header, labels: labels}) 
     .expandable-checkbox-list 
-        
+        .expandable-checkbox-list__header
+            .expandable-checkbox-list__label.text-h3= header 
+            .expandable-checkbox-list__arrow
+                .expandable-checkbox-list__arrow-line 
+        .expandable-checkbox-list__list
+            each label, i in labels
+                +input-button({type: "checkbox", id: name + i, label: label})

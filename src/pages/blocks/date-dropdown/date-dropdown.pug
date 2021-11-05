@@ -1,7 +1,7 @@
 // type: guests, room
-mixin date-dropdown({width: width, type: type, label: label, labelTo: labelTo, desc: desc})
+mixin date-dropdown({type: type, label: label, labelTo: labelTo, desc: desc})
     if (type == "split")
-        .date-dropdown.date-dropdown_split( data-date-type = "split" style="width:" + width ) 
+        .date-dropdown.date-dropdown_split( data-date-type = "split") 
 
             .date-dropdown__half
                 .date-dropdown__header.text-h3= label

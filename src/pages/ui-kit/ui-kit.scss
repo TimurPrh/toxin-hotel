@@ -1,6 +1,6 @@
 @import '../base/montserrat';
 @import '../base/icons.css';
-@import '../base/variables';
+// @import '../base/variables';
 @import '../base/mixins';
 @import '../base/texs-types';
 
@@ -50,7 +50,7 @@
 }
 
 .form-elements {
-    min-height: 1900px;
+    min-height: 5000px;
     &__header {
         margin: 30px 0 0 30px;
     }
@@ -59,15 +59,27 @@
     }
     &__text-field {
         margin-top: 20px;
+        width: 320px;
         &:nth-child(1) {
             margin-top: 0px;
+        }
+        &_slim {
+            width: 267px;
         }
     }
     &__dropdown {
         margin-top: 20px;
+        width: 320px;
+        &_slim {
+            width: 267px;
+        }
     }
     &__date-dropdown {
         margin-top: 20px;
+        width: 320px;
+        &_slim {
+            width: 266px;
+        }
     }
     &__checkbox-buttons {
         margin-top: 20px;
@@ -109,5 +121,39 @@
             column-gap: 10px;
             row-gap: 10px;
         }
+    }
+    &__rate-buttons {
+        margin-top: 40px;
+        width: 260px;
+        &-list {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+            column-gap: 20px;
+            row-gap: 10px;
+        }
+    }
+    &__expandable-checkbox-list {
+        margin-top: 40px;
+        width: 266px;
+        &:first-child {
+            margin-top: 20px;
+        }
+    }
+    &__rich-checkbox-buttons {
+        margin-top: 98px;
+        width: 266px;
+    }
+    &__bullet-list {
+        margin-top: 98px;
+        width: 292px;
+    }
+    &__room-details{
+        margin-top: 100px;
+        width: 291px;
+    }
+    &__feedback {
+        margin-top: 100px;
+        width: 711px;
     }
 }

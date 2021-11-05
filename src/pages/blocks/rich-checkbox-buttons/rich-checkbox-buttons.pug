@@ -1,0 +1,7 @@
+include ../input-button/input-button.pug
+mixin rich-checkbox-buttons({name: name, header: header, labels: labels})
+    .rich-checkbox-buttons
+        .rich-checkbox-buttons__header.text-h3= header 
+        .rich-checkbox-buttons__list 
+            each label, i in labels
+                +input-button({type: "checkbox", id: name + i, label: label[1], labelHeader: label[0]})

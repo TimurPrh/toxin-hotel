@@ -1,7 +1,7 @@
 // type: guests, room
-mixin dropdown({width: width, type: type, label: label, desc: desc})
+mixin dropdown({type: type, label: label, desc: desc, id: id})
     if (type == "guests") 
-        .dropdown.dropdown_guests(style="width:" + width) 
+        .dropdown.dropdown_guests
 
             .dropdown__header.text-h3= label
             .dropdown__desc.text-h3_50= desc
