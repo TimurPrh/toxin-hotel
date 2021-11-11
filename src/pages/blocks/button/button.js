@@ -25,11 +25,11 @@ wideButton.forEach(wide => {
 
 invertButton.forEach(invert => {
     invert.addEventListener('mouseover', () => {
-        invert.style.opacity = 0.5;
+        invert.classList.add('button_type_invert_hover');
     });
 });
 invertButton.forEach(invert => {
     invert.addEventListener('mouseleave', () => {
-        invert.style.opacity = 1;
+        invert.classList.remove('button_type_invert_hover');
     });
 });
