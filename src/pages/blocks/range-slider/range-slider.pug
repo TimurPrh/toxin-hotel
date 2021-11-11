@@ -1,0 +1,13 @@
+mixin range-slider({header: header, from: from, to: to})
+    - let min = 1000, max = 16000
+    - let a = 5000, b = 10000;
+    .range-slider(style=`--a: ${a}; --b: ${b}; --min: ${min}; --max: ${max}`)
+        .range-slider__header.text-h3= header
+        .range-slider__result.text-h3_50 1000₽ - 5000₽
+        .range-slider__bg
+        .range-slider__range-bg
+        label(for='a' style='--c: var(--a)')
+        input#a(type='range' min=min value=a max=max step=100)
+        label(for='b' style='--c: var(--b)')
+        input#b(type='range' min=min value=b max=max step=100)
+        

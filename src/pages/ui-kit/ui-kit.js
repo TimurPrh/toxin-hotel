@@ -11,4 +11,9 @@ import '../blocks/rich-checkbox-buttons/rich-checkbox-buttons.js';
 import '../blocks/bullet-list/bullet-list.js';
 import '../blocks/room-details/room-details.js';
 import '../blocks/feedback/feedback.js'
+import '../blocks/range-slider/range-slider.js';
+import '../blocks/button/button.js';
+import '../blocks/pagination/pagination.js';
 import './ui-kit.scss';
+
+

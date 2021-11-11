@@ -156,4 +156,31 @@
         margin-top: 100px;
         width: 711px;
     }
+    &__range-slider {
+        width: 266px;
+    }
+    &__buttons {
+        margin-top: 40px;
+        width: 320px;
+        &-wrapper {
+            margin-top: 30px;
+            display: flex;
+            .button:first-child {
+                margin-right: 20px;
+            }
+            &:nth-child(2) {
+                margin-top: 16px;
+            }   
+        }
+        & > .button__wrapper {
+            margin-top: 30px;
+        }
+    }
+    &__pagination {
+        margin-top: 40px;
+        max-width: 360px;
+        .pagination {
+            margin-top: 16px;
+        }
+    }
 }

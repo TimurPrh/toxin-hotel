@@ -51,9 +51,31 @@ html(lang="en")
                 include ../blocks/bullet-list/bullet-list.pug
                 include ../blocks/room-details/room-details.pug
                 include ../blocks/feedback/feedback.pug
+                include ../blocks/range-slider/range-slider.pug
+                include ../blocks/button/button.pug
+                include ../blocks/pagination/pagination.pug
                 
                 .form-elements__wrapper 
                     .form-elements__fst-col
+                        .form-elements__range-slider
+                            +range-slider({header: "Range Slider"})
+                        .form-elements__buttons
+                            .text-h3 buttons
+                            .form-elements__buttons-wrapper 
+                                +button({label: "CLICK ME", type: "filed"})
+                                +button({label: "CLICK ME", type: "filed"})
+                            .form-elements__buttons-wrapper 
+                                +button({label: "CLICK ME", type: "invert"})
+                                +button({label: "CLICK ME", type: "invert"})
+                            .form-elements__buttons-wrapper 
+                                +button({label: "CLICK ME", type: "icon"})
+                                +button({label: "CLICK ME", type: "icon"})
+                            +button({label: "перейти к оплате", type: "wide"})
+
+                        .form-elements__pagination
+                            .text-h3 pagination
+                            +pagination({})
+
                         .form-elements__text-field
                             +text-field({id: "test_field_1", label: "text field", desc: "default", placeholder: "Email"})
                         .form-elements__text-field
