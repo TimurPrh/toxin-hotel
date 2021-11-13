@@ -1,6 +1,6 @@
 .room-details {
     &__item {
-        margin-top: 20px;
+        margin-top: 21px;
         display: flex;
         &:first-child {
             margin-top: 0;
@@ -9,7 +9,9 @@
     &__img {
         width: 48px;
         height: 48px;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     &__text {
         padding-left: 10px;
@@ -18,7 +20,7 @@
         }
     }
     &__line {
-        margin-top: 17px;
+        margin-top: 19px;
         width: 96%;
         height: 1px;
         background-color: var(--dark-shade-10);

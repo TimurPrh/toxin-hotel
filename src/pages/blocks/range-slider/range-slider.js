@@ -14,8 +14,35 @@ function renderRangeBg() {
 
     rangeBg.style.marginLeft = `${begin / 160 - 6.25}%`;
     rangeBg.style.width = `${dif / 160 + 6.25}%`;
+    
+    let beginHigh,
+        beginLow,
+        endHigh,
+        endLow;
+    
+    if (Math.trunc(begin/1000) == 0) {
+        beginHigh = '';
+    } else {
+        beginHigh = `${Math.trunc(begin/1000)} `;
+    }
+    if (begin%1000 == 0) {
+        beginLow = '000';
+    } else {
+        beginLow = begin%1000;
+    }
 
-    result.innerHTML = `${begin}₽ - ${end}₽`;
+    if (Math.trunc(end/1000) == 0) {
+        endHigh = '';
+    } else {
+        endHigh = `${Math.trunc(end/1000)} `;
+    }
+    if (end%1000 == 0) {
+        endLow = '000';
+    } else {
+        endLow = end%1000;
+    }
+
+    result.innerHTML = `${beginHigh}${beginLow}₽ - ${endHigh}${endLow}₽`;
 }
 
 renderRangeBg();

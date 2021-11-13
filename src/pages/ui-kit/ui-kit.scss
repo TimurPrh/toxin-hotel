@@ -12,14 +12,19 @@
 }
 
 .container {
-    max-width: 1160px;
+    max-width: 1269px;
     margin: 0 auto;
+    &_m-left-150 {
+        max-width: 1160px;
+        margin-left: 150px;
+    }
 }
 
 .color-and-types {
+    margin-top: 30px;
     min-height: 900px;
     &__header {
-        margin: 30px 0 0 30px;
+        margin: 0;
     }
     &__wrapper {
         margin-top: 67px;
@@ -28,6 +33,7 @@
         justify-items: space-between;
     }
     &__palette {
+        margin-left: 120px;
         &-item {
             margin-bottom: 20px;
             &:last-child {
@@ -36,6 +42,7 @@
         }
     }
     &__text-types {
+        margin-right: 16px;
         justify-self: end;
         display: grid;
         grid-template-columns: 40px 370px;
@@ -44,6 +51,7 @@
         grid-auto-rows: minmax(min-content, max-content);
         &-header {
             color: var(--dark-shade-25);
+            font-weight: normal;
             justify-self: end;
         }
     }
@@ -52,18 +60,42 @@
 .form-elements {
     min-height: 5000px;
     &__header {
-        margin: 30px 0 0 30px;
+        margin: 0;
     }
     &__wrapper {
-        margin-top: 62px;
+        margin-top: 64px;
+        margin-left: 112px;
+        min-width: 1159px;
+        display: grid;
+        grid-template-columns: 320px 374px 320px;
+        column-gap: 72px;
     }
+    &__snd-col {
+        margin-left: 54px;
+        .form-elements__dropdown {
+            margin-top: 196px;
+        }
+    }
+
+    &__trd-col {
+        .form-elements__dropdown {
+            margin-top: 232px;
+        }
+    }
+
+    &__fifth-col {
+        margin-left: 54px;
+        grid-column: 2 / span 2;
+    }
+    
     &__text-field {
-        margin-top: 20px;
+        margin-top: 22px;
         width: 320px;
         &:nth-child(1) {
             margin-top: 0px;
         }
         &_slim {
+            margin-top: 42px;
             width: 267px;
         }
     }
@@ -71,18 +103,21 @@
         margin-top: 20px;
         width: 320px;
         &_slim {
-            width: 267px;
+            width: 265px;
+        }
+        &:nth-child(8) {
+            margin-top: 100px;
         }
     }
     &__date-dropdown {
-        margin-top: 20px;
+        margin-top: 42px;
         width: 320px;
         &_slim {
             width: 266px;
         }
     }
     &__checkbox-buttons {
-        margin-top: 20px;
+        margin-top: 1px;
         width: 222px;
         &-list > div {
             margin-top: 10px;
@@ -95,24 +130,24 @@
         margin-top: 40px;
         width: 220px;
         &-list {
-            margin-top: 16px;
+            margin-top: 14px;
             display: grid;
             grid-template-columns: auto auto;
             column-gap: 20px;
         }
     }
     &__toggle-buttons {
-        margin-top: 36px;
+        margin-top: 42px;
         width: 260px;
         &-list > div {
-            margin-top: 10px;
+            margin-top: 14px;
         }
         &-list > div:first-child {
             margin-top: 16px;
         }
     }
     &__like-buttons {
-        margin-top: 40px;
+        margin-top: 45px;
         width: 90px;
         &-list {
             margin-top: 16px;
@@ -123,9 +158,10 @@
         }
     }
     &__rate-buttons {
-        margin-top: 40px;
-        width: 260px;
+        margin-top: 42px;
+        width: 264px;
         &-list {
+            margin-left: 2px;
             margin-top: 16px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(120px, auto));
@@ -134,33 +170,33 @@
         }
     }
     &__expandable-checkbox-list {
-        margin-top: 40px;
+        margin-top: 20px;
         width: 266px;
         &:first-child {
-            margin-top: 20px;
+            margin-top: 41px;
         }
     }
     &__rich-checkbox-buttons {
-        margin-top: 98px;
-        width: 266px;
+        margin-top: 101px;
+        width: 260px;
     }
     &__bullet-list {
-        margin-top: 98px;
-        width: 292px;
+        margin-top: 102px;
+        width: 260px;
     }
     &__room-details{
-        margin-top: 100px;
+        margin-top: 102px;
         width: 291px;
     }
     &__feedback {
-        margin-top: 100px;
+        margin-top: 113px;
         width: 711px;
     }
     &__range-slider {
         width: 266px;
     }
     &__buttons {
-        margin-top: 40px;
+        margin-top: 45px;
         width: 320px;
         &-wrapper {
             margin-top: 30px;
@@ -173,7 +209,7 @@
             }   
         }
         & > .button__wrapper {
-            margin-top: 30px;
+            margin-top: 28px;
         }
     }
     &__pagination {
@@ -181,6 +217,7 @@
         max-width: 360px;
         .pagination {
             margin-top: 16px;
+            margin-left: -77px;
         }
     }
 }

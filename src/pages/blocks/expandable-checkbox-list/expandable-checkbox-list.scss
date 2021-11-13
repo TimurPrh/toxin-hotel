@@ -26,6 +26,8 @@
         
     }
     &__list {
+        margin-top: 3px;
+        display: none;
         & > div {
             margin-top: 10px;
             &:first-child {
