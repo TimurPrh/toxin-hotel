@@ -46,4 +46,9 @@
         line-height: var(--text-body-line-height);
         color: var(--dark-shade-50);
     }
+    &_100 {
+        font-size: var(--text-body-font-size);
+        line-height: var(--text-body-line-height);
+        color: var(--dark-shade-100);
+    }
 }

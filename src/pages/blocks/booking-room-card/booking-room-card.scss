@@ -1,0 +1,96 @@
+.booking-room-card {
+    width: 380px;
+    min-height: 512px;
+    padding: 40px 30px 30px 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+    &__room {
+        &-number {
+            &-wrapper {
+                font-weight: bold;
+            }
+        }
+        &-class {
+            margin-left: 8px;
+            color: var(--purple-color) !important;
+        }
+        &-price {
+            font-weight: bold;
+            &-range {
+                font-weight: normal;
+                text-transform: lowercase !important;
+            }
+        }
+    }
+    &__calendar {
+        margin-top: 21px;
+    }
+    &__guests {
+        margin-top: 22px;
+    }
+    &__calculate {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 214px auto;
+        column-gap: 25px;
+        row-gap: 10px;
+    }
+    &__item {
+        &-desc {
+            line-height: 18px !important;
+            &_with-info {
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 220px;
+                    top: 1px;
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid var(--dark-shade-25);
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+                &::before {
+                    content: 'i';
+                    position: absolute;
+                    left: 229px;
+                    top: 0;
+                    font-weight: bold;
+                    font-size: 12px;
+                    color: var(--dark-shade-25);
+                    
+                }
+            }
+        }
+        &-price {
+            justify-self: end;
+        }
+    }
+    &__sum {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        &-line {
+            width: 0;
+            height: 1px;
+            border: dashed var(--dark-shade-25);
+            border-width: 1px 0 0 0;
+            margin-bottom: 4px;
+        }
+        &-number {
+            white-space: nowrap;
+        }
+    }
+    &__button {
+        margin-top: 22px;
+    }
+}

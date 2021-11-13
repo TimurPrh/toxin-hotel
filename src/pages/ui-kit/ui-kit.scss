@@ -25,15 +25,15 @@
     padding-top: 30px;
     background: #E5E5E5;
     &__wrapper {
-        margin-top: 64px;
-        margin-left: 112px;
+        margin-top: 72px;
+        margin-left: 109px;
         min-width: 1159px;
         display: grid;
-        // grid-template-columns: 320px 374px 320px;
-        // column-gap: 72px;
+        grid-template-columns: 380px 380px 320px;
+        column-gap: 40px;
     }
-    &__selection-card {
-
+    &__registartion-card {
+        margin-top: 40px;
     }
 }
 
@@ -191,15 +191,15 @@
         margin-top: 20px;
         width: 266px;
         &:first-child {
-            margin-top: 41px;
+            margin-top: 157px;
         }
     }
     &__rich-checkbox-buttons {
-        margin-top: 101px;
+        margin-top: 257px;
         width: 260px;
     }
     &__bullet-list {
-        margin-top: 102px;
+        margin-top: 257px;
         width: 260px;
     }
     &__room-details{
@@ -219,15 +219,15 @@
         &-wrapper {
             margin-top: 30px;
             display: flex;
-            .button:first-child {
-                margin-right: 20px;
-            }
             &:nth-child(2) {
                 margin-top: 16px;
             }   
         }
         & > .button__wrapper {
             margin-top: 28px;
+        }
+        &-margin-right {
+            margin-right: 20px;
         }
     }
     &__pagination {

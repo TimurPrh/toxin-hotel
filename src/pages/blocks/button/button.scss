@@ -26,14 +26,8 @@
             position: absolute;
             top: 0; right: 0; bottom: 0; left: 0;
             z-index: -1;
-            margin: -2px;
             border-radius: inherit;
             background: var(--gradient-color);
-        }
-        &_hover {
-            &::before {
-                opacity: 0.5;
-            }
         }
     }
     &_type_icon {
@@ -50,6 +44,13 @@
     }
     &__wrapper {
         position: relative;
+        &-invert {
+            border-radius: 22px;
+            background: var(--gradient-color);
+            &_hover {
+                background: var(--gradient-color-opacity);
+            }
+        }
     }
     &__arrow {
         cursor: pointer;
@@ -78,5 +79,8 @@
                 padding: 4px;
             }
         }
+    }
+    &_size_m {
+        padding: 12px 24px 13px;
     }
 }

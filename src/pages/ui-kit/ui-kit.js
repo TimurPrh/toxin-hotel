@@ -15,6 +15,8 @@ import '../blocks/range-slider/range-slider.js';
 import '../blocks/button/button.js';
 import '../blocks/pagination/pagination.js';
 import '../blocks/selection-card/selection-card.js';
+import '../blocks/registartion-card/registartion-card.js';
+import '../blocks/booking-room-card/booking-room-card.js';
 import './ui-kit.scss';
 
 

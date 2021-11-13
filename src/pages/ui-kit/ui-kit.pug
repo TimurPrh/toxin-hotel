@@ -42,10 +42,18 @@ html(lang="en")
                 .color-and-types__header 
                     +kit-section-name("Cards")
                 include ../blocks/selection-card/selection-card.pug
+                include ../blocks/registartion-card/registartion-card.pug
+                include ../blocks/booking-room-card/booking-room-card.pug
+
                 .cards__wrapper 
                     .cards__fst-col
                         .cards__selection-card
                             +selection-card({header: "Найдём номера под ваши пожелания", dateDropdownId: "split_date_2"})
+                        .cards__registartion-card 
+                            +registartion-card({header: "Регистрация аккаунта"})
+                    .cards__snd-col
+                        .cards__booking-room-card
+                            +booking-room-card({roomNumber: "888", roomClass: "люкс", price: "9 990₽"})
 
         .section.form-elements 
             .container
@@ -143,13 +151,16 @@ html(lang="en")
                         .form-elements__buttons
                             .text-h3 buttons
                             .form-elements__buttons-wrapper 
-                                +button({label: "CLICK ME", type: "filed"})
+                                .form-elements__buttons-margin-right
+                                    +button({label: "CLICK ME", type: "filed"})
                                 +button({label: "CLICK ME", type: "filed"})
                             .form-elements__buttons-wrapper 
+                                .form-elements__buttons-margin-right
+                                    +button({label: "CLICK ME", type: "invert"})
                                 +button({label: "CLICK ME", type: "invert"})
-                                +button({label: "CLICK ME", type: "invert"})
-                            .form-elements__buttons-wrapper 
-                                +button({label: "CLICK ME", type: "icon"})
+                            .form-elements__buttons-wrapper
+                                .form-elements__buttons-margin-right
+                                    +button({label: "CLICK ME", type: "icon"})
                                 +button({label: "CLICK ME", type: "icon"})
                             +button({label: "перейти к оплате", type: "wide"})
 

@@ -1,10 +1,18 @@
-mixin button({label: label, type: type})
+mixin button({label: label, type: type, size: size})
     .button__wrapper
         if (type == "filed") 
-            button.button.text-h3.button_type_filed= label
+            if (size == "m")
+                button.button.text-h3.button_type_filed.button_size_m= label
+            else 
+                button.button.text-h3.button_type_filed= label
         if (type == "invert") 
-            button.button.text-h3.button_type_invert= label
-        if (type == "icon") 
+            if (size == "m")
+            .button__wrapper-invert 
+                if (size == "m")
+                    button.button.button_type_invert.text-h3.button_size_m= label
+                else 
+                    button.button.button_type_invert.text-h3= label
+        if (type == "icon")
             button.button.text-h3.button_type_icon= label
         if (type == "wide") 
             button.button.text-h3.button_type_wide= label
