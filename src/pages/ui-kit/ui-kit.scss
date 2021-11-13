@@ -20,8 +20,25 @@
     }
 }
 
+.cards {
+    min-height: 1350px;
+    padding-top: 30px;
+    background: #E5E5E5;
+    &__wrapper {
+        margin-top: 64px;
+        margin-left: 112px;
+        min-width: 1159px;
+        display: grid;
+        // grid-template-columns: 320px 374px 320px;
+        // column-gap: 72px;
+    }
+    &__selection-card {
+
+    }
+}
+
 .color-and-types {
-    margin-top: 30px;
+    padding-top: 30px;
     min-height: 900px;
     &__header {
         margin: 0;
@@ -58,7 +75,8 @@
 }
 
 .form-elements {
-    min-height: 5000px;
+    padding-top: 30px;
+    min-height: 1853px;
     &__header {
         margin: 0;
     }

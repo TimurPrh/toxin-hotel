@@ -11,6 +11,11 @@ import './dropdown.scss';
     dropdown.each((i, item) => {
         $(item).find('.dropdown__arrow').on('click', () => {
             $(item).find('.dropdown__list').slideToggle();
+            if (item.querySelector('.dropdown__wrapper').style.borderRadius != '4px 4px 0px 0px') {
+                item.querySelector('.dropdown__wrapper').style.borderRadius = '4px 4px 0px 0px';
+            } else {
+                item.querySelector('.dropdown__wrapper').style.borderRadius = '4px';
+            }
         });
     });
 

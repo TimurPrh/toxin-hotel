@@ -14,6 +14,7 @@ import '../blocks/feedback/feedback.js'
 import '../blocks/range-slider/range-slider.js';
 import '../blocks/button/button.js';
 import '../blocks/pagination/pagination.js';
+import '../blocks/selection-card/selection-card.js';
 import './ui-kit.scss';
 
 

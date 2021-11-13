@@ -37,8 +37,17 @@ html(lang="en")
                                         br
                                         |of the design, like paragraphs, lists, etc.
 
+        .section.cards 
+            .container 
+                .color-and-types__header 
+                    +kit-section-name("Cards")
+                include ../blocks/selection-card/selection-card.pug
+                .cards__wrapper 
+                    .cards__fst-col
+                        .cards__selection-card
+                            +selection-card({header: "Найдём номера под ваши пожелания", dateDropdownId: "split_date_2"})
+
         .section.form-elements 
-            
             .container
                 include ../blocks/text-field/text-field.pug
                 include ../blocks/dropdown/dropdown.pug
@@ -59,7 +68,6 @@ html(lang="en")
                 
                 .form-elements__wrapper 
                     .form-elements__fst-col
-
                         .form-elements__text-field
                             +text-field({id: "test_field_1", label: "text field", desc: "default", placeholder: "Email"})
                         .form-elements__text-field
@@ -72,9 +80,9 @@ html(lang="en")
                             +text-field({id: "test_field_3", label: "masked text field", desc: "default", mask: true})
 
                         .form-elements__date-dropdown
-                            +date-dropdown({type: "split", label: "date Dropdown", labelTo: "date Dropdown"})
+                            +date-dropdown({id: "split_date_1", type: "split", label: "date Dropdown", labelTo: "date Dropdown"})
                         .form-elements__date-dropdown.form-elements__date-dropdown_slim
-                            +date-dropdown({type: "filter", label: "filter date dropdown"})
+                            +date-dropdown({id: "filter_date_1", type: "filter", label: "filter date dropdown"})
 
                         .form-elements__text-field.form-elements__text-field_slim
                             +text-field({id: "test_field_4", label: "subscription text field", placeholder: "Email", arrow: true})

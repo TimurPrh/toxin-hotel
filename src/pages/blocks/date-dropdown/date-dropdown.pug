@@ -1,7 +1,7 @@
 // type: guests, room
-mixin date-dropdown({type: type, label: label, labelTo: labelTo, desc: desc})
+mixin date-dropdown({type: type, label: label, labelTo: labelTo, desc: desc, id: id})
     if (type == "split")
-        .date-dropdown.date-dropdown_split( data-date-type = "split") 
+        .date-dropdown.date-dropdown_split(id = id data-date-type = "split") 
 
             .date-dropdown__half
                 .date-dropdown__header.text-h3= label
@@ -28,7 +28,7 @@ mixin date-dropdown({type: type, label: label, labelTo: labelTo, desc: desc})
                         button.text-h3 Применить
 
     if (type == "filter")
-        .date-dropdown.date-dropdown_filter( data-date-type = "filter" style="width:" + width ) 
+        .date-dropdown.date-dropdown_filter(id = id data-date-type = "filter") 
 
             .date-dropdown__header.text-h3= label
             .date-dropdown__desc.text-h3_50= desc
