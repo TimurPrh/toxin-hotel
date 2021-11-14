@@ -1,0 +1,42 @@
+include ../rate-button/rate-button.pug
+
+mixin room-card({roomNumber: roomNumber, roomClass: roomClass, price: price, reviewsCount: reviewsCount, rate: rate, photos: photos})
+    .room-card 
+        .room-card__photos 
+            .room-card__photos-prev
+            .room-card__photos-next
+            - var dotsWidth = 11 * photos.length
+            .room-card__photos-dots(style="width:" + dotsWidth + "px")
+                - for (var x = 0; x < photos.length; x++)
+                    if (x == 0)
+                        .room-card__photos-dot.room-card__photos-dot_active
+                    else 
+                        .room-card__photos-dot
+            .room-card__carousel
+                each roomPhoto in photos
+                    .room-card__carousel-img
+                        img(src=require('../../assets/img/rooms/' + roomNumber + '/' + roomPhoto))
+
+        .room-card__wrapper= header
+            .room-card__room
+                .room-card__room-number-wrapper.text-body_100 № 
+                    span.room-card__room-number.text-h2= roomNumber
+                    span.room-card__room-class.text-h3= roomClass
+                .room-card__room-price-wrapper 
+                    span.room-card__room-price.text-body_50= price
+                    span.room-card__room-price-range.text-h3_50  в сутки
+            .room-card__line 
+            .room-card__rate 
+                .room-card__rate-stars
+                    +rate-button({rate: rate})
+                .room-card__rate-reviews.text-body_50
+                    if (reviewsCount == 0)
+                        |  Нет отзывов
+                    else if (reviewsCount > 0)
+                        span= reviewsCount 
+                        if (reviewsCount == 1 || (reviewsCount > 20 && reviewsCount%10 == 1))
+                            |  Отзыв
+                        else if ((reviewsCount >= 2 && reviewsCount <= 4) || (reviewsCount > 20 && (reviewsCount%10 >= 2 && reviewsCount%10 <= 4)))
+                            |  Отзыва
+                        else if (reviewsCount > 4)
+                            |  Отзывов

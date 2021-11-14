@@ -17,6 +17,8 @@ import '../blocks/pagination/pagination.js';
 import '../blocks/selection-card/selection-card.js';
 import '../blocks/registartion-card/registartion-card.js';
 import '../blocks/booking-room-card/booking-room-card.js';
+import '../blocks/login-card/login-card.js';
+import '../blocks/room-card/room-card.js';
 import './ui-kit.scss';
 
 

@@ -14,27 +14,12 @@
 .container {
     max-width: 1269px;
     margin: 0 auto;
-    &_m-left-150 {
-        max-width: 1160px;
-        margin-left: 150px;
-    }
 }
 
-.cards {
-    min-height: 1350px;
+.headers-and-footers {
     padding-top: 30px;
-    background: #E5E5E5;
-    &__wrapper {
-        margin-top: 72px;
-        margin-left: 109px;
-        min-width: 1159px;
-        display: grid;
-        grid-template-columns: 380px 380px 320px;
-        column-gap: 40px;
-    }
-    &__registartion-card {
-        margin-top: 40px;
-    }
+    min-height: 1350px;
+    background: #F4F4F6;
 }
 
 .color-and-types {
@@ -180,7 +165,7 @@
         width: 264px;
         &-list {
             margin-left: 2px;
-            margin-top: 16px;
+            margin-top: 14px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(120px, auto));
             column-gap: 20px;
@@ -236,6 +221,45 @@
         .pagination {
             margin-top: 16px;
             margin-left: -77px;
+        }
+    }
+}
+
+.cards {
+    min-height: 1350px;
+    padding-top: 30px;
+    background: #E5E5E5;
+    &__wrapper {
+        margin-top: 72px;
+        margin-left: 109px;
+        min-width: 1159px;
+        display: grid;
+        grid-template-columns: 380px 380px 320px;
+        column-gap: 40px;
+    }
+    &__registartion-card {
+        margin-top: 40px;
+    }
+    &__login-card {
+        margin-top: 40px;
+    }
+    &__calendar {
+        width: 320px;
+        .date-dropdown {
+            &__input {
+                display: none;
+            }
+            &__list {
+                display: block;
+                margin-top: 0;
+                top: 0;
+            }
+        }
+    }
+    &__room-card {
+        margin-top: 405px;
+        &:nth-child(3) {
+            margin-top: 40px;
         }
     }
 }
