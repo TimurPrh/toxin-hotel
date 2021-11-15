@@ -1,0 +1,33 @@
+include ../button/button.pug
+
+mixin header({type: type, name: name})
+    .header 
+        .container 
+            .header__wrapper
+                .header__logo
+                    img(src=require("../../assets/icons/main-logo.svg"), alt="logo")
+                nav.header__nav
+                    ul.header__list 
+                        li
+                            a.header__list-link.header__list-link_active.text-body_50(href="unset") О нас
+                        li
+                            a.header__list-link.text-body_50(href="unset") Услуги
+                            .header__list-arrow
+                        li
+                            a.header__list-link.text-body_50(href="unset") Вакансии
+                        li
+                            a.header__list-link.text-body_50(href="unset") Новости
+                        li
+                            a.header__list-link.text-body_50(href="unset") Соглашения
+                            .header__list-arrow
+                        if (type == "user")
+                            li
+                                .header__user
+                                    .header__line 
+                                    a.header__name.header__list-link.text-body_50(href="unset")= name
+                if (type == "guest")
+                    .header__buttons
+                        .header__buttons-login
+                            +button({label: "войти", type: "invert", width: "87", height: "34"})
+                        .header__buttons-register
+                            +button({label: "зарегистрироваться", type: "filed", width: "196", height: "34"})

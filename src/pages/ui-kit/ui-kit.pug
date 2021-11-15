@@ -8,9 +8,9 @@ html(lang="en")
     body 
         section.color-and-types 
             include ../blocks/kit-section-name/kit-section-name.pug
-            .container
-                .color-and-types__header 
+            .color-and-types__header 
                     +kit-section-name({title: "Color & Type", logo: "logo-light-grey.svg"})
+            .container
                 .color-and-types__wrapper 
                     .color-and-types__palette
                         - var colorsListName = ["Dark Shade 100%", "Dark Shade 75%", "Dark Shade 50%", "Dark Shade 25%", "Dark Shade 5%", "Purple", "Green"]
@@ -38,12 +38,20 @@ html(lang="en")
                                         |of the design, like paragraphs, lists, etc.
 
         section.headers-and-footers
-            .container 
-                .headers-and-footers__header 
-                    +kit-section-name({title: "Headers and Footers", logo: "logo-dark-grey.svg"})
+            .headers-and-footers__title
+                +kit-section-name({title: "Headers and Footers", logo: "logo-dark-grey.svg"})
+            
+            include ../blocks/header/header.pug   
+            .headers-and-footers__headers
+                .headers-and-footers__header-guest
+                    +header({type: "guest"})
+                .headers-and-footers__header-user
+                    +header({type: "user", name: "Юлий Цезарь"})
 
 
         section.form-elements 
+            .form-elements__header 
+                +kit-section-name({title: "Form Elements", logo: "logo-light-grey.svg"})
             .container
                 include ../blocks/text-field/text-field.pug
                 include ../blocks/dropdown/dropdown.pug
@@ -58,9 +66,6 @@ html(lang="en")
                 include ../blocks/range-slider/range-slider.pug
                 include ../blocks/button/button.pug
                 include ../blocks/pagination/pagination.pug
-
-                .form-elements__header 
-                    +kit-section-name({title: "Form Elements", logo: "logo-light-grey.svg"})
                 
                 .form-elements__wrapper 
                     .form-elements__fst-col
@@ -140,12 +145,12 @@ html(lang="en")
                             .text-h3 buttons
                             .form-elements__buttons-wrapper 
                                 .form-elements__buttons-margin-right
-                                    +button({label: "CLICK ME", type: "filed"})
-                                +button({label: "CLICK ME", type: "filed"})
+                                    +button({label: "CLICK ME", type: "filed", width: "99", height: "44"})
+                                +button({label: "CLICK ME", type: "filed", width: "99", height: "44"})
                             .form-elements__buttons-wrapper 
                                 .form-elements__buttons-margin-right
-                                    +button({label: "CLICK ME", type: "invert"})
-                                +button({label: "CLICK ME", type: "invert"})
+                                    +button({label: "CLICK ME", type: "invert", width: "99", height: "44"})
+                                +button({label: "CLICK ME", type: "invert", width: "99", height: "44"})
                             .form-elements__buttons-wrapper
                                 .form-elements__buttons-margin-right
                                     +button({label: "CLICK ME", type: "icon"})
@@ -171,9 +176,9 @@ html(lang="en")
                             +feedback({name: "Мурад Сарафанов", icon: "photo.png", time: "5 дней назад", text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", likes: "11"})
         
         .section.cards 
-            .container 
-                .color-and-types__header 
+            .color-and-types__header 
                     +kit-section-name({title: "Cards", logo: "logo-dark-grey.svg"})
+            .container  
                 include ../blocks/selection-card/selection-card.pug
                 include ../blocks/registartion-card/registartion-card.pug
                 include ../blocks/booking-room-card/booking-room-card.pug

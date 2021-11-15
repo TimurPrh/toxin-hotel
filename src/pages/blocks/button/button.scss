@@ -6,16 +6,14 @@
     border: none;
     cursor: pointer;
     &_type_filed {
-        min-width: 97px;
-        padding: 14px 2px 15px;
         &:hover {
             opacity: 0.5;
         }
     }
     &_type_invert {
         position: relative;
-        min-width: 97px;
-        padding: 12px 2px 13px;
+        width: 100%;
+        height: 100%;
         background: #FFFFFF;
         color: var(--purple-color) !important;
         
