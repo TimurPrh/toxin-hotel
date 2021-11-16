@@ -1,6 +1,6 @@
 include ../button/button.pug
 
-mixin header({type: type, name: name})
+mixin header({login: login, name: name})
     .header 
         .container 
             .header__wrapper
@@ -20,12 +20,12 @@ mixin header({type: type, name: name})
                         li
                             a.header__list-link.text-body_50(href="unset") Соглашения
                             .header__list-arrow
-                        if (type == "user")
+                        if (login == true)
                             li
                                 .header__user
                                     .header__line 
                                     a.header__name.header__list-link.text-body_50(href="unset")= name
-                if (type == "guest")
+                if (login == false)
                     .header__buttons
                         .header__buttons-login
                             +button({label: "войти", type: "invert", width: "87", height: "34"})

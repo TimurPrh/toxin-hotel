@@ -1,0 +1,37 @@
+.cards {
+    min-height: 1350px;
+    padding-top: 30px;
+    background: #E5E5E5;
+    &__wrapper {
+        margin-top: 72px;
+        min-width: 1159px;
+        display: grid;
+        grid-template-columns: 380px 380px 320px;
+        column-gap: 40px;
+    }
+    &__registartion-card {
+        margin-top: 40px;
+    }
+    &__login-card {
+        margin-top: 40px;
+    }
+    &__calendar {
+        width: 320px;
+        .date-dropdown {
+            &__input {
+                display: none;
+            }
+            &__list {
+                display: block;
+                margin-top: 0;
+                top: 0;
+            }
+        }
+    }
+    &__room-card {
+        margin-top: 405px;
+        &:nth-child(3) {
+            margin-top: 40px;
+        }
+    }
+}

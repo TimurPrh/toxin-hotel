@@ -1,3 +1,4 @@
+include ../button/button.pug
 mixin dropdown({type: type, label: label, desc: desc, id: id})
     if (type == "guests") 
         .dropdown.dropdown_guests
@@ -31,9 +32,9 @@ mixin dropdown({type: type, label: label, desc: desc, id: id})
                             .dropdown__item-plus
                     .dropdown__btns
                         .dropdown__btns-reset
-                            button.text-h3 
+                            +button({type: "icon"})
                         .dropdown__btns-apply
-                            button.text-h3 Применить
+                            +button({label: "Применить", type: "icon"})
          
     else if (type == "room")
         .dropdown.dropdown_room
@@ -65,10 +66,3 @@ mixin dropdown({type: type, label: label, desc: desc, id: id})
                                 .dropdown__item-minus-line 
                             .dropdown__item-count.text-h3 0 
                             .dropdown__item-plus
-                    //- .dropdown__btns
-                    //-     .dropdown__btns-reset
-                    //-         button.text-h3 
-                    //-     .dropdown__btns-apply
-                    //-         button.text-h3 Применить
-
-            

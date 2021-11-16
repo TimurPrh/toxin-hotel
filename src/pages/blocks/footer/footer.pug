@@ -1,0 +1,77 @@
+include ../text-field/text-field.pug
+
+mixin footer({mobile: mobile})
+    .footer
+        if (!mobile)
+            .footer__main-outer 
+                .container
+                    .footer__main 
+                        .footer__about  
+                            .footer__about-logo 
+                                img(src=require("../../assets/icons/main-logo.svg"), alt="logo")
+                            .footer__about-text.text-body Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+
+                        nav.footer__nav
+                            .footer__nav-header.text-h3 навигация
+                            ul.footer__nav-list
+                                li 
+                                    a.footer__nav-link.text-body_50(href="unset") О нас
+                                li 
+                                    a.footer__nav-link.text-body_50(href="unset") Новости
+                                li 
+                                    a.footer__nav-link.text-body_50(href="unset") Служба поддержки
+                                li 
+                                    a.footer__nav-link.text-body_50(href="unset") Услуги
+
+                        nav.footer__nav
+                            .footer__nav-header.text-h3 о нас
+                            ul.footer__nav-list
+                                li 
+                                    a.footer__nav-link.text-body_50(href="unset") О сервисе
+                                li 
+                                    a.footer__nav-link.text-body_50(href="unset") Наша команда
+                                li 
+                                    a.footer__nav-link.text-body_50(href="unset") Вакансии
+                                li 
+                                    a.footer__nav-link.text-body_50(href="unset") Инвесторы
+
+                        nav.footer__nav
+                            .footer__nav-header.text-h3 Служба поддержки
+                            ul.footer__nav-list
+                                li 
+                                    a.footer__nav-link.text-body_50(href="unset") Соглашения
+                                li 
+                                    a.footer__nav-link.text-body_50(href="unset") Сообщества
+                                li 
+                                    a.footer__nav-link.text-body_50(href="unset") Связь с нами
+
+                        form.footer__subscribe
+                            .footer__subscribe-header.text-h3 Подписка
+                            .footer__subscribe-text.text-body Получайте специальные предложения и новости сервиса
+                            .footer__subscribe-input
+                                +text-field({id: "subscribe_field", placeholder: "Email", arrow: true})
+            .footer__copyright-outer 
+                .container
+                    .footer__copyright 
+                        .footer__copyright-text.text-body Copyright © 2018 Toxin отель. Все права защищены.
+                        .footer__copyright-icons 
+                            .footer__copyright-icon 
+                                img(src=require("../../assets/icons/social/twitter.svg"), alt="twitter")
+                            .footer__copyright-icon
+                                img(src=require("../../assets/icons/social/facebook.svg"), alt="facebook")
+                            .footer__copyright-icon
+                                img(src=require("../../assets/icons/social/instagram.svg"), alt="instagram")
+
+        else 
+            .footer__mobile
+                .footer__mobile-logo 
+                    img(src=require("../../assets/icons/main-logo.svg"), alt="logo")
+                .footer__mobile-text.text-body Copyright © 2018 Toxin отель. Все права защищены.
+                .footer__mobile-icons 
+                    .footer__mobile-icon 
+                        img(src=require("../../assets/icons/social/twitter.svg"), alt="twitter")
+                    .footer__mobile-icon
+                        img(src=require("../../assets/icons/social/facebook.svg"), alt="facebook")
+                    .footer__mobile-icon
+                        img(src=require("../../assets/icons/social/instagram.svg"), alt="instagram")
+

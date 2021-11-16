@@ -1,3 +1,4 @@
+include ../button/button.pug
 mixin date-dropdown({type: type, label: label, labelTo: labelTo, desc: desc, id: id})
     if (type == "split")
         .date-dropdown.date-dropdown_split(id = id data-date-type = "split") 
@@ -22,9 +23,9 @@ mixin date-dropdown({type: type, label: label, labelTo: labelTo, desc: desc, id:
                 .date-dropdown__calendar
                 .date-dropdown__btns
                     .date-dropdown__btns-reset
-                        button.text-h3 
+                        +button({type: "icon"})
                     .date-dropdown__btns-apply
-                        button.text-h3 Применить
+                        +button({label: "Применить", type: "icon"})
 
     if (type == "filter")
         .date-dropdown.date-dropdown_filter(id = id data-date-type = "filter") 
@@ -40,8 +41,8 @@ mixin date-dropdown({type: type, label: label, labelTo: labelTo, desc: desc, id:
                     .date-dropdown__calendar
                     .date-dropdown__btns
                         .date-dropdown__btns-reset
-                            button.text-h3 
+                            +button({type: "icon"})
                         .date-dropdown__btns-apply
-                            button.text-h3 Применить
+                            +button({label: "Применить", type: "icon"})
 
             

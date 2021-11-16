@@ -123,16 +123,6 @@
         margin-top: 17px;
         display: flex;
         justify-content: space-between;
-        button {
-            cursor: pointer;
-            padding: 0;
-            border: none;
-            background-color: inherit;
-            color: var(--purple-color);
-            &:hover {
-                color: var(--dark-shade-50);
-            }
-        }
     }
     .air-datepicker {
         border: none;

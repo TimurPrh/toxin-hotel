@@ -3,7 +3,7 @@ include ../input-button/input-button.pug
 include ../button/button.pug
 
 mixin registartion-card({header: header})
-    .registartion-card
+    form.registartion-card
         .registartion-card__header.text-h1= header
         .registartion-card__person 
             +text-field({id: "name_1", placeholder: "Имя"})

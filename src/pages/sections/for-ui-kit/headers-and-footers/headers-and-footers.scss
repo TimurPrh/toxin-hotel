@@ -1,0 +1,20 @@
+.headers-and-footers {
+    padding-top: 30px;
+    min-height: 1350px;
+    background: #F4F4F6;
+    &__title {
+        margin-left: 30px;
+    }
+    &__header {
+        margin-top: 62px;
+        &-user {
+            margin-top: 40px;
+        }
+    }
+    &__footer {
+        margin-top: 40px;
+        &-mobile {
+            margin-top: 40px;
+        }
+    }
+}

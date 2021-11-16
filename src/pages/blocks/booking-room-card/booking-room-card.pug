@@ -3,7 +3,7 @@ include ../dropdown/dropdown.pug
 include ../button/button.pug
 
 mixin booking-room-card({roomNumber: roomNumber, roomClass: roomClass, price: price})
-    .booking-room-card 
+    form.booking-room-card 
         .booking-room-card__header  
             .booking-room-card__room-number-wrapper.text-body_100 № 
                 span.booking-room-card__room-number.text-h1= roomNumber
