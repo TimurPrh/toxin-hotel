@@ -89,7 +89,10 @@ module.exports = {
     mode: 'development',
     entry: {
         'main': './src/index.js',
-        'ui-kit': './src/pages/ui-kit/ui-kit'
+        'ui-kit': './src/pages/ui-kit/ui-kit',
+        'landing-page': './src/pages/landing-page/landing-page',
+        'registration': './src/pages/registration/registration',
+        'login': './src/pages/login/login'
     },
     output: {
         filename: filename('js'),
@@ -116,6 +119,24 @@ module.exports = {
             template: 'src/pages/ui-kit/ui-kit.pug',
             filename: 'ui-kit/index.html'
         }),
+        new HTMLWebpackPlugin({
+            inject: true,
+            chunks: ['landing-page'],
+            template: 'src/pages/landing-page/landing-page.pug',
+            filename: 'landing-page/index.html'
+        }),
+        new HTMLWebpackPlugin({
+            inject: true,
+            chunks: ['registration'],
+            template: 'src/pages/registration/registration.pug',
+            filename: 'registration/index.html'
+        }),
+        new HTMLWebpackPlugin({
+            inject: true,
+            chunks: ['login'],
+            template: 'src/pages/login/login.pug',
+            filename: 'login/index.html'
+        }),
 
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
@@ -127,7 +148,8 @@ module.exports = {
             ]
         }),
         new MiniCssExtractPlugin({
-            filename: filename('css')
+            filename: filename('css'),
+            ignoreOrder: true
         })
     ],
     module: {

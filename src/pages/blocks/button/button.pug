@@ -1,15 +1,23 @@
-mixin button({label: label, type: type, width: width, height: height})
+mixin button({label: label, type: type, width: width, height: height, link: link})
     .button__wrapper
         if (type == "filed") 
-            button.button.text-h3.button_type_filed(style="width:" + width +"px;height:" + height + "px;")= label
+            if (link)
+                a(href= link) 
+                    button.button.text-h3.button_type_filed(style="width:" + width +"px;height:" + height + "px;" type="button")= label
+            else 
+                button.button.text-h3.button_type_filed(style="width:" + width +"px;height:" + height + "px;")= label
         if (type == "invert") 
-            if (size == "m")
-            .button__wrapper-invert(style="width:" + width +"px;height:" + height + "px;")
-                button.button.button_type_invert.text-h3= label
+            if (link)
+                a(href= link)
+                    .button__wrapper-invert(style="width:" + width +"px;height:" + height + "px;")
+                        button.button.button_type_invert.text-h3(type="button")= label 
+            else
+                .button__wrapper-invert(style="width:" + width +"px;height:" + height + "px;")
+                    button.button.button_type_invert.text-h3= label
         if (type == "icon")
-            button.button.text-h3.button_type_icon= label
+            button.button.text-h3.button_type_icon(type="button")= label
         if (type == "wide") 
-            button.button.text-h3.button_type_wide= label
+            button.button.text-h3.button_type_wide(type="button")= label
             .button__arrow
                 .button__arrow-line
                 .button__arrow-line

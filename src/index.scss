@@ -1,0 +1,14 @@
+@import './pages/base/montserrat.css';
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+

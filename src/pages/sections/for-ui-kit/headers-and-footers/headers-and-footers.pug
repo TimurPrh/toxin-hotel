@@ -6,9 +6,9 @@ section.headers-and-footers
         +kit-section-name({title: "Headers and Footers", logo: "logo-dark-grey.svg"})
     .headers-and-footers__header
         .headers-and-footers__header-guest
-            +header({login: false})
+            +header({login: false, activeLink: 1})
         .headers-and-footers__header-user
-            +header({login: true, name: "Юлий Цезарь"})
+            +header({login: true, activeLink: 1, name: "Юлий Цезарь"})
     .headers-and-footers__footer
         .headers-and-footers__footer-desctop
             +footer({mobile: false})

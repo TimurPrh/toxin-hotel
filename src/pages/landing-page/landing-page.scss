@@ -1,0 +1,61 @@
+@import '../base/montserrat';
+@import '../base/icons.css';
+@import '../base/mixins';
+@import '../base/texs-types';
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.container {
+    max-width: 1159px;
+    margin: 0 auto;
+}
+
+.landing-main {
+    height: 100vh;
+    background: center center/cover no-repeat;
+    background-image: url(../../assets/img/main-bg/bg_3.jpg);
+    background-image: url(../../assets/img/main-bg/bg_2.jpg);
+    background-image: url(../../assets/img/main-bg/bg_1.jpg);
+    animation: bg-images 30s cubic-bezier(0.8,-2.5,0.8,1) infinite;
+
+    display: flex;
+    flex-direction: column;
+    .container {
+        width: 100%;
+        flex: 1;
+    }
+    &__wrapper {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 70px 0 18px;
+    }
+    &__text {
+        margin: auto 0 0 auto;
+        bottom: 18px;
+        right: 0;
+        width: 300px;
+        text-align: right;
+    }
+}
+
+@keyframes bg-images {
+    0% {
+        background-image: url(../../assets/img/main-bg/bg_1.jpg);
+    }
+    33.3% {
+        background-image: url(../../assets/img/main-bg/bg_2.jpg);
+    }
+    66.6% {
+        background-image: url(../../assets/img/main-bg/bg_3.jpg);
+    }
+    100% {
+        background-image: url(../../assets/img/main-bg/bg_1.jpg);
+    }
+}

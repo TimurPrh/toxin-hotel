@@ -96,6 +96,10 @@ import 'air-datepicker/air-datepicker.css';
             $(elem).find('.date-dropdown__list').slideToggle();
         });
 
+        $(elem).find('.date-dropdown__btns-apply button').on('click', () => {
+            $(elem).find('.date-dropdown__list').slideUp();
+        });
+
         $(elem).find('.air-datepicker').appendTo(`#${id} .date-dropdown__calendar`);
         $(elem).find('.air-datepicker-nav--title').addClass('text-h2');
         $(elem).find('.air-datepicker-body--day-name').addClass('text-h3');

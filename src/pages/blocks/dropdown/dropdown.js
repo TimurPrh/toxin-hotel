@@ -21,18 +21,36 @@ import './dropdown.scss';
 
     function sumListItems() {
         dropdowGuests.each((i, item) => {
+            let inputArray = [];
             let sum = 0;
+            let guests = 0;
             $(item).find('.dropdown__item-count').each((j, count) => {
                 sum += parseInt($(count).html());
+                if (j < 2) {
+                    guests += parseInt($(count).html());
+                }
             });
+            let babies = parseInt($(item).find('.dropdown__item-count').eq(2).html());
             if (sum == 0) {
                 $(item).find('.dropdown__input input').val('Сколько гостей');
-            } else if (sum == 1) {
-                $(item).find('.dropdown__input input').val(`${sum} гость`);
-            } else if (sum < 5) {
-                $(item).find('.dropdown__input input').val(`${sum} гостя`);
-            } else if (sum >= 5) {
-                $(item).find('.dropdown__input input').val(`${sum} гостей`);
+            } else {
+                if (guests == 1) {
+                    inputArray.push(`${guests} гость`);
+                } else if (guests > 1 && guests < 5) {
+                    inputArray.push(`${guests} гостя`);
+                } else if (guests >= 5) {
+                    inputArray.push(`${guests} гостей`);
+                }
+
+                if (babies == 1) {
+                    inputArray.push(`${babies} младенец`);
+                } else if (babies > 1 && babies < 5) {
+                    inputArray.push(`${babies} младенца`);
+                } else if (babies >= 5) {
+                    inputArray.push(`${babies} младенцев`);
+                }
+
+                $(item).find('.dropdown__input input').val(inputArray.join(', '));
             }
 
             if (sum > 0) {
@@ -40,11 +58,18 @@ import './dropdown.scss';
             } else {
                 $(item).find('.dropdown__btns-reset button').html('');
             }
+
             $(item).find('.dropdown__btns-reset button').on('click', () => {
                 $(item).find('.dropdown__item-count').each((j, count) => {
                     $(count).html('0');
                     $(count).prev().removeClass('dropdown__item-minus_active');
                     sumListItems();
+                });
+            });
+
+            $(item).find('.dropdown__btns-apply button').on('click', () => {
+                $(item).find('.dropdown__item-count').each((j, count) => {
+                    $(item).find('.dropdown__list').slideUp();
                 });
             });
         });
@@ -99,6 +124,10 @@ import './dropdown.scss';
                     $(count).prev().removeClass('dropdown__item-minus_active');
                     sumListItems();
                 });
+            });
+
+            $(item).find('.dropdown__btns-apply button').on('click', () => {
+                $(item).find('.dropdown__list').slideUp();
             });
         });
     };

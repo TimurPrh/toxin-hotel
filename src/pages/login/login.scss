@@ -1,0 +1,50 @@
+@import '../base/montserrat';
+@import '../base/icons.css';
+@import '../base/mixins';
+@import '../base/texs-types';
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.container {
+    max-width: 1159px;
+    margin: 0 auto;
+}
+
+.landing-main {
+    height: 100vh;
+    background: center center/cover no-repeat;
+    background-image: url(../../assets/img/main-bg/bg_1.jpg);
+    background-image: url(../../assets/img/main-bg/bg_4.jpg);
+    animation: bg-images 20s cubic-bezier(0.8,-2.5,0.8,1) infinite;
+
+    display: flex;
+    flex-direction: column;
+    .container {
+        width: 100%;
+        flex: 1;
+    }
+    &__login {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@keyframes bg-images {
+    0% {
+        background-image: url(../../assets/img/main-bg/bg_4.jpg);
+    }
+    50% {
+        background-image: url(../../assets/img/main-bg/bg_1.jpg);
+    }
+    100% {
+        background-image: url(../../assets/img/main-bg/bg_4.jpg);
+    }
+}
