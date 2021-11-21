@@ -63,10 +63,24 @@ mixin footer({mobile: mobile})
                             .footer__copyright-icon
                                 img(src=require("../../assets/icons/social/instagram.svg"), alt="instagram")
 
+            .footer__true-mobile
+                .footer__mobile-logo 
+                    a(href="landing-page") 
+                        img(src=require("../../assets/icons/main-logo.svg"), alt="logo")
+                .footer__true-mobile-text.text-body Copyright © 2018 Toxin отель. Все права защищены.
+                .footer__true-mobile-icons 
+                    .footer__true-mobile-icon 
+                        img(src=require("../../assets/icons/social/twitter.svg"), alt="twitter")
+                    .footer__true-mobile-icon
+                        img(src=require("../../assets/icons/social/facebook.svg"), alt="facebook")
+                    .footer__true-mobile-icon
+                        img(src=require("../../assets/icons/social/instagram.svg"), alt="instagram")
+
         else 
             .footer__mobile
                 .footer__mobile-logo 
-                    img(src=require("../../assets/icons/main-logo.svg"), alt="logo")
+                    a(href="landing-page") 
+                        img(src=require("../../assets/icons/main-logo.svg"), alt="logo")
                 .footer__mobile-text.text-body Copyright © 2018 Toxin отель. Все права защищены.
                 .footer__mobile-icons 
                     .footer__mobile-icon 
