@@ -60,7 +60,7 @@
         position: absolute;
         z-index: 1;
         top: 100%;
-        width: 320px;
+        width: 100%;
         border-width: 1px 0 0 0;
         grid-column: 1 / 3;
         margin-top: 5px;
@@ -220,4 +220,29 @@
             background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
         }
     }
+}
+
+@media (max-width: 475px) {
+    .date-dropdown {
+        &__list {
+            padding: 15px 4px 18px 4px;
+        }
+        &__input {
+            input {
+                padding: 13px 5px;
+            }
+        }
+    }
+    .air-datepicker {
+        --adp-width: 100%;
+        --adp-day-cell-width: calc(100% / 7) !important;
+        --adp-day-cell-height: 40px !important;
+        &-body--day-names {
+            justify-content: center;
+        }
+        &-body--cells {
+            justify-content: center;
+        }
+    }
+    
 }

@@ -1,0 +1,137 @@
+@import '../base/montserrat';
+@import '../base/icons.css';
+@import '../base/mixins';
+@import '../base/texs-types';
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1160px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+}
+
+.search-room {
+    &__main {
+        background: #FFFFFF;
+        &-wrapper {
+            padding: 30px 0 70px;
+            display: grid;
+            grid-template-columns: 266px auto;
+            column-gap: 60px;
+        }
+    }
+    &__filter {
+        max-width: 425px;
+        min-height: 915px;
+        &-guests {
+            margin-top: 20px;
+        }
+        &-price {
+            margin-top: 30px;
+            &-text {
+                margin-top: 10px;
+                text-transform: unset;
+            }
+        }
+        &-house-rules {
+            margin-top: 30px;
+            .input-button {
+                margin-top: 10px;
+                &:nth-child(2) {
+                    margin-top: 16px;
+                }
+            }
+        }
+        &-availability {
+            margin-top: 30px;
+        }
+        &-comfort {
+            margin-top: 30px;
+        }
+        &-additional-comfort {
+            margin-top: 15px;
+        }
+        &-symbols {
+            display: none;
+        }
+    }
+    &__result {
+        
+        &-wrapper {
+            margin-top: 20px;
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(auto-fill, 270px);
+            column-gap: 12px;
+            row-gap: 20px;
+            grid-row: auto;
+        }
+        &-pagination {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .search-room {
+        &__main {
+            &-wrapper {
+                grid-template-columns: auto !important;
+            }
+        }
+        &__filter {
+            display: none;
+            margin-left: auto;
+            &-symbols {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+                font-size: 34px;
+                color: var(--dark-shade-75);
+            }
+        }
+        &__result {
+            text-align: center;
+            &-filter {
+                transform: translateY(-50%);
+                width: 30px;
+                margin-left: calc(100% - 30px);
+                span {
+                    display: block;
+                    height: 4px;
+                    margin: 0 auto;
+                    background-color: var(--dark-shade-75);
+                    margin-bottom: 4px;
+                    transition: 0.5s all;
+                    &:nth-child(1) {
+                        width: 100%;
+                    }
+                    &:nth-child(2) {
+                        width: 60%;
+                    }
+                    &:nth-child(3) {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}

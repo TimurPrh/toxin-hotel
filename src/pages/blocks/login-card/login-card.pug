@@ -3,7 +3,7 @@ include ../input-button/input-button.pug
 include ../button/button.pug
 
 mixin login-card({header: header})
-    Form.login-card
+    .login-card
         .login-card__header.text-h1= header
         .login-card__login
             +text-field({id: "email_2", placeholder: "Email"})

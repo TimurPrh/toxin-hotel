@@ -92,7 +92,8 @@ module.exports = {
         'ui-kit': './src/pages/ui-kit/ui-kit',
         'landing-page': './src/pages/landing-page/landing-page',
         'registration': './src/pages/registration/registration',
-        'login': './src/pages/login/login'
+        'login': './src/pages/login/login',
+        'search-room': './src/pages/search-room/search-room'
     },
     output: {
         filename: filename('js'),
@@ -136,6 +137,12 @@ module.exports = {
             chunks: ['login'],
             template: 'src/pages/login/login.pug',
             filename: 'login/index.html'
+        }),
+        new HTMLWebpackPlugin({
+            inject: true,
+            chunks: ['search-room'],
+            template: 'src/pages/search-room/search-room.pug',
+            filename: 'search-room/index.html'
         }),
 
         new CleanWebpackPlugin(),

@@ -1,4 +1,5 @@
 import * as $ from 'jquery';
+import '../rate-button/rate-button.js'
 import 'slick-carousel/slick/slick.min';
 import 'slick-carousel/slick/slick.scss';
 import './room-card.scss';

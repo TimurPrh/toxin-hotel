@@ -1,12 +1,13 @@
 .registartion-card {
-    width: 382px;
-    height: 646px;
+    max-width: 382px;
+    min-height: 646px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     padding: 40px 30px 30px 30px;
+    flex: 1;
     &__person {
         margin-top: 15px;
         &-surname {
