@@ -93,7 +93,8 @@ module.exports = {
         'landing-page': './src/pages/landing-page/landing-page',
         'registration': './src/pages/registration/registration',
         'login': './src/pages/login/login',
-        'search-room': './src/pages/search-room/search-room'
+        'search-room': './src/pages/search-room/search-room',
+        'room-details': './src/pages/room-details/room-details'
     },
     output: {
         filename: filename('js'),
@@ -143,6 +144,12 @@ module.exports = {
             chunks: ['search-room'],
             template: 'src/pages/search-room/search-room.pug',
             filename: 'search-room/index.html'
+        }),
+        new HTMLWebpackPlugin({
+            inject: true,
+            chunks: ['room-details'],
+            template: 'src/pages/room-details/room-details.pug',
+            filename: 'room-details/index.html'
         }),
 
         new CleanWebpackPlugin(),

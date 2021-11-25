@@ -6,7 +6,7 @@ include ../../../blocks/rate-button/rate-button.pug
 include ../../../blocks/expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../../blocks/rich-checkbox-buttons/rich-checkbox-buttons.pug
 include ../../../blocks/bullet-list/bullet-list.pug
-include ../../../blocks/room-details/room-details.pug
+include ../../../blocks/room-details-list/room-details-list.pug
 include ../../../blocks/feedback/feedback.pug
 include ../../../blocks/range-slider/range-slider.pug
 include ../../../blocks/button/button.pug
@@ -108,7 +108,7 @@ section.form-elements
 
                 .form-elements__pagination
                     .text-h3 pagination
-                    +pagination({})
+                    +pagination({pages: 15})
 
                 .form-elements__dropdown
                     +dropdown({id: "dropdown_2", type: "guests", label: "dropdown"})
@@ -117,8 +117,8 @@ section.form-elements
                     +bullet-list({header: "bullet list", labels: ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]})
 
             .form-elements__fourt-col
-                .form-elements__room-details
-                    +room-details({items: [["Комфорт", "Шумопоглощающие стены", "insert_emoticon-min.svg"], ["Удобство", "Окно в каждой из спален", "location_city-min.svg"]]})
+                .form-elements__room-details-list
+                    +room-details-list({items: [["Комфорт", "Шумопоглощающие стены", "insert_emoticon-min.svg"], ["Удобство", "Окно в каждой из спален", "location_city-min.svg"]]})
 
             .form-elements__fifth-col
                 .form-elements__feedback

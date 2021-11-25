@@ -7,7 +7,7 @@ import '../../../blocks/rate-button/rate-button.js';
 import '../../../blocks/expandable-checkbox-list/expandable-checkbox-list.js';
 import '../../../blocks/rich-checkbox-buttons/rich-checkbox-buttons.js';
 import '../../../blocks/bullet-list/bullet-list.js';
-import '../../../blocks/room-details/room-details.js';
+import '../../../blocks/room-details-list/room-details-list.js';
 import '../../../blocks/feedback/feedback.js'
 import '../../../blocks/range-slider/range-slider.js';
 import '../../../blocks/button/button.js';

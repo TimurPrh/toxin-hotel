@@ -1,3 +1,6 @@
+import '../dropdown/dropdown.js';
+import '../date-dropdown/date-dropdown.js';
+import '../button/button.js';
 import './booking-room-card.scss';
 
 const prices = document.querySelectorAll('.booking-room-card__item-price');
