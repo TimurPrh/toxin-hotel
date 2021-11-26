@@ -9,8 +9,6 @@ import './feedback-diagram.scss';
     const feedbackTotalNumberField = document.querySelector('.js-feedback-diagram__text-number');
     const feedbackTotalNumberText = document.querySelector('.js-feedback-diagram__text-label');
 
-    console.log(document.querySelector('.feedback-diagram').dataset.feedback);
-
     const feedbackCount = JSON.parse(document.querySelector('.feedback-diagram').dataset.feedback);
     let feedbackTotalNumber = 0;
     let notZeroFeedbackCount = 0;
