@@ -1,68 +1,66 @@
 include ../button/button.pug
 mixin dropdown({type: type, label: label, desc: desc, id: id})
     if (type == "guests") 
-        .dropdown.dropdown_guests
+        .dropdown.js-dropdown.dropdown_guests.js-dropdown_guests
 
             .dropdown__header.text-h3= label
             .dropdown__desc.text-h3_50= desc
-            .dropdown__wrapper 
-                .dropdown__input
-                    .dropdown__arrow
+            .dropdown__wrapper.js-dropdown__wrapper 
+                .dropdown__input.js-dropdown__input
+                    .dropdown__arrow.js-dropdown__arrow
                         .dropdown__arrow-line 
                     input.text-body_25(placeholder=placeholder value=text readonly)
-                .dropdown__list 
+                .dropdown__list.js-dropdown__list 
                     .dropdown__item 
                         .dropdown__item-title.text-h3 взрослые 
                         .dropdown__item-counter 
-                            .dropdown__item-minus 
-                            .dropdown__item-count.text-h3 0
-                            .dropdown__item-plus
+                            .dropdown__item-minus.js-dropdown__item-minus 
+                            .dropdown__item-count.js-dropdown__item-count.text-h3 0
+                            .dropdown__item-plus.js-dropdown__item-plus
                     .dropdown__item 
                         .dropdown__item-title.text-h3 дети 
                         .dropdown__item-counter 
-                            .dropdown__item-minus 
-                            .dropdown__item-count.text-h3 0 
-                            .dropdown__item-plus
+                            .dropdown__item-minus.js-dropdown__item-minus 
+                            .dropdown__item-count.js-dropdown__item-count.text-h3 0 
+                            .dropdown__item-plus.js-dropdown__item-plus
                     .dropdown__item 
                         .dropdown__item-title.text-h3 младенцы 
                         .dropdown__item-counter 
-                            .dropdown__item-minus 
-                                .dropdown__item-minus-line 
-                            .dropdown__item-count.text-h3 0 
-                            .dropdown__item-plus
+                            .dropdown__item-minus.js-dropdown__item-minus 
+                            .dropdown__item-count.js-dropdown__item-count.text-h3 0 
+                            .dropdown__item-plus.js-dropdown__item-plus
                     .dropdown__btns
-                        .dropdown__btns-reset
+                        .dropdown__btns-reset.js-dropdown__btns-reset
                             +button({type: "icon"})
-                        .dropdown__btns-apply
+                        .dropdown__btns-apply.js-dropdown__btns-apply
                             +button({label: "Применить", type: "icon"})
          
     else if (type == "room")
-        .dropdown.dropdown_room
+        .dropdown.js-dropdown.dropdown_room.js-dropdown_room
 
             .dropdown__header.text-h3= label
             .dropdown__desc.text-h3_50= desc
-            .dropdown__wrapper 
-                .dropdown__input
-                    .dropdown__arrow
+            .dropdown__wrapper.js-dropdown__wrapper 
+                .dropdown__input.js-dropdown__input
+                    .dropdown__arrow.js-dropdown__arrow
                         .dropdown__arrow-line 
                     input.text-body_25(placeholder=placeholder value=text readonly)
-                .dropdown__list 
+                .dropdown__list.js-dropdown__list 
                     .dropdown__item 
                         .dropdown__item-title.text-h3 спальни 
                         .dropdown__item-counter 
-                            .dropdown__item-minus 
-                            .dropdown__item-count.text-h3 0
-                            .dropdown__item-plus
+                            .dropdown__item-minus.js-dropdown__item-minus 
+                            .dropdown__item-count.js-dropdown__item-count.text-h3 0
+                            .dropdown__item-plus.js-dropdown__item-plus
                     .dropdown__item 
                         .dropdown__item-title.text-h3 кровати
                         .dropdown__item-counter 
-                            .dropdown__item-minus 
-                            .dropdown__item-count.text-h3 0 
-                            .dropdown__item-plus
+                            .dropdown__item-minus.js-dropdown__item-minus 
+                            .dropdown__item-count.js-dropdown__item-count.text-h3 0 
+                            .dropdown__item-plus.js-dropdown__item-plus
                     .dropdown__item 
                         .dropdown__item-title.text-h3 ванные комнаты 
                         .dropdown__item-counter 
-                            .dropdown__item-minus 
-                                .dropdown__item-minus-line 
-                            .dropdown__item-count.text-h3 0 
-                            .dropdown__item-plus
+                            .dropdown__item-minus.js-dropdown__item-minus 
+                            .dropdown__item-count.js-dropdown__item-count.text-h3 0 
+                            .dropdown__item-plus.js-dropdown__item-plus

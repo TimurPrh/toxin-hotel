@@ -1,37 +1,7 @@
 @import '../base/montserrat';
-@import '../base/icons.css';
-@import '../base/mixins';
 @import '../base/texs-types';
-
-* {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-}
-
-body {
-    margin: 0;
-}
-
-.container {
-    max-width: 1160px;
-    margin: 0 auto;
-}
-
-@media (max-width: 1160px) {
-    .container {
-        max-width: 100%;
-        padding: 0 30px;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 485px) {
-    .container {
-        padding: 0 10px;
-    }
-}
+@import '../base/mixins';
+@include page-init;
 
 .room-details {
     background: #FFFFFF;

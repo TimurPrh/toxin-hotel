@@ -3,18 +3,18 @@ import 'jquery-mask-plugin';
 import './dropdown.scss';
 
 (function dropdown() {
-    const counter = $('.dropdown__item-count');
-    const dropdown = $('.dropdown');
-    const dropdowGuests = $('.dropdown_guests');
-    const dropdowRoom = $('.dropdown_room');
+    const counter = $('.js-dropdown__item-count');
+    const dropdown = $('.js-dropdown');
+    const dropdowGuests = $('.js-dropdown_guests');
+    const dropdowRoom = $('.js-dropdown_room');
 
     dropdown.each((i, item) => {
-        $(item).find('.dropdown__arrow').on('click', () => {
-            $(item).find('.dropdown__list').slideToggle();
-            if (item.querySelector('.dropdown__wrapper').style.borderRadius != '4px 4px 0px 0px') {
-                item.querySelector('.dropdown__wrapper').style.borderRadius = '4px 4px 0px 0px';
+        $(item).find('.js-dropdown__arrow').on('click', () => {
+            $(item).find('.js-dropdown__list').slideToggle();
+            if (item.querySelector('.js-dropdown__wrapper').style.borderRadius != '4px 4px 0px 0px') {
+                item.querySelector('.js-dropdown__wrapper').style.borderRadius = '4px 4px 0px 0px';
             } else {
-                item.querySelector('.dropdown__wrapper').style.borderRadius = '4px';
+                item.querySelector('.js-dropdown__wrapper').style.borderRadius = '4px';
             }
         });
     });
@@ -24,15 +24,15 @@ import './dropdown.scss';
             let inputArray = [];
             let sum = 0;
             let guests = 0;
-            $(item).find('.dropdown__item-count').each((j, count) => {
+            $(item).find('.js-dropdown__item-count').each((j, count) => {
                 sum += parseInt($(count).html());
                 if (j < 2) {
                     guests += parseInt($(count).html());
                 }
             });
-            let babies = parseInt($(item).find('.dropdown__item-count').eq(2).html());
+            let babies = parseInt($(item).find('.js-dropdown__item-count').eq(2).html());
             if (sum == 0) {
-                $(item).find('.dropdown__input input').val('Сколько гостей');
+                $(item).find('.js-dropdown__input input').val('Сколько гостей');
             } else {
                 if (guests == 1) {
                     inputArray.push(`${guests} гость`);
@@ -50,41 +50,42 @@ import './dropdown.scss';
                     inputArray.push(`${babies} младенцев`);
                 }
 
-                $(item).find('.dropdown__input input').val(inputArray.join(', '));
+                $(item).find('.js-dropdown__input input').val(inputArray.join(', '));
             }
 
             if (sum > 0) {
-                $(item).find('.dropdown__btns-reset button').html('очистить');
+                $(item).find('.js-dropdown__btns-reset button').html('очистить');
             } else {
-                $(item).find('.dropdown__btns-reset button').html('');
+                $(item).find('.js-dropdown__btns-reset button').html('');
             }
 
-            $(item).find('.dropdown__btns-reset button').on('click', () => {
-                $(item).find('.dropdown__item-count').each((j, count) => {
+            $(item).find('.js-dropdown__btns-reset button').on('click', () => {
+                $(item).find('.js-dropdown__item-count').each((j, count) => {
                     $(count).html('0');
                     $(count).prev().removeClass('dropdown__item-minus_active');
                     sumListItems();
                 });
             });
 
-            $(item).find('.dropdown__btns-apply button').on('click', () => {
-                $(item).find('.dropdown__item-count').each((j, count) => {
-                    $(item).find('.dropdown__list').slideUp();
+            $(item).find('.js-dropdown__btns-apply button').on('click', () => {
+                $(item).find('.js-dropdown__item-count').each((j, count) => {
+                    item.querySelector('.js-dropdown__wrapper').style.borderRadius = '4px';
+                    $(item).find('.js-dropdown__list').slideUp();
                 });
             });
         });
         dropdowRoom.each((i, item) => {
-            let bedrooms = parseInt($(item).find('.dropdown__item-count').eq(0).html());
-            let beds = parseInt($(item).find('.dropdown__item-count').eq(1).html());
-            let bathrooms = parseInt($(item).find('.dropdown__item-count').eq(2).html());
+            let bedrooms = parseInt($(item).find('.js-dropdown__item-count').eq(0).html());
+            let beds = parseInt($(item).find('.js-dropdown__item-count').eq(1).html());
+            let bathrooms = parseInt($(item).find('.js-dropdown__item-count').eq(2).html());
             let inputArray = [];
 
             let sum = 0;
-            $(item).find('.dropdown__item-count').each((j, count) => {
+            $(item).find('.js-dropdown__item-count').each((j, count) => {
                 sum += parseInt($(count).html());
             });
             if (sum == 0) {
-                $(item).find('.dropdown__input input').val('Сколько спален');
+                $(item).find('.js-dropdown__input input').val('Сколько спален');
             } else {
                 if (bedrooms == 1) {
                     inputArray.push(`${bedrooms} спальня`);
@@ -110,37 +111,37 @@ import './dropdown.scss';
                     inputArray.push(`${bathrooms} ванных`);
                 }
                 
-                $(item).find('.dropdown__input input').val(inputArray.join(', ').concat('...'));
+                $(item).find('.js-dropdown__input input').val(inputArray.join(', ').concat('...'));
             }
 
             if (sum > 0) {
-                $(item).find('.dropdown__btns-reset button').html('очистить');
+                $(item).find('.js-dropdown__btns-reset button').html('очистить');
             } else {
-                $(item).find('.dropdown__btns-reset button').html('');
+                $(item).find('.js-dropdown__btns-reset button').html('');
             }
-            $(item).find('.dropdown__btns-reset button').on('click', () => {
-                $(item).find('.dropdown__item-count').each((j, count) => {
+            $(item).find('.js-dropdown__btns-reset button').on('click', () => {
+                $(item).find('.js-dropdown__item-count').each((j, count) => {
                     $(count).html('0');
                     $(count).prev().removeClass('dropdown__item-minus_active');
                     sumListItems();
                 });
             });
 
-            $(item).find('.dropdown__btns-apply button').on('click', () => {
-                $(item).find('.dropdown__list').slideUp();
+            $(item).find('.js-dropdown__btns-apply button').on('click', () => {
+                $(item).find('.js-dropdown__list').slideUp();
             });
         });
     };
     sumListItems();
 
-    $('.dropdown__item-plus').addClass('dropdown__item-plus_active');
+    $('.js-dropdown__item-plus').addClass('dropdown__item-plus_active');
     counter.each(i => {
         if (counter.eq(i).html() > 0) {
-            $('.dropdown__item-minus').eq(i).addClass('dropdown__item-minus_active');
+            $('.js-dropdown__item-minus').eq(i).addClass('dropdown__item-minus_active');
         }
     });
 
-    $('.dropdown__item-plus').each((i, item) => {
+    $('.js-dropdown__item-plus').each((i, item) => {
         $(item).on('click', ()=> {
             $(item).prev().html(parseInt( $(item).prev().html() ) + 1);
             $(item).prev().prev().addClass('dropdown__item-minus_active');
@@ -148,7 +149,7 @@ import './dropdown.scss';
         });
     });
 
-    $('.dropdown__item-minus').each((i, item) => {
+    $('.js-dropdown__item-minus').each((i, item) => {
         $(item).on('click', ()=> {
             if ($(item).next().html() > 0) {
                 $(item).next().html(parseInt( $(item).next().html() ) - 1);
