@@ -12,11 +12,11 @@ import '../blocks/pagination/pagination.js';
 import './search-room.scss';
 
 
-document.querySelector('.search-room__filter-symbols-reset').addEventListener('click', toggleContent);
-document.querySelector('.search-room__filter-symbols-apply').addEventListener('click', toggleContent);
-document.querySelector('.search-room__result-filter').addEventListener('click', toggleContent);
+document.querySelector('.js-search-room__filter-symbols-reset').addEventListener('click', toggleContent);
+document.querySelector('.js-search-room__filter-symbols-apply').addEventListener('click', toggleContent);
+document.querySelector('.js-search-room__result-filter').addEventListener('click', toggleContent);
 
 function toggleContent() {
-    $('.search-room__result').fadeToggle();
-    $('.search-room__filter').fadeToggle();
+    $('.js-search-room__result').fadeToggle();
+    $('.js-search-room__filter').fadeToggle();
 }

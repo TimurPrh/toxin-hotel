@@ -5,6 +5,9 @@
     column-gap: 20px;
     &_filter {
         grid-template-columns: auto auto;
+        .date-dropdown__list {
+            width: 320px;
+        }
     }
     &__desc {
         justify-self: end;
@@ -232,6 +235,7 @@
                 padding: 13px 5px;
             }
         }
+        
     }
     .air-datepicker {
         --adp-width: 100%;
@@ -244,5 +248,12 @@
             justify-content: center;
         }
     }
-    
+}
+
+@media (max-width: 340px) {
+    .date-dropdown_filter {
+        .date-dropdown__list {
+            width: 100%;
+        }
+    }
 }

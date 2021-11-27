@@ -5,11 +5,11 @@ import './booking-room-card.scss';
 
 window.addEventListener("load", function(event) {
     (function bookingRoomCard() {
-        const prices = document.querySelectorAll('.booking-room-card__item-price');
-        const descriptions = document.querySelectorAll('.booking-room-card__item-desc');
-        const sumText = document.querySelector('.booking-room-card__sum-text');
-        const sumNumber = document.querySelector('.booking-room-card__sum-number');
-        const sumLine = document.querySelector('.booking-room-card__sum-line');
+        const prices = document.querySelectorAll('.js-booking-room-card__item-price');
+        const descriptions = document.querySelectorAll('.js-booking-room-card__item-desc');
+        const sumText = document.querySelector('.js-booking-room-card__sum-text');
+        const sumNumber = document.querySelector('.js-booking-room-card__sum-number');
+        const sumLine = document.querySelector('.js-booking-room-card__sum-line');
     
         let sum = 0,
             discount = 0,

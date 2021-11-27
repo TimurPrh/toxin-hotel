@@ -1,9 +1,9 @@
 import './rate-button.scss';
 
-document.querySelectorAll('.rate-button__star').forEach(item => {
+document.querySelectorAll('.js-rate-button__star').forEach(item => {
     item.addEventListener('click', (e) => {
         let setStarsFlag = true;
-        let star = e.target.closest('.rate-button__star');
+        let star = e.target.closest('.js-rate-button__star');
 
         for (let item of star.parentElement.children) {
             if (item.classList.contains('rate-button__star_active')) {

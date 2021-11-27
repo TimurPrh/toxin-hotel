@@ -1,7 +1,7 @@
 import './button.scss';
-const wideButton = document.querySelectorAll('.button_type_wide');
-const invertButton = document.querySelectorAll('.button_type_invert');
-const wideButtonArrow = document.querySelectorAll('.button__wrapper .button__arrow');
+const wideButton = document.querySelectorAll('.js-button_type_wide');
+const invertButton = document.querySelectorAll('.js-button_type_invert');
+const wideButtonArrow = document.querySelectorAll('.js-button__wrapper .js-button__arrow');
 wideButtonArrow.forEach(arrow => {
     arrow.addEventListener('mouseover', (e) => {
         arrow.previousElementSibling.style.opacity = 0.5;

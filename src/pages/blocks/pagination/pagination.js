@@ -1,6 +1,6 @@
 import './pagination.scss';
-const totalPages = (document.querySelector('.pagination').dataset.pages);
-const element = document.querySelector(".pagination ul");
+const totalPages = (document.querySelector('.js-pagination').dataset.pages);
+const element = document.querySelector(".js-pagination ul");
 let page = 1;
 
 

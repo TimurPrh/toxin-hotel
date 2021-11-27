@@ -12,7 +12,7 @@ import '../blocks/feedback-diagram/feedback-diagram.js';
 import './room-details.scss';
 
 (function roomDetails() {
-    const $carousel = $('.room-details__photos');
+    const $carousel = $('.js-room-details__photos');
 
     const sliderSettings = {
         arrows: false,

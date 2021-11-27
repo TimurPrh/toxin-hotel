@@ -23,10 +23,10 @@ html(lang="en")
         section.search-room__main
             .container
                 .search-room__main-wrapper
-                    .search-room__filter
+                    .search-room__filter.js-search-room__filter
                         .search-room__filter-symbols 
-                            .search-room__filter-symbols-reset &#10006;
-                            .search-room__filter-symbols-apply &#10004;
+                            .search-room__filter-symbols-reset.js-search-room__filter-symbols-reset &#10006;
+                            .search-room__filter-symbols-apply.js-search-room__filter-symbols-apply &#10004;
                         .search-room__filter-date
                             +date-dropdown({id: "filter-date", type: "filter", label: "даты пребывания в отеле"})
                         .search-room__filter-guests
@@ -46,8 +46,8 @@ html(lang="en")
                         .search-room__filter-additional-comfort
                             +expandable-checkbox-list({name: "filter-additional-comfort", header: "дополнительные удобства", labels: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
                         
-                    .search-room__result
-                        .search-room__result-filter
+                    .search-room__result.js-search-room__result
+                        .search-room__result-filter.js-search-room__result-filter
                             span 
                             span 
                             span 

@@ -3,7 +3,7 @@ include ../button/button.pug
 mixin header({login: login, name: name, activeLink: activeLink})
     .header 
         .container 
-            .header__wrapper
+            .header__wrapper.js-header__wrapper
                 .header__logo
                     a(href="landing-page") 
                         img(src=require("../../assets/icons/main-logo.svg"), alt="logo")
@@ -49,7 +49,7 @@ mixin header({login: login, name: name, activeLink: activeLink})
                         .header__buttons-register
                             +button({label: "зарегистрироваться", type: "filed", width: "196", height: "34", link: "registration"})
 
-            .header__hamburger 
+            .header__hamburger.js-header__hamburger 
                 span 
                 span 
                 span 

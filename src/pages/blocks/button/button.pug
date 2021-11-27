@@ -1,5 +1,5 @@
 mixin button({label: label, type: type, width: width, height: height, link: link})
-    .button__wrapper
+    .button__wrapper.js-button__wrapper
         if (type == "filed") 
             if (link)
                 a(href= link) 
@@ -10,15 +10,15 @@ mixin button({label: label, type: type, width: width, height: height, link: link
             if (link)
                 a(href= link)
                     .button__wrapper-invert(style="width:" + width +"px;height:" + height + "px;")
-                        button.button.button_type_invert.text-h3(type="button")= label 
+                        button.button.button_type_invert.js-button_type_invert.text-h3(type="button")= label 
             else
                 .button__wrapper-invert(style="width:" + width +"px;height:" + height + "px;")
-                    button.button.button_type_invert.text-h3= label
+                    button.button.button_type_invert.js-button_type_invert.text-h3= label
         if (type == "icon")
             button.button.text-h3.button_type_icon(type="button")= label
         if (type == "wide") 
-            button.button.text-h3.button_type_wide(type="button")= label
-            .button__arrow
+            button.button.text-h3.button_type_wide.js-button_type_wide(type="button")= label
+            .button__arrow.js-button__arrow
                 .button__arrow-line
                 .button__arrow-line
         

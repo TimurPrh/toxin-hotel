@@ -20,19 +20,19 @@ mixin booking-room-card({roomNumber: roomNumber, roomClass: roomClass, price: pr
 
         .booking-room-card__calculate
             .booking-room-card__item
-                .booking-room-card__item-desc.text-body 9&nbsp;990₽ х 4 суток
-                .booking-room-card__item-price.text-body 39&nbsp;960₽
+                .booking-room-card__item-desc.js-booking-room-card__item-desc.text-body 9&nbsp;990₽ х 4 суток
+                .booking-room-card__item-price.js-booking-room-card__item-price.text-body 39&nbsp;960₽
             .booking-room-card__item
                 .booking-room-card__item-desc.booking-room-card__item-desc_with-info.text-body Сбор за услуги: скидка 2&nbsp;179₽
-                .booking-room-card__item-price.text-body 0₽
+                .booking-room-card__item-price.js-booking-room-card__item-price.text-body 0₽
             .booking-room-card__item
                 .booking-room-card__item-desc.booking-room-card__item-desc_with-info.text-body Сбор за дополнительные услуги
-                .booking-room-card__item-price.text-body 300₽
+                .booking-room-card__item-price.js-booking-room-card__item-price.text-body 300₽
         
         .booking-room-card__sum  
-            .booking-room-card__sum-text.text-h2 Итого
-            .booking-room-card__sum-line
-            .booking-room-card__sum-number.text-h2
+            .booking-room-card__sum-text.js-booking-room-card__sum-text.text-h2 Итого
+            .booking-room-card__sum-line.js-booking-room-card__sum-line
+            .booking-room-card__sum-number.js-booking-room-card__sum-number.text-h2
 
         .booking-room-card__button  
             +button({label: "забронировать", type: "wide"})

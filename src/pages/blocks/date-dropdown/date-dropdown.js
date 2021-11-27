@@ -4,9 +4,9 @@ import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 
 (function dropdown() {
-    const dropdownDateSplit = $('.date-dropdown_split');
+    const dropdownDateSplit = $('.js-date-dropdown_split');
     let dropdownDateSplitId = [];
-    const dropdownDateFilter = $('.date-dropdown_filter');
+    const dropdownDateFilter = $('.js-date-dropdown_filter');
     let dropdownDateFilterId = [];
 
     $(dropdownDateSplit).each((i, item) => {
@@ -20,7 +20,7 @@ import 'air-datepicker/air-datepicker.css';
     let airDatepickerFilter = [];
 
     $(dropdownDateSplit).each((i, item) => {
-        airDatepickerSplit.push(new AirDatepicker(`#${dropdownDateSplitId[i]} .date-dropdown__calendar-input`, {
+        airDatepickerSplit.push(new AirDatepicker(`#${dropdownDateSplitId[i]} .js-date-dropdown__calendar-input`, {
                 inline: true,
                 minDate: new Date(),
                 navTitles: {
@@ -71,10 +71,10 @@ import 'air-datepicker/air-datepicker.css';
     });
 
     function renderResetButton(elem) {
-        const inputVal = $(elem).find('.date-dropdown__calendar-input').val();
+        const inputVal = $(elem).find('.js-date-dropdown__calendar-input').val();
         const comma = inputVal.indexOf(',');
 
-        if ($(elem).hasClass('date-dropdown_split')) {
+        if ($(elem).hasClass('js-date-dropdown_split')) {
             if (comma == -1) {
                 $(elem).find('[data-date="from"]').val(inputVal);
                 $(elem).find('[data-date="to"]').val('');
@@ -85,22 +85,22 @@ import 'air-datepicker/air-datepicker.css';
         }
 
         if ($(elem).find('input').val()) {
-            $(elem).find('.date-dropdown__btns-reset button').html('очистить');
+            $(elem).find('.js-date-dropdown__btns-reset button').html('очистить');
         } else {
-            $(elem).find('.date-dropdown__btns-reset button').html('');
+            $(elem).find('.js-date-dropdown__btns-reset button').html('');
         }
     }
 
     function dropdownDateInit(elem, datePicker, id) {
-        $(elem).find('.date-dropdown__arrow').on('click', () => {
-            $(elem).find('.date-dropdown__list').slideToggle();
+        $(elem).find('.js-date-dropdown__arrow').on('click', () => {
+            $(elem).find('.js-date-dropdown__list').slideToggle();
         });
 
-        $(elem).find('.date-dropdown__btns-apply button').on('click', () => {
-            $(elem).find('.date-dropdown__list').slideUp();
+        $(elem).find('.js-date-dropdown__btns-apply button').on('click', () => {
+            $(elem).find('.js-date-dropdown__list').slideUp();
         });
 
-        $(elem).find('.air-datepicker').appendTo(`#${id} .date-dropdown__calendar`);
+        $(elem).find('.air-datepicker').appendTo(`#${id} .js-date-dropdown__calendar`);
         $(elem).find('.air-datepicker-nav--title').addClass('text-h2');
         $(elem).find('.air-datepicker-body--day-name').addClass('text-h3');
         $(elem).find('.air-datepicker-cell').addClass('text-h3_50');
@@ -108,8 +108,8 @@ import 'air-datepicker/air-datepicker.css';
 
         $(elem).find('input').on('input', () => renderResetButton(elem));
 
-        $(elem).find('.date-dropdown__btns-reset button').on('click', () => {
-            $(elem).find('.date-dropdown__calendar-input').val('');
+        $(elem).find('.js-date-dropdown__btns-reset button').on('click', () => {
+            $(elem).find('.js-date-dropdown__calendar-input').val('');
             renderResetButton(elem);
             datePicker.clear();
         });
