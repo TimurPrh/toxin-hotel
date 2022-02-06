@@ -1,2 +1,2 @@
-import '../input-button/input-button.js';
-import './feedback.scss'
+import '../input-button/input-button';
+import './feedback.scss';

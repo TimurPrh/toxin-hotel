@@ -1,11 +1,17 @@
 import './rate-button.scss';
 
-document.querySelectorAll('.js-rate-button__star').forEach(item => {
-    item.addEventListener('click', (e) => {
+document.querySelectorAll('.js-rate-button__star').forEach((starElement) => {
+    const handleStarClick = (e) => {
+        function setStars(elem) {
+            if (!elem.classList.contains('rate-button__star_active')) {
+                elem.classList.add('rate-button__star_active');
+            }
+        }
+
         let setStarsFlag = true;
         let star = e.target.closest('.js-rate-button__star');
 
-        for (let item of star.parentElement.children) {
+        for (const item of star.parentElement.children) {
             if (item.classList.contains('rate-button__star_active')) {
                 setStarsFlag = false;
             }
@@ -18,15 +24,11 @@ document.querySelectorAll('.js-rate-button__star').forEach(item => {
                 setStars(star);
             }
         } else {
-            for (let item of star.parentElement.children) {
+            for (const item of star.parentElement.children) {
                 item.classList.remove('rate-button__star_active');
             }
         }
+    };
 
-        function setStars(elem) {
-            if (!elem.classList.contains('rate-button__star_active')) {
-                elem.classList.add('rate-button__star_active');
-            }
-        }
-    });
+    starElement.addEventListener('click', handleStarClick);
 });

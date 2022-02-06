@@ -1,10 +1,8 @@
 import './pagination.scss';
-const totalPages = (document.querySelector('.js-pagination').dataset.pages);
+
+const totalPagesFromDataset = (document.querySelector('.js-pagination').dataset.pages);
 const element = document.querySelector(".js-pagination ul");
-let page = 1;
-
-
-createPagination(totalPages, page);
+const initialPage = 1;
 
 function createPagination(totalPages, page) {
     let liTag = '';
@@ -21,27 +19,26 @@ function createPagination(totalPages, page) {
         }
     }
 
-    if (page == totalPages || page == totalPages - 1) {
-        beforePage = beforePage - 1;
+    if (page === totalPages || page === totalPages - 1) {
+        beforePage -= 1;
     }
 
-    if (page == 1 || page == 2) {
-        afterPage = afterPage + 1;
+    if (page === 1 || page === 2) {
+        afterPage += 1;
     }
 
-    for (var plength = beforePage; plength <= afterPage; plength++) {
-        if (plength > totalPages) {
-            continue;
+    for (let pageLength = beforePage; pageLength <= afterPage; pageLength++) {
+        if (pageLength <= totalPages) {
+            if (pageLength === 0) {
+                pageLength += 1;
+            }
+            if (page === pageLength) {
+                active = "pagination__item_active";
+            } else {
+                active = "";
+            }
+            liTag += `<li class="text-h3_50 pagination__item ${active}" onclick="createPagination(${totalPages}, ${pageLength})">${pageLength}</li>`;
         }
-        if (plength == 0) {
-            plength = plength + 1;
-        }
-        if (page == plength) {
-            active = "pagination__item_active";
-        } else {
-            active = "";
-        }
-        liTag += `<li class="text-h3_50 pagination__item ${active}" onclick="createPagination(${totalPages}, ${plength})">${plength}</li>`;
     }
 
     if (page < totalPages - 1) {
@@ -56,5 +53,7 @@ function createPagination(totalPages, page) {
     element.innerHTML = liTag;
     return liTag;
 }
+
+createPagination(totalPagesFromDataset, initialPage);
 
 window.createPagination = createPagination;

@@ -12,33 +12,36 @@ import './feedback-diagram.scss';
     const feedbackCount = JSON.parse(document.querySelector('.feedback-diagram').dataset.feedback);
     let feedbackTotalNumber = 0;
     let notZeroFeedbackCount = 0;
-    for (let item in feedbackCount) {
-        if (parseInt(feedbackCount[item])) {
-            notZeroFeedbackCount++;
+
+    // eslint-disable-next-line no-restricted-syntax
+    for (const item in feedbackCount) {
+        if (Object.prototype.hasOwnProperty.call(feedbackCount, item)) {
+            if (parseInt(feedbackCount[item], 10)) {
+                notZeroFeedbackCount++;
+            }
+            feedbackTotalNumber += parseInt(feedbackCount[item], 10);
         }
-        feedbackTotalNumber += parseInt(feedbackCount[item]);
     }
 
-    let rate1DashArray = 0,
-        rate2DashArray = 0,
-        rate3DashArray = 0,
-        rate4DashArray = 0;
+    let rate1DashArray = 0;
+    let rate2DashArray = 0;
+    let rate3DashArray = 0;
+    let rate4DashArray = 0;
 
-    let rate1DashOffset,
-        rate2DashOffset,
-        rate3DashOffset,
-        rate4DashOffset;
+    const rate1DashOffset = 24.75;
+    let rate2DashOffset;
+    let rate3DashOffset;
+    let rate4DashOffset;
 
-    rate1DashOffset = 24.75;
     if (feedbackCount.disappointed > 0) {
-        rate1DashArray = 100 * feedbackCount.disappointed / feedbackTotalNumber - 0.5;
+        rate1DashArray = (100 * feedbackCount.disappointed) / feedbackTotalNumber - 0.5;
         disappointedSegment.setAttribute("stroke-width", "1");
-        if (notZeroFeedbackCount == 1) {
+        if (notZeroFeedbackCount === 1) {
             disappointedSegment.setAttribute("stroke-dasharray", `100 0`);
         } else {
             disappointedSegment.setAttribute("stroke-dasharray", `${rate1DashArray} ${100 - rate1DashArray}`);
         }
-        
+
         disappointedSegment.setAttribute("stroke-dashoffset", `${rate1DashOffset}`);
         rate1DashArray += 0.5;
     }
@@ -48,14 +51,14 @@ import './feedback-diagram.scss';
         rate2DashOffset = 100 + rate2DashOffset;
     }
     if (feedbackCount.acceptable > 0) {
-        rate2DashArray = 100 * feedbackCount.acceptable / feedbackTotalNumber - 0.5;
+        rate2DashArray = (100 * feedbackCount.acceptable) / feedbackTotalNumber - 0.5;
         acceptableSegment.setAttribute("stroke-width", "1");
-        if (notZeroFeedbackCount == 1) {
+        if (notZeroFeedbackCount === 1) {
             acceptableSegment.setAttribute("stroke-dasharray", `100 0`);
         } else {
             acceptableSegment.setAttribute("stroke-dasharray", `${rate2DashArray} ${100 - rate2DashArray}`);
         }
-        
+
         acceptableSegment.setAttribute("stroke-dashoffset", `${rate2DashOffset}`);
         rate2DashArray += 0.5;
     }
@@ -65,9 +68,9 @@ import './feedback-diagram.scss';
         rate3DashOffset = 100 + rate3DashOffset;
     }
     if (feedbackCount.good > 0) {
-        rate3DashArray = 100 * feedbackCount.good / feedbackTotalNumber - 0.5;
+        rate3DashArray = (100 * feedbackCount.good) / feedbackTotalNumber - 0.5;
         goodSegment.setAttribute("stroke-width", "1");
-        if (notZeroFeedbackCount == 1) {
+        if (notZeroFeedbackCount === 1) {
             goodSegment.setAttribute("stroke-dasharray", `100 0`);
         } else {
             goodSegment.setAttribute("stroke-dasharray", `${rate3DashArray} ${100 - rate3DashArray}`);
@@ -82,14 +85,13 @@ import './feedback-diagram.scss';
         rate4DashOffset = 100 + rate4DashOffset;
     }
     if (feedbackCount.amazing > 0) {
-        rate4DashArray = 100 * feedbackCount.amazing / feedbackTotalNumber - 0.5;
+        rate4DashArray = (100 * feedbackCount.amazing) / feedbackTotalNumber - 0.5;
         amazingSegment.setAttribute("stroke-width", "1");
-        if (notZeroFeedbackCount == 1) {
+        if (notZeroFeedbackCount === 1) {
             amazingSegment.setAttribute("stroke-dasharray", `100 0`);
         } else {
             amazingSegment.setAttribute("stroke-dasharray", `${rate4DashArray} ${100 - rate4DashArray}`);
         }
-        
 
         amazingSegment.setAttribute("stroke-dashoffset", `${rate4DashOffset}`);
         rate4DashArray += 0.5;
@@ -97,11 +99,19 @@ import './feedback-diagram.scss';
 
     feedbackTotalNumberField.innerHTML = feedbackTotalNumber;
 
-    if (feedbackTotalNumber == 1 || (feedbackTotalNumber > 20 && feedbackTotalNumber%10 == 1)) {
+    function isUnitNumber() {
+        return (feedbackTotalNumber === 1 || (feedbackTotalNumber > 20 && feedbackTotalNumber % 10 === 1));
+    }
+
+    function isMultipleNumber() {
+        return (feedbackTotalNumber >= 2 && feedbackTotalNumber <= 4) || (feedbackTotalNumber > 20 && (feedbackTotalNumber % 10 >= 2 && feedbackTotalNumber % 10 <= 4));
+    }
+
+    if (isUnitNumber()) {
         feedbackTotalNumberText.innerHTML = "голос";
-    } else if ((feedbackTotalNumber >= 2 && feedbackTotalNumber <= 4) || (feedbackTotalNumber > 20 && (feedbackTotalNumber%10 >= 2 && feedbackTotalNumber%10 <= 4))) {
+    } else if (isMultipleNumber()) {
         feedbackTotalNumberText.innerHTML = "голоса";
     } else if (feedbackTotalNumber > 4) {
         feedbackTotalNumberText.innerHTML = "голосов";
     }
-})();
+}());
