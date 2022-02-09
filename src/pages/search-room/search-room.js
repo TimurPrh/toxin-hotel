@@ -1,22 +1,20 @@
-import * as $ from 'jquery';
-import '../blocks/header/header.js';
-import '../blocks/footer/footer.js';
-import '../blocks/dropdown/dropdown.js';
-import '../blocks/date-dropdown/date-dropdown.js';
-import '../blocks/range-slider/range-slider.js';
-import '../blocks/input-button/input-button.js';
-import '../blocks/rich-checkbox-buttons/rich-checkbox-buttons.js';
-import '../blocks/expandable-checkbox-list/expandable-checkbox-list.js';
-import '../blocks/room-card/room-card.js';
-import '../blocks/pagination/pagination.js';
+import '../blocks/header/header';
+import '../blocks/footer/footer';
+import '../blocks/dropdown/dropdown';
+import '../blocks/date-dropdown/date-dropdown';
+import '../blocks/slider/slider';
+import '../blocks/input-button/input-button';
+import '../blocks/rich-checkbox-buttons/rich-checkbox-buttons';
+import '../blocks/expandable-checkbox-list/expandable-checkbox-list';
+import '../blocks/room-card/room-card';
+import '../blocks/pagination/pagination';
 import './search-room.scss';
-
-
-document.querySelector('.js-search-room__filter-symbols-reset').addEventListener('click', toggleContent);
-document.querySelector('.js-search-room__filter-symbols-apply').addEventListener('click', toggleContent);
-document.querySelector('.js-search-room__result-filter').addEventListener('click', toggleContent);
 
 function toggleContent() {
     $('.js-search-room__result').fadeToggle();
     $('.js-search-room__filter').fadeToggle();
 }
+
+document.querySelector('.js-search-room__filter-symbols-reset').addEventListener('click', toggleContent);
+document.querySelector('.js-search-room__filter-symbols-apply').addEventListener('click', toggleContent);
+document.querySelector('.js-search-room__result-filter').addEventListener('click', toggleContent);

@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import './date-dropdown.scss';
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';

@@ -1,4 +1,4 @@
-import '../blocks/header/header.js';
-import '../blocks/login-card/login-card.js';
-import '../blocks/footer/footer.js';
+import '../blocks/header/header';
+import '../blocks/login-card/login-card';
+import '../blocks/footer/footer';
 import './login.scss';

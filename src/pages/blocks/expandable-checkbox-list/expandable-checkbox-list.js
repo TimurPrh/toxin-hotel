@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import './expandable-checkbox-list.scss';
 
 const dropdown = $('.js-expandable-checkbox-list');

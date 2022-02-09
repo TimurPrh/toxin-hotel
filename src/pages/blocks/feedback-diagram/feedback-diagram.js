@@ -13,15 +13,12 @@ import './feedback-diagram.scss';
     let feedbackTotalNumber = 0;
     let notZeroFeedbackCount = 0;
 
-    // eslint-disable-next-line no-restricted-syntax
-    for (const item in feedbackCount) {
-        if (Object.prototype.hasOwnProperty.call(feedbackCount, item)) {
-            if (parseInt(feedbackCount[item], 10)) {
-                notZeroFeedbackCount++;
-            }
-            feedbackTotalNumber += parseInt(feedbackCount[item], 10);
+    Object.values(feedbackCount).forEach((count) => {
+        if (parseInt(count, 10)) {
+            notZeroFeedbackCount++;
         }
-    }
+        feedbackTotalNumber += parseInt(count, 10);
+    });
 
     let rate1DashArray = 0;
     let rate2DashArray = 0;

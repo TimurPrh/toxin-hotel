@@ -1,0 +1,23 @@
+.slider {
+    height: 48px;
+    display: grid;
+    grid-template-columns: auto auto;
+    &__result {
+        justify-self: end;
+    }
+    &__plugin {
+        height: 6px;
+        margin-top: 18px;
+        grid-column: 1 / 3;
+    }
+    .range-slider {
+        padding-top: 0;
+        &__thumb {
+            width: 15px;
+            height: 15px;
+        }
+        &__border {
+            z-index: 0;
+        }
+    }
+}

@@ -2,27 +2,27 @@ include ../text-field/text-field.pug
 include ../input-button/input-button.pug
 include ../button/button.pug
 
-mixin registartion-card({header: header})
-    form.registartion-card
-        .registartion-card__header.text-h1= header
-        .registartion-card__person 
+mixin registration-card({header: header})
+    form.registration-card
+        .registration-card__header.text-h1= header
+        .registration-card__person 
             +text-field({id: "name_1", placeholder: "Имя"})
-            .registartion-card__person-surname
+            .registration-card__person-surname
                 +text-field({id: "surname_1", placeholder: "Фамилия"})
-            .registartion-card__person-gender
+            .registration-card__person-gender
                 +input-button({type: "radio", name:"gender_1", id:"gender_male_1", label: "Мужчина"})
                 +input-button({type: "radio", name:"gender_1", id:"gender_female_1", label: "Женщина"})
-            .registartion-card__person-burthday
-                +text-field({id: "burthday_1", label: "дата рождения", mask: true})
-        .registartion-card__login
+            .registration-card__person-birthday
+                +text-field({id: "birthday_1", label: "дата рождения", mask: true})
+        .registration-card__login
             +text-field({id: "email_1", label: "данные для входа в сервис", placeholder: "Email"})
-            .registartion-card__login-password
+            .registration-card__login-password
                 +text-field({id: "password", placeholder: "Пароль"})
-        .registartion-card__special
+        .registration-card__special
             +input-button({type: "switch", id:"special_offer_3", label: "Получать спецпредложения"})
-        .registartion-card__pay-button 
+        .registration-card__pay-button 
             +button({label: "перейти к оплате", type: "wide"})
-        .registartion-card__account
-            .registartion-card__account-text.text-body Уже есть аккаунт на Toxin
-            .registartion-card__account-button
+        .registration-card__account
+            .registration-card__account-text.text-body Уже есть аккаунт на Toxin
+            .registration-card__account-button
                 +button({label: "войти", type: "invert", width: "99", height: "44", link: "login"})

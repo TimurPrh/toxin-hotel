@@ -7,14 +7,14 @@ html(lang="en")
         title Toxin Hotel 
     body 
         include ../blocks/header/header.pug
-        include ../blocks/registartion-card/registartion-card.pug
+        include ../blocks/registration-card/registration-card.pug
         include ../blocks/footer/footer.pug
         section.landing-main
             .landing-header 
                 +header({login: false})
             .container
                 .landing-main__register
-                    +registartion-card({header: "Регистрация аккаунта"})
+                    +registration-card({header: "Регистрация аккаунта"})
 
         section.landing-footer
             +footer({mobile: false})

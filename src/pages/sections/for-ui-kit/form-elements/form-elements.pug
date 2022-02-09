@@ -8,7 +8,7 @@ include ../../../blocks/rich-checkbox-buttons/rich-checkbox-buttons.pug
 include ../../../blocks/bullet-list/bullet-list.pug
 include ../../../blocks/room-details-list/room-details-list.pug
 include ../../../blocks/feedback/feedback.pug
-include ../../../blocks/range-slider/range-slider.pug
+include ../../../blocks/slider/slider.pug
 include ../../../blocks/button/button.pug
 include ../../../blocks/pagination/pagination.pug
 section.form-elements 
@@ -88,8 +88,8 @@ section.form-elements
 
             .form-elements__trd-col
 
-                .form-elements__range-slider
-                    +range-slider({header: "Range Slider"})
+                .form-elements__slider
+                    +slider({header: "Range Slider", min: 1000, max: 18000, step: 100, from: 5000, to: 10000})
                 .form-elements__buttons
                     .text-h3 buttons
                     .form-elements__buttons-wrapper 

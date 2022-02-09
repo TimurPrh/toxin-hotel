@@ -1,8 +1,8 @@
-import '../../../blocks/kit-section-name/kit-section-name.js';
-import '../../../blocks/date-dropdown/date-dropdown.js';
-import '../../../blocks/selection-card/selection-card.js';
-import '../../../blocks/registartion-card/registartion-card.js';
-import '../../../blocks/booking-room-card/booking-room-card.js';
-import '../../../blocks/login-card/login-card.js';
-import '../../../blocks/room-card/room-card.js';
+import '../../../blocks/kit-section-name/kit-section-name';
+import '../../../blocks/date-dropdown/date-dropdown';
+import '../../../blocks/selection-card/selection-card';
+import '../../../blocks/registration-card/registration-card';
+import '../../../blocks/booking-room-card/booking-room-card';
+import '../../../blocks/login-card/login-card';
+import '../../../blocks/room-card/room-card';
 import './cards.scss';

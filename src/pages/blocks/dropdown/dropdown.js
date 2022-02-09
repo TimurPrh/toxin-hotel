@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import 'jquery-mask-plugin';
 import './dropdown.scss';
 

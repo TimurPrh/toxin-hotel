@@ -11,11 +11,11 @@ document.querySelectorAll('.js-rate-button__star').forEach((starElement) => {
         let setStarsFlag = true;
         let star = e.target.closest('.js-rate-button__star');
 
-        for (const item of star.parentElement.children) {
-            if (item.classList.contains('rate-button__star_active')) {
+        star.parentElement.childNodes.forEach((starDiv) => {
+            if (starDiv.nodeName === "DIV" && starDiv.classList.contains('rate-button__star_active')) {
                 setStarsFlag = false;
             }
-        }
+        });
 
         if (setStarsFlag) {
             setStars(star);
@@ -24,9 +24,11 @@ document.querySelectorAll('.js-rate-button__star').forEach((starElement) => {
                 setStars(star);
             }
         } else {
-            for (const item of star.parentElement.children) {
-                item.classList.remove('rate-button__star_active');
-            }
+            star.parentElement.childNodes.forEach((starDiv) => {
+                if (starDiv.nodeName === "DIV") {
+                    starDiv.classList.remove('rate-button__star_active');
+                }
+            });
         }
     };
 

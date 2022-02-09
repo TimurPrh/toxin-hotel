@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const webpack = require("webpack");
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -105,7 +106,7 @@ module.exports = {
     devServer: {
         port: 4200,
     },
-    // devtool: isDev ? 'source-map' : '',
+    devtool: isProd ? false : 'source-map',
     plugins: [
         new HTMLWebpackPlugin({
             inject: true,
@@ -162,6 +163,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: filename('css'),
             ignoreOrder: true,
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
         }),
     ],
     module: {

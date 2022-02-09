@@ -1,4 +1,4 @@
-import '../blocks/header/header.js';
-import '../blocks/selection-card/selection-card.js';
-import '../blocks/footer/footer.js';
+import '../blocks/header/header';
+import '../blocks/selection-card/selection-card';
+import '../blocks/footer/footer';
 import './landing-page.scss';
