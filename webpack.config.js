@@ -32,9 +32,9 @@ const optimization = () => {
 const filename = (ext) => {
     let name;
     if (ext === 'html') {
-        name = isDev ? `[name]/index.${ext}` : `[name]/index.[hash].${ext}`;
+        name = isDev ? `[name]/index.${ext}` : `[name]/index.${ext}`;
     } else {
-        name = isDev ? `[name]/[name].${ext}` : `[name]/[name].[hash].${ext}`;
+        name = isDev ? `[name]/[name].${ext}` : `[name]/[name].${ext}`;
     }
     return name;
 };
