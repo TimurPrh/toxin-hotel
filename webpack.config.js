@@ -143,10 +143,16 @@ module.exports = {
             {
                 test: /\.(png|jpg|svg|gif)$/,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'static/[hash][ext]',
+                },
             },
             {
                 test: /\.(ttf|woff|woff2|eot)$/,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'static/[hash][ext]',
+                },
             },
             {
                 test: /\.xml$/,
