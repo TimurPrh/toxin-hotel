@@ -1,5 +1,4 @@
 const path = require('path');
-const fs = require('fs');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -11,36 +10,6 @@ const webpack = require("webpack");
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 console.log('is DEV: ', isDev);
-
-const pugPages = [];
-function fromDir(startPath, filter) {
-    if (!fs.existsSync(startPath)) {
-        return;
-    }
-    const files = fs.readdirSync(startPath);
-    for (let i = 0; i < files.length; i++) {
-        const filename = path.join(startPath, files[i]);
-        const stat = fs.lstatSync(filename);
-        if (stat.isDirectory()) {
-            fromDir(filename, filter); // recurse
-        } else if (filename.indexOf(filter) >= 0) {
-            console.log('-- found: ', filename);
-            pugPages.push(filename.toString());
-        }
-    }
-}
-
-fromDir('./src/pages', '.pug');
-console.log('Pages: ', pugPages);
-
-const pugPagesPlugin = pugPages.map((page) => new HTMLWebpackPlugin({
-    inject: true,
-    chunks: '[name]',
-    template: `${page}`,
-    filename: '[name]/index.html',
-}));
-
-console.log('pug pages plugin: ', pugPagesPlugin);
 
 const optimization = () => {
     const config = {
