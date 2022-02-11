@@ -10,6 +10,7 @@ import './room-card.scss';
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
+            lazyLoad: 'ondemand',
         });
 
         const handlePreviousClick = () => {

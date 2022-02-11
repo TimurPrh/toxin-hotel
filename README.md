@@ -7,5 +7,5 @@
 `npm run build` - сборка проекта в режиме production  
 `npm start` - сборка проекта в режиме development, запуск локального сервера, открытие вкладки с адресом локального сервера в браузере  
 
-## Основные команды
+## Ссылки
 Страницы проекта на Github Pages: [timurprh.github.io](https://timurprh.github.io)

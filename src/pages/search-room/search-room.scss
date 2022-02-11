@@ -83,6 +83,11 @@
                 font-size: 34px;
                 color: var(--dark-shade-75);
             }
+            &-price {
+                .range-slider {
+                    margin: 0 8px;
+                }
+            }
         }
         &__result {
             text-align: center;
