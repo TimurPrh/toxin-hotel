@@ -1,20 +1,15 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Toxin Hotel 
-    body 
-        include ../blocks/header/header.pug
-        include ../blocks/registration-card/registration-card.pug
-        include ../blocks/footer/footer.pug
-        section.landing-main
-            .landing-header 
-                +header({login: false})
-            .container
-                .landing-main__register
-                    +registration-card({header: "Регистрация аккаунта"})
+extends ../template/template.pug
 
-        section.landing-footer
-            +footer({mobile: false})
+block content
+    include ../../blocks/header/header.pug
+    include ../../blocks/registration-card/registration-card.pug
+    include ../../blocks/footer/footer.pug
+    section.landing-main
+        .landing-header 
+            +header({login: false})
+        .container
+            .landing-main__register
+                +registration-card({header: "Регистрация аккаунта"})
+
+    section.landing-footer
+        +footer({mobile: false})

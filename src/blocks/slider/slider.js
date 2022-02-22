@@ -1,5 +1,5 @@
-import '../../../libs/range-slider-plugin/range-slider';
-import '../../../libs/range-slider-plugin/range-slider.css';
+import '../../libs/range-slider-plugin/range-slider';
+import '../../libs/range-slider-plugin/range-slider.css';
 import './slider.scss';
 
 const $sliderWrapper = $('.js-slider__plugin');

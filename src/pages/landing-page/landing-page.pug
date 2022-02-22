@@ -1,22 +1,17 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Toxin Hotel 
-    body 
-        include ../blocks/header/header.pug
-        include ../blocks/selection-card/selection-card.pug
-        include ../blocks/footer/footer.pug
-        section.landing-main
-            .landing-header 
-                +header({login: false})
-            .container
-                .landing-main__wrapper
-                    .landing-main__selection-card 
-                        +selection-card({header: "Найдём номера под ваши пожелания", dateDropdownId: "find_dates"})
-                    .landing-main__text.text-body Лучшие номера для вашей работы, отдыха и просто вдохновения
+extends ../template/template.pug
 
-        section.landing-footer
-            +footer({mobile: false})
+block content
+    include ../../blocks/header/header.pug
+    include ../../blocks/selection-card/selection-card.pug
+    include ../../blocks/footer/footer.pug
+    section.landing-main
+        .landing-header 
+            +header({login: false})
+        .container
+            .landing-main__wrapper
+                .landing-main__selection-card 
+                    +selection-card({header: "Найдём номера под ваши пожелания", dateDropdownId: "find_dates"})
+                .landing-main__text.text-body Лучшие номера для вашей работы, отдыха и просто вдохновения
+
+    section.landing-footer
+        +footer({mobile: false})

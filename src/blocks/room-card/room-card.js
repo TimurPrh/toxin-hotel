@@ -1,6 +1,7 @@
-import '../rate-button/rate-button';
 import 'slick-carousel/slick/slick.min';
 import 'slick-carousel/slick/slick.scss';
+
+import '../rate-button/rate-button';
 import './room-card.scss';
 
 (function roomCard() {

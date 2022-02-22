@@ -1,5 +1,5 @@
 {
-  "name": "pug-test",
+  "name": "toxin-hotel",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,8 @@
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
-    "start": "cross-env NODE_ENV=development webpack serve --mode development --open"
+    "start": "cross-env NODE_ENV=development webpack serve --mode development --open",
+    "lint": "eslint src/pages/**/*.js"
   },
   "author": "",
   "license": "ISC",

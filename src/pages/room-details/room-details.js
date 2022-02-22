@@ -1,13 +1,13 @@
 import 'slick-carousel/slick/slick.min';
 import 'slick-carousel/slick/slick.scss';
-import '../blocks/header/header';
-import '../blocks/footer/footer';
-import '../blocks/bullet-list/bullet-list';
-import '../blocks/feedback/feedback';
-import '../blocks/room-details-list/room-details-list';
-import '../blocks/booking-room-card/booking-room-card';
-import '../blocks/feedback-diagram/feedback-diagram';
 
+import '../../blocks/header/header';
+import '../../blocks/footer/footer';
+import '../../blocks/bullet-list/bullet-list';
+import '../../blocks/feedback/feedback';
+import '../../blocks/room-details-list/room-details-list';
+import '../../blocks/booking-room-card/booking-room-card';
+import '../../blocks/feedback-diagram/feedback-diagram';
 import './room-details.scss';
 
 (function roomDetails() {

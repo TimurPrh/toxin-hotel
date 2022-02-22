@@ -1,6 +1,6 @@
-@import '../base/montserrat';
-@import '../base/texs-types';
-@import '../base/mixins';
+@import '../../assets/styles/montserrat';
+@import '../../assets/styles/text-types';
+@import '../../assets/styles/mixins';
 @include page-init;
 
 .landing-main {

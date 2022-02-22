@@ -1,4 +1,5 @@
 import 'jquery-mask-plugin';
+
 import './dropdown.scss';
 
 (function dropdownFunction() {

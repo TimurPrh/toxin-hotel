@@ -1,7 +1,7 @@
 include ../text-field/text-field.pug
 
 mixin footer({mobile: mobile})
-    .footer
+    footer.footer
         if (!mobile)
             .footer__main-outer 
                 .container
@@ -15,36 +15,23 @@ mixin footer({mobile: mobile})
                         nav.footer__nav
                             .footer__nav-header.text-h3 навигация
                             ul.footer__nav-list
-                                li 
-                                    a.footer__nav-link.text-body_50(href="unset") О нас
-                                li 
-                                    a.footer__nav-link.text-body_50(href="unset") Новости
-                                li 
-                                    a.footer__nav-link.text-body_50(href="unset") Служба поддержки
-                                li 
-                                    a.footer__nav-link.text-body_50(href="unset") Услуги
+                                each link in ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
+                                    li 
+                                        a.footer__nav-link.text-body_50(href="unset")= link
 
                         nav.footer__nav
                             .footer__nav-header.text-h3 о нас
                             ul.footer__nav-list
-                                li 
-                                    a.footer__nav-link.text-body_50(href="unset") О сервисе
-                                li 
-                                    a.footer__nav-link.text-body_50(href="unset") Наша команда
-                                li 
-                                    a.footer__nav-link.text-body_50(href="unset") Вакансии
-                                li 
-                                    a.footer__nav-link.text-body_50(href="unset") Инвесторы
+                                each link in ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
+                                    li 
+                                        a.footer__nav-link.text-body_50(href="unset")= link
 
                         nav.footer__nav
                             .footer__nav-header.text-h3 Служба поддержки
                             ul.footer__nav-list
-                                li 
-                                    a.footer__nav-link.text-body_50(href="unset") Соглашения
-                                li 
-                                    a.footer__nav-link.text-body_50(href="unset") Сообщества
-                                li 
-                                    a.footer__nav-link.text-body_50(href="unset") Связь с нами
+                                each link in ['Соглашения', 'Сообщества', 'Связь с нами']
+                                    li 
+                                        a.footer__nav-link.text-body_50(href="unset")= link
 
                         form.footer__subscribe
                             .footer__subscribe-header.text-h3 Подписка
