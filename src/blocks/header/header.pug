@@ -45,9 +45,11 @@ mixin header({login: login, name: name, activeLink: activeLink})
                 if (login == false)
                     .header__buttons
                         .header__buttons-login
-                            +button({label: "войти", type: "invert", width: "87", height: "34", link: "login"})
+                            .header__buttons-login-set-size
+                                +button({label: "войти", type: "invert", link: "login"})
                         .header__buttons-register
-                            +button({label: "зарегистрироваться", type: "filed", width: "196", height: "34", link: "registration"})
+                            .header__buttons-register-set-size
+                                +button({label: "зарегистрироваться", type: "filed", link: "registration"})
 
             .header__hamburger.js-header__hamburger 
                 span 

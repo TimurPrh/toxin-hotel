@@ -1,111 +1,109 @@
 .booking-room-card {
-    max-width: 380px;
-    min-height: 512px;
-    padding: 40px 30px 30px 30px;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
+  max-width: 380px;
+  min-height: 512px;
+  padding: 40px 30px 30px 30px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  &__room {
+    &-number {
+      &-wrapper {
+        font-weight: bold;
+      }
     }
-    &__room {
-        &-number {
-            &-wrapper {
-                font-weight: bold;
-            }
-        }
-        &-class {
-            margin-left: 8px;
-            color: var(--purple-color) !important;
-        }
-        &-price {
-            font-weight: bold;
-            &-range {
-                font-weight: normal;
-                text-transform: lowercase !important;
-            }
-        }
+    &-class {
+      margin-left: 8px;
+      color: var(--purple-color) !important;
     }
-    &__calendar {
-        margin-top: 21px;
+    &-price {
+      font-weight: bold;
+      &-range {
+        font-weight: normal;
+        text-transform: lowercase !important;
+      }
     }
-    &__guests {
-        margin-top: 22px;
+  }
+  &__calendar {
+    margin-top: 21px;
+  }
+  &__guests {
+    margin-top: 22px;
+  }
+  &__calculate {
+    margin-top: 20px;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    &:first-child {
+      margin-top: 0;
     }
-    &__calculate {
-        margin-top: 20px;
-    }
-    &__item {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        margin-top: 16px;
-        &:first-child {
-            margin-top: 0;
+    &-desc {
+      line-height: 18px !important;
+      max-width: 215px;
+      &_with-info {
+        &::after {
+          content: '';
+          position: absolute;
+          left: 69%;
+          top: 0px;
+          width: 18px;
+          height: 18px;
+          border: 1px solid var(--dark-shade-25);
+          border-radius: 50%;
+          cursor: pointer;
         }
-        &-desc {
-            line-height: 18px !important;
-            max-width: 215px;
-            &_with-info {
-                
-                &::after {
-                    content: '';
-                    position: absolute;
-                    left: 69%;
-                    top: 0px;
-                    width: 18px;
-                    height: 18px;
-                    border: 1px solid var(--dark-shade-25);
-                    border-radius: 50%;
-                    cursor: pointer;
-                }
-                &::before {
-                    content: 'i';
-                    position: absolute;
-                    left: 71.7%;
-                    top: 1px;
-                    font-weight: bold;
-                    font-size: 12px;
-                    color: var(--dark-shade-25);
-                    
-                }
-            }
+        &::before {
+          content: 'i';
+          position: absolute;
+          left: 71.7%;
+          top: 1px;
+          font-weight: bold;
+          font-size: 12px;
+          color: var(--dark-shade-25);
         }
-        &-price {
-            line-height: 18px !important;
-        }
+      }
     }
-    &__sum {
-        margin-top: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-        &-line {
-            width: 0;
-            height: 1px;
-            border: dashed var(--dark-shade-25);
-            border-width: 1px 0 0 0;
-            margin-bottom: 4px;
-        }
-        &-number {
-            white-space: nowrap;
-        }
+    &-price {
+      line-height: 18px !important;
     }
-    &__button {
-        margin-top: 22px;
+  }
+  &__sum {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    &-line {
+      width: 0;
+      height: 1px;
+      border: dashed var(--dark-shade-25);
+      border-width: 1px 0 0 0;
+      margin-bottom: 4px;
     }
+    &-number {
+      white-space: nowrap;
+    }
+  }
+  &__button {
+    margin-top: 22px;
+  }
 }
 
 @media (max-width: 400px) {
-    .booking-room-card {
-        padding: 40px 15px 30px 15px;
-        &__item {
-            &-desc {
-                max-width: 175px;
-            }
-        }
+  .booking-room-card {
+    padding: 40px 15px 30px 15px;
+    &__item {
+      &-desc {
+        max-width: 175px;
+      }
     }
+  }
 }

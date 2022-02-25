@@ -1,217 +1,216 @@
 .input-button {
+  position: relative;
+  display: grid;
+  grid-template-columns: 20px auto;
+  &__label {
+    line-height: 20px !important;
+  }
+  &_wide {
+    grid-template-columns: 40px auto;
+  }
+  &_one-col {
+    grid-template-columns: auto;
+    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+  }
+
+  input[type='checkbox'], input[type='radio'], input[type="number"] {
+    --active: var(--purple-color);
+    --active-inner: var(--gradient-color);
+    --focus: 0px var(--dark-shade-25);
+    --border: var(--dark-shade-25);
+    --border-hover: var(--purple-color);
+    --background: inherit;
+    --disabled: inherit;
+    --disabled-inner: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 20px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
     position: relative;
-    display: grid;
-    grid-template-columns: 20px auto;
-    &__label {
-        line-height: 20px !important;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background .3s, border-color .3s, box-shadow .2s;
+    &:after {
+      content: '';
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
     }
-    &_wide {
-        grid-template-columns: 40px auto;
+    &:checked {
+      --b: var(--background);
+      --bc: var(--active);
+      --d-o: .3s;
+      --d-t: .6s;
+      --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
     }
-    &_one-col {
-        grid-template-columns: auto;
-        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-        }
+    &:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: .9;
+      &:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border);
+      }
+      & + label {
+        cursor: not-allowed;
+      }
     }
-
-    input[type='checkbox'], input[type='radio'], input[type="number"] {
-        --active: var(--purple-color);
-        --active-inner: var(--gradient-color);
-        --focus: 0px var(--dark-shade-25);
-        --border: var(--dark-shade-25);
-        --border-hover: var(--purple-color);
-        --background: inherit;
-        --disabled: inherit;
-        --disabled-inner: inherit;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        height: 20px;
-        outline: none;
-        display: inline-block;
-        vertical-align: top;
-        position: relative;
-        margin: 0;
-        cursor: pointer;
-        border: 1px solid var(--bc, var(--border));
-        background: var(--b, var(--background));
-        transition: background .3s, border-color .3s, box-shadow .2s;
-        &:after {
-            content: '';
-            display: block;
-            left: 0;
-            top: 0;
-            position: absolute;
-            transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+    &:hover {
+      &:not(:checked) {
+        &:not(:disabled) {
+          --bc: var(--border-hover);
         }
-        &:checked {
-            --b: var(--background);
-            --bc: var(--active);
-            --d-o: .3s;
-            --d-t: .6s;
-            --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
-        }
-        &:disabled {
-            --b: var(--disabled);
-            cursor: not-allowed;
-            opacity: .9;
-            &:checked {
-                --b: var(--disabled-inner);
-                --bc: var(--border);
-            }
-            & + label {
-                cursor: not-allowed;
-            }
-        }
-        &:hover {
-            &:not(:checked) {
-                &:not(:disabled) {
-                    --bc: var(--border-hover);
-                }
-            }
-        }
-        &:focus {
-            box-shadow: 0 0 0 var(--focus);
-        }
-        &:not(.input-button_switch):not(.input-button_like) {
-            width: 20px;
-            &:after {
-                opacity: var(--o, 0);
-            }
-            &:checked {
-                --o: 1;
-            }
-        }
+      }
     }
-    .input-button__label {
-        display: inline-block;
-        cursor: pointer;
-        padding-left: 10px;
+    &:focus {
+      box-shadow: 0 0 0 var(--focus);
     }
-    .input-button__label-header {
-        font-weight: bold;
-        line-height: 18px;
-        margin-bottom: 5px;
-        display: inline-block;
-        cursor: pointer;
-        padding-left: 10px;
+    &:not(.input-button_switch):not(.input-button_like) {
+      width: 20px;
+      &:after {
+        opacity: var(--o, 0);
+      }
+      &:checked {
+        --o: 1;
+      }
     }
-    .input-button__label-subheader {
-        font-size: 12px;
-        line-height: 14px;
-        display: inline-block;
-        cursor: pointer;
-        padding-left: 10px;
+  }
+  .input-button__label {
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 10px;
+  }
+  .input-button__label-header {
+    font-weight: bold;
+    line-height: 18px;
+    margin-bottom: 5px;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 10px;
+  }
+  .input-button__label-subheader {
+    font-size: 12px;
+    line-height: 14px;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 10px;
+  }
+  input[type='radio'] {
+    &:checked {
+      & + label {
+        color: rgba(31, 32, 65, 0.75);
+      }
     }
-    input[type='radio'] {
-        &:checked {
-            & + label {
-                color: rgba(31, 32, 65, 0.75);
-            }
-        }
+  }
+  input[type='checkbox'], input[type='number'] {
+    &:not(.input-button_switch):not(.input-button_like) {
+      border-radius: 4px;
+      &:after {
+        width: 4px;
+        height: 6px;
+        border: 2px solid;
+        border-image: var(--active-inner);
+        border-image-slice: 1;
+        border-top: 0;
+        border-left: 0;
+        left: 6px;
+        top: 4px;
+        transform: rotate(var(--r, 20deg));
+      }
+      &:checked {
+        --r: 45deg;
+      }
     }
-    input[type='checkbox'], input[type='number'] {
-        &:not(.input-button_switch):not(.input-button_like) {
-            border-radius: 4px;
-            &:after {
-                width: 4px;
-                height: 6px;
-                border: 2px solid;
-                border-image: var(--active-inner);
-                border-image-slice: 1;
-                border-top: 0;
-                border-left: 0;
-                left: 6px;
-                top: 4px;
-                transform: rotate(var(--r, 20deg));
-            }
-            &:checked {
-                --r: 45deg;
-            }
-        }
-        &.input-button_switch {
-            width: 40px;
-            border-radius: 10px;
-            &:after {
-                left: 4px;
-                top: 3px;
-                border-radius: 50%;
-                width: 12px;
-                height: 12px;
-                background: var(--ab, var(--border));
-                transform: translateX(var(--x, 0));
-            }
-            &:checked {
-                --ab: var(--active-inner);
-                --x: 19px;
-            }
-            &:disabled {
-                &:not(:checked) {
-                    &:after {
-                        opacity: .6;
-                    }
-                }
-            }
-        }
-        &.input-button_like {
-            min-width: 40px;
-            border-radius: 10px;
-            &_active {
-                --b: var(--background);
-                --bc: var(--active);
-                color: var(--active);
-            }
-            &_active ~ svg {
-                width: 10px;
-                height: 10px;
-                fill: url(#purpleGradient);
-                stroke-width: 0;
-            }
-
-            &_active ~ label {
-                color: var(--purple-color);
-            }
-            
-            &:disabled {
-                &:not(:checked) {
-                    &:after {
-                        opacity: .6;
-                    }
-                }
-            }
-        }
-    }
-    input[type='radio'] {
+    &.input-button_switch {
+      width: 40px;
+      border-radius: 10px;
+      &:after {
+        left: 4px;
+        top: 3px;
         border-radius: 50%;
-        &:after {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--active-inner);
-            opacity: 0;
-            top: 3px;
-            left: 3px;
+        width: 12px;
+        height: 12px;
+        background: var(--ab, var(--border));
+        transform: translateX(var(--x, 0));
+      }
+      &:checked {
+        --ab: var(--active-inner);
+        --x: 19px;
+      }
+      &:disabled {
+        &:not(:checked) {
+          &:after {
+            opacity: .6;
+          }
         }
-        &:checked {
-            --s: .5;
+      }
+    }
+    &.input-button_like {
+      min-width: 40px;
+      border-radius: 10px;
+      &_active {
+        --b: var(--background);
+        --bc: var(--active);
+        color: var(--active);
+      }
+      &_active ~ svg {
+        width: 10px;
+        height: 10px;
+        fill: url(#purpleGradient);
+        stroke-width: 0;
+      }
+
+      &_active ~ label {
+        color: var(--purple-color);
+      }
+      
+      &:disabled {
+        &:not(:checked) {
+          &:after {
+            opacity: .6;
+          }
         }
+      }
     }
-    input[type='number'] {
-        padding: 0;
-        padding-left: 20px;
-        font-size: 10px;
+  }
+  input[type='radio'] {
+    border-radius: 50%;
+    &:after {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--active-inner);
+      opacity: 0;
+      top: 3px;
+      left: 3px;
     }
-    svg {
-        position: absolute;
-        top: 50%;
-        left: 11px;
-        transform: translate(-50%, -50%);
-        width: 9px;
-        height: 9px;
-        stroke: var(--dark-shade-25);
-        stroke-width: 2px;
-        z-index: -1;
+    &:checked {
+      --s: .5;
     }
-    
+  }
+  input[type='number'] {
+    padding: 0;
+    padding-left: 20px;
+    font-size: 10px;
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 11px;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    stroke: var(--dark-shade-25);
+    stroke-width: 2px;
+    z-index: -1;
+  }
 }

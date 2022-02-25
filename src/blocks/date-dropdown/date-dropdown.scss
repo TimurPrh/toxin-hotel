@@ -1,259 +1,259 @@
 .date-dropdown {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  &_filter {
+    grid-template-columns: auto auto;
+    .date-dropdown__list {
+      width: 320px;
+    }
+  }
+  &__desc {
+    justify-self: end;
+  }
+  &__wrapper {
+    margin-top: 4px;
+    grid-column: 1 / 3;
+    border: 1px solid var(--dark-shade-25);
+    border-radius: 4px;
+    border: none;
+    width: inherit;
+    // box-shadow: 0px 10px 20px var(--dark-shade-5);
+  }
+  &__input {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
-    &_filter {
-        grid-template-columns: auto auto;
-        .date-dropdown__list {
-            width: 320px;
-        }
+    height: 44px;
+    width: inherit;
+    border: 1px solid var(--dark-shade-25);
+    border-radius: 4px;
+    input {
+      padding: 13px 15px;
+      width: 100%;
+      height: 100%;
+      background: #FFFFFF;
+      border: none;
+      border-radius: 4px;
+      color: var(--dark-shade-75);
+      outline:none;
+      &::placeholder {
+        color: var(--dark-shade-75);
+      }
     }
-    &__desc {
-        justify-self: end;
+  }
+  &__arrow {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 44px;
+    height: 44px;
+    &-line {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      border: solid var(--dark-shade-25);
+      border-width: 0 0 2px 2px;
+      padding: 4px;
     }
-    &__wrapper {
-        margin-top: 4px;
-        grid-column: 1 / 3;
-        border: 1px solid var(--dark-shade-25);
-        border-radius: 4px;
-        border: none;
-        width: inherit;
-        // box-shadow: 0px 10px 20px var(--dark-shade-5);
-    }
-    &__input {
-        position: relative;
-        height: 44px;
-        width: inherit;
-        border: 1px solid var(--dark-shade-25);
-        border-radius: 4px;
-        input {
-            padding: 13px 15px;
-            width: 100%;
-            height: 100%;
-            background: #FFFFFF;
-            border: none;
-            border-radius: 4px;
-            color: var(--dark-shade-75);
-            outline:none;
-            &::placeholder {
-                color: var(--dark-shade-75);
-            }
-        }
-    }
-    &__arrow {
-        cursor: pointer;
+  }
+  &__list {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    width: 100%;
+    border-width: 1px 0 0 0;
+    grid-column: 1 / 3;
+    margin-top: 5px;
+    padding: 15px 20px 18px 20px;
+    border: 1px solid var(--dark-shade-25);
+    border-radius: 4px;
+    background: #FFFFFF;
+  }
+  &__prev-arrow {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    &-line {
+      &:nth-child(1) {
         position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 44px;
-        height: 44px;
-        &-line {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-45deg);
-            border: solid var(--dark-shade-25);
-            border-width: 0 0 2px 2px;
-            padding: 4px;
-        }
-    }
-    &__list {
-        display: none;
+        height: 2px;
+        width: 14px;
+        top: 50%;
+        left: 34%;
+        transform: translate(-50%, -50%);
+        background-color: var(--purple-color);
+      }
+      &:nth-child(2) {
         position: absolute;
-        z-index: 1;
-        top: 100%;
-        width: 100%;
-        border-width: 1px 0 0 0;
-        grid-column: 1 / 3;
-        margin-top: 5px;
-        padding: 15px 20px 18px 20px;
-        border: 1px solid var(--dark-shade-25);
-        border-radius: 4px;
-        background: #FFFFFF;
+        top: 50%;
+        left: 29%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        border: solid var(--purple-color);
+        border-width: 2px 0 0 2px;
+        padding: 4px;
+      }
     }
-    &__prev-arrow {
-        position: relative;
-        width: inherit;
-        height: inherit;
-        &-line {
-            &:nth-child(1) {
-                position: absolute;
-                height: 2px;
-                width: 14px;
-                top: 50%;
-                left: 34%;
-                transform: translate(-50%, -50%);
-                background-color: var(--purple-color);
-            }
-            &:nth-child(2) {
-                position: absolute;
-                top: 50%;
-                left: 29%;
-                transform: translate(-50%, -50%) rotate(-45deg);
-                border: solid var(--purple-color);
-                border-width: 2px 0 0 2px;
-                padding: 4px;
-            }
-        }
+  }
+  &__next-arrow {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    &-line {
+      &:nth-child(1) {
+        position: absolute;
+        height: 2px;
+        width: 14px;
+        top: 50%;
+        left: 66%;
+        transform: translate(-50%, -50%);
+        background-color: var(--purple-color);
+      }
+      &:nth-child(2) {
+        position: absolute;
+        top: 50%;
+        left: 71%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        border: solid var(--purple-color);
+        border-width: 0 2px 2px 0;
+        padding: 4px;
+      }
     }
-    &__next-arrow {
-        position: relative;
-        width: inherit;
-        height: inherit;
-        &-line {
-            &:nth-child(1) {
-                position: absolute;
-                height: 2px;
-                width: 14px;
-                top: 50%;
-                left: 66%;
-                transform: translate(-50%, -50%);
-                background-color: var(--purple-color);
-            }
-            &:nth-child(2) {
-                position: absolute;
-                top: 50%;
-                left: 71%;
-                transform: translate(-50%, -50%) rotate(-45deg);
-                border: solid var(--purple-color);
-                border-width: 0 2px 2px 0;
-                padding: 4px;
-            }
-        }
+  }
+  &__btns {
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .air-datepicker {
+    border: none;
+    --adp-day-cell-width: 40px;
+    --adp-day-cell-height: 40px;
+    --adp-background-color-hover: unset;
+    --adp-background-color-active: unset;
+  }
+  .air-datepicker-nav {
+    border: none;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  .air-datepicker-body--day-name {
+    text-transform: unset;
+    color: var(--purple-color);
+  }
+  .air-datepicker--content {
+    padding: 0;
+  }
+  .air-datepicker-body--day-names {
+    margin: 13px 0;
+  }
+  .air-datepicker-body--cells .-day- {
+    font-size: var(--text-h3-font-size);
+    color: var(--dark-shade-50);
+  }
+  .air-datepicker-body--cells .-other-month- {
+    color: var(--dark-shade-25);
+  }
+  .air-datepicker-body--cells .-focus- {
+    position: relative;
+    background: none;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      z-index: -1;
+      border-radius: 50%;
+      background: var(--dark-shade-5);
     }
-    &__btns {
-        margin-top: 17px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .air-datepicker {
-        border: none;
-        --adp-day-cell-width: 40px;
-        --adp-day-cell-height: 40px;
-        --adp-background-color-hover: unset;
-        --adp-background-color-active: unset;
-    }
-    .air-datepicker-nav {
-        border: none;
-        padding: 0;
-        margin-bottom: 25px;
-    }
-    .air-datepicker-body--day-name {
-        text-transform: unset;
-        color: var(--purple-color);
-    }
-    .air-datepicker--content {
-        padding: 0;
-    }
-    .air-datepicker-body--day-names {
-        margin: 13px 0;
-    }
-    .air-datepicker-body--cells .-day- {
-        font-size: var(--text-h3-font-size);
-        color: var(--dark-shade-50);
-    }
-    .air-datepicker-body--cells .-other-month- {
-        color: var(--dark-shade-25);
-    }
-    .air-datepicker-body--cells .-focus- {
-        position: relative;
-        background: none;
-        &::before {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            z-index: -1;
-            border-radius: 50%;
-            background: var(--dark-shade-5);
-        }
-    }
+  }
 
-    .air-datepicker-body--cells .-current- {
-        position: relative;
-        font-weight: bold;
-        color: #FFFFFF;
-        background: none;
-        &::before {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            z-index: -1;
-            border-radius: 50%;
-            background: var(--secondary-gradient-color);
-        }
+  .air-datepicker-body--cells .-current- {
+    position: relative;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: none;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      z-index: -1;
+      border-radius: 50%;
+      background: var(--secondary-gradient-color);
     }
-    .air-datepicker-body--cells .-selected- {
-        position: relative;
-        font-weight: bold;
-        color: #FFFFFF;
-        background: none;
-        &::before {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            z-index: -1;
-            border-radius: 50%;
-            background: var(--gradient-color);
-        }
+  }
+  .air-datepicker-body--cells .-selected- {
+    position: relative;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: none;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      z-index: -1;
+      border-radius: 50%;
+      background: var(--gradient-color);
     }
-    .air-datepicker-body--cells .-in-range- {
-        background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+  }
+  .air-datepicker-body--cells .-in-range- {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+  }
+  .air-datepicker-body--cells .-range-from- {
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50% 0 0 50%;
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
     }
-    .air-datepicker-body--cells .-range-from- {
-        &::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50% 0 0 50%;
-            background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
-        }
+  }
+  .air-datepicker-body--cells .-range-to- {
+    &::after {
+      content: '';
+      position: absolute;;
+      width: 100%;
+      height: 100%;
+      border-radius: 0 50% 50% 0;
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
     }
-    .air-datepicker-body--cells .-range-to- {
-        &::after {
-            content: '';
-            position: absolute;;
-            width: 100%;
-            height: 100%;
-            border-radius: 0 50% 50% 0;
-            background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
-        }
-    }
+  }
 }
 
 @media (max-width: 475px) {
-    .date-dropdown {
-        &__list {
-            padding: 15px 4px 18px 4px;
-        }
-        &__input {
-            input {
-                padding: 13px 5px;
-            }
-        }
-        
+  .date-dropdown {
+    &__list {
+      padding: 15px 4px 18px 4px;
     }
-    .air-datepicker {
-        --adp-width: 100%;
-        --adp-day-cell-width: calc(100% / 7) !important;
-        --adp-day-cell-height: 40px !important;
-        &-body--day-names {
-            justify-content: center;
-        }
-        &-body--cells {
-            justify-content: center;
-        }
+    &__input {
+      input {
+        padding: 13px 5px;
+      }
     }
+      
+  }
+  .air-datepicker {
+    --adp-width: 100%;
+    --adp-day-cell-width: calc(100% / 7) !important;
+    --adp-day-cell-height: 40px !important;
+    &-body--day-names {
+      justify-content: center;
+    }
+    &-body--cells {
+      justify-content: center;
+    }
+  }
 }
 
 @media (max-width: 340px) {
-    .date-dropdown_filter {
-        .date-dropdown__list {
-            width: 100%;
-        }
+  .date-dropdown_filter {
+    .date-dropdown__list {
+      width: 100%;
     }
+  }
 }

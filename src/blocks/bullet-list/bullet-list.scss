@@ -1,25 +1,25 @@
 .bullet-list {
-    &__list {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        padding-left: 21px;
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 21px;
+  }
+  &__item {
+    position: relative;
+    margin-top: 10px;
+    &:first-child {
+      margin-top: 12px;
     }
-    &__item {
-        position: relative;
-        margin-top: 10px;
-        &:first-child {
-            margin-top: 12px;
-        }
-        &::before {
-            position: absolute;
-            content: '';
-            width: 10.43px;
-            height: 10px;
-            top: 7px;
-            left: -21px;
-            border-radius: 50%;
-            background-color: var(--dark-shade-25);
-        }
+    &::before {
+      position: absolute;
+      content: '';
+      width: 10.43px;
+      height: 10px;
+      top: 7px;
+      left: -21px;
+      border-radius: 50%;
+      background-color: var(--dark-shade-25);
     }
+  }
 }

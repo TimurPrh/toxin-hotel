@@ -1,34 +1,33 @@
 @mixin page-init {
+  * {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+  }
 
-    * {
-        box-sizing: border-box;
-        font-family: 'Montserrat', sans-serif;
-        font-style: normal;
-        font-weight: normal;
-    }
+  body {
+    margin: 0;
+  }
 
-    body {
-        margin: 0;
-    }
+  .container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
 
+  @media (max-width: 1160px) {
     .container {
-        max-width: 1160px;
-        margin: 0 auto;
+      max-width: 100%;
+      padding: 0 30px;
+      margin: 0 auto;
     }
+  }
 
-    @media (max-width: 1160px) {
-        .container {
-            max-width: 100%;
-            padding: 0 30px;
-            margin: 0 auto;
-        }
+  @media (max-width: 485px) {
+    .container {
+      max-width: 100%;
+      padding: 0 10px;
+      margin: 0 auto;
     }
-
-    @media (max-width: 485px) {
-        .container {
-            max-width: 100%;
-            padding: 0 10px;
-            margin: 0 auto;
-        }
-    }
+  }
 }

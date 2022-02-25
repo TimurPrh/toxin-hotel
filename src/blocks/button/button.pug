@@ -3,16 +3,16 @@ mixin button({label: label, type: type, width: width, height: height, link: link
         if (type == "filed") 
             if (link)
                 a(href= link) 
-                    button.button.text-h3.button_type_filed(style="width:" + width +"px;height:" + height + "px;" type="button")= label
+                    button.button.text-h3.button_type_filed= label
             else 
-                button.button.text-h3.button_type_filed(style="width:" + width +"px;height:" + height + "px;")= label
+                button.button.text-h3.button_type_filed= label
         if (type == "invert") 
             if (link)
                 a(href= link)
-                    .button__wrapper-invert(style="width:" + width +"px;height:" + height + "px;")
+                    .button__wrapper-invert
                         button.button.button_type_invert.js-button_type_invert.text-h3(type="button")= label 
             else
-                .button__wrapper-invert(style="width:" + width +"px;height:" + height + "px;")
+                .button__wrapper-invert
                     button.button.button_type_invert.js-button_type_invert.text-h3= label
         if (type == "icon")
             button.button.text-h3.button_type_icon(type="button")= label

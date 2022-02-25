@@ -93,13 +93,15 @@ section.form-elements
                 .form-elements__buttons
                     .text-h3 buttons
                     .form-elements__buttons-wrapper 
-                        .form-elements__buttons-margin-right
-                            +button({label: "CLICK ME", type: "filed", width: "99", height: "44"})
-                        +button({label: "CLICK ME", type: "filed", width: "99", height: "44"})
+                        .form-elements__buttons-margin-right.form-elements__buttons-set-size
+                            +button({label: "CLICK ME", type: "filed"})
+                        .form-elements__buttons-set-size
+                            +button({label: "CLICK ME", type: "filed"})
                     .form-elements__buttons-wrapper 
-                        .form-elements__buttons-margin-right
-                            +button({label: "CLICK ME", type: "invert", width: "99", height: "44"})
-                        +button({label: "CLICK ME", type: "invert", width: "99", height: "44"})
+                        .form-elements__buttons-margin-right.form-elements__buttons-set-size
+                            +button({label: "CLICK ME", type: "invert"})
+                        .form-elements__buttons-set-size
+                            +button({label: "CLICK ME", type: "invert"})
                     .form-elements__buttons-wrapper
                         .form-elements__buttons-margin-right
                             +button({label: "CLICK ME", type: "icon"})
