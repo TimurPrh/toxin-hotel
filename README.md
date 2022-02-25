@@ -10,7 +10,7 @@
 `npm start` - сборка проекта в режиме development, запуск локального сервера, открытие вкладки с адресом локального сервера в браузере  
 
 ## Ссылки
-Страницы проекта на Github Pages: [timurprh.github.io](https://timurprh.github.io)
+Страницы проекта на Github Pages: [timurprh.github.io/toxin](https://timurprh.github.io/toxin)
 
 ## Использованные библиотеки
 - air-datepicker  
