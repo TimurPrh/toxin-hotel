@@ -3,36 +3,36 @@ include ../dropdown/dropdown.pug
 include ../button/button.pug
 
 mixin booking-room-card({roomNumber: roomNumber, roomClass: roomClass, price: price})
-    form.booking-room-card 
-        .booking-room-card__header  
-            .booking-room-card__room-number-wrapper.text-body_100 № 
-                span.booking-room-card__room-number.text-h1= roomNumber
-                span.booking-room-card__room-class.text-h3= roomClass
-            .booking-room-card__room-price-wrapper 
-                span.booking-room-card__room-price.text-body_50= price
-                span.booking-room-card__room-price-range.text-h3_50  в сутки
+  form.booking-room-card 
+    .booking-room-card__header  
+      .booking-room-card__room-number-wrapper.text-body_100 № 
+        span.booking-room-card__room-number.text-h1= roomNumber
+        span.booking-room-card__room-class.text-h3= roomClass
+      .booking-room-card__room-price-wrapper 
+        span.booking-room-card__room-price.text-body_50= price
+        span.booking-room-card__room-price-range.text-h3_50  в сутки
 
-        .booking-room-card__calendar
-            +date-dropdown({id: "split_date_3", type: "split", label: "прибытие", labelTo: "выезд"})
+    .booking-room-card__calendar
+      +date-dropdown({id: "split_date_3", type: "split", label: "прибытие", labelTo: "выезд"})
 
-        .booking-room-card__guests 
-            +dropdown({id: "booking-room_guests", type: "guests", label: "гости"})
+    .booking-room-card__guests 
+      +dropdown({id: "booking-room_guests", type: "guests", label: "гости"})
 
-        .booking-room-card__calculate
-            .booking-room-card__item
-                .booking-room-card__item-desc.js-booking-room-card__item-desc.text-body 9&nbsp;990₽ х 4 суток
-                .booking-room-card__item-price.js-booking-room-card__item-price.text-body 39&nbsp;960₽
-            .booking-room-card__item
-                .booking-room-card__item-desc.js-booking-room-card__item-desc.booking-room-card__item-desc_with-info.text-body Сбор за услуги: скидка 2&nbsp;179₽
-                .booking-room-card__item-price.js-booking-room-card__item-price.text-body 0₽
-            .booking-room-card__item
-                .booking-room-card__item-desc.js-booking-room-card__item-desc.booking-room-card__item-desc_with-info.text-body Сбор за дополнительные услуги
-                .booking-room-card__item-price.js-booking-room-card__item-price.text-body 300₽
-        
-        .booking-room-card__sum  
-            .booking-room-card__sum-text.js-booking-room-card__sum-text.text-h2 Итого
-            .booking-room-card__sum-line.js-booking-room-card__sum-line
-            .booking-room-card__sum-number.js-booking-room-card__sum-number.text-h2
+    .booking-room-card__calculate
+      .booking-room-card__item
+        .booking-room-card__item-desc.js-booking-room-card__item-desc.text-body 9&nbsp;990₽ х 4 суток
+        .booking-room-card__item-price.js-booking-room-card__item-price.text-body 39&nbsp;960₽
+      .booking-room-card__item
+        .booking-room-card__item-desc.js-booking-room-card__item-desc.booking-room-card__item-desc_with-info.text-body Сбор за услуги: скидка 2&nbsp;179₽
+        .booking-room-card__item-price.js-booking-room-card__item-price.text-body 0₽
+      .booking-room-card__item
+        .booking-room-card__item-desc.js-booking-room-card__item-desc.booking-room-card__item-desc_with-info.text-body Сбор за дополнительные услуги
+        .booking-room-card__item-price.js-booking-room-card__item-price.text-body 300₽
+    
+    .booking-room-card__sum  
+      .booking-room-card__sum-text.js-booking-room-card__sum-text.text-h2 Итого
+      .booking-room-card__sum-line.js-booking-room-card__sum-line
+      .booking-room-card__sum-number.js-booking-room-card__sum-number.text-h2
 
-        .booking-room-card__button  
-            +button({label: "забронировать", type: "wide"})
+    .booking-room-card__button  
+      +button({label: "забронировать", type: "wide"})

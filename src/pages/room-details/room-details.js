@@ -11,29 +11,29 @@ import '../../blocks/feedback-diagram/feedback-diagram';
 import './room-details.scss';
 
 (function roomDetails() {
-    const $carousel = $('.js-room-details__photos');
+  const $carousel = $('.js-room-details__photos');
 
-    const sliderSettings = {
-        arrows: false,
-        dots: false,
-        infinite: true,
-        slidesToShow: 1,
-    };
+  const sliderSettings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+  };
 
-    function toggleSlider() {
-        if (document.documentElement.clientWidth <= 768 && !$carousel.hasClass('slick-initialized')) {
-            $carousel.slick(sliderSettings);
-        }
-        if (document.documentElement.clientWidth > 768 && $carousel.hasClass('slick-initialized')) {
-            $carousel.slick('unslick');
-        }
+  function toggleSlider() {
+    if (document.documentElement.clientWidth <= 768 && !$carousel.hasClass('slick-initialized')) {
+      $carousel.slick(sliderSettings);
     }
+    if (document.documentElement.clientWidth > 768 && $carousel.hasClass('slick-initialized')) {
+      $carousel.slick('unslick');
+    }
+  }
 
-    const handleResizeWindow = () => {
-        toggleSlider();
-    };
-
+  const handleResizeWindow = () => {
     toggleSlider();
+  };
 
-    $(window).on('resize', handleResizeWindow);
+  toggleSlider();
+
+  $(window).on('resize', handleResizeWindow);
 }());

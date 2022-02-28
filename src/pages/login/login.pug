@@ -1,15 +1,15 @@
 extends ../template/template.pug
 
 block content
-    include ../../blocks/header/header.pug
-    include ../../blocks/login-card/login-card.pug
-    include ../../blocks/footer/footer.pug
-    section.landing-main
-        .landing-header 
-            +header({login: false})
-        .container
-            .landing-main__login
-                +login-card({header: "Войти"})
+  include ../../blocks/header/header.pug
+  include ../../blocks/login-card/login-card.pug
+  include ../../blocks/footer/footer.pug
+  section.landing-main
+    .landing-header 
+      +header({login: false})
+    .container
+      .landing-main__login
+        +login-card({header: "Войти"})
 
-    section.landing-footer
-        +footer({mobile: false})
+  section.landing-footer
+    +footer({mobile: false})

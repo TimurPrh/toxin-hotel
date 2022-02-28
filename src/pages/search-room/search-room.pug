@@ -1,61 +1,61 @@
 extends ../template/template.pug
 
 block content
-    include ../../blocks/header/header.pug
-    include ../../blocks/footer/footer.pug
-    include ../../blocks/dropdown/dropdown.pug
-    include ../../blocks/date-dropdown/date-dropdown.pug
-    include ../../blocks/slider/slider.pug
-    include ../../blocks/input-button/input-button.pug
-    include ../../blocks/rich-checkbox-buttons/rich-checkbox-buttons.pug
-    include ../../blocks/expandable-checkbox-list/expandable-checkbox-list.pug
-    include ../../blocks/room-card/room-card.pug
-    include ../../blocks/pagination/pagination.pug
+  include ../../blocks/header/header.pug
+  include ../../blocks/footer/footer.pug
+  include ../../blocks/dropdown/dropdown.pug
+  include ../../blocks/date-dropdown/date-dropdown.pug
+  include ../../blocks/slider/slider.pug
+  include ../../blocks/input-button/input-button.pug
+  include ../../blocks/rich-checkbox-buttons/rich-checkbox-buttons.pug
+  include ../../blocks/expandable-checkbox-list/expandable-checkbox-list.pug
+  include ../../blocks/room-card/room-card.pug
+  include ../../blocks/pagination/pagination.pug
 
-    section.search-room__header
-        +header({login: false})
-    
-    section.search-room__main
-        .container
-            .search-room__main-wrapper
-                .search-room__filter.js-search-room__filter
-                    .search-room__filter-symbols 
-                        .search-room__filter-symbols-reset.js-search-room__filter-symbols-reset &#10006;
-                        .search-room__filter-symbols-apply.js-search-room__filter-symbols-apply &#10004;
-                    .search-room__filter-date
-                        +date-dropdown({id: "filter-date", type: "filter", label: "даты пребывания в отеле"})
-                    .search-room__filter-guests
-                        +dropdown({id: "filter-guests", type: "guests", label: "гости"})
-                    .search-room__filter-price
-                        +slider({header: "диапазон цены", min: 1000, max: 15000, step: 100, from: 5000, to: 10000})
-                        .search-room__filter-price-text.text-h3_50 Стоимость за сутки пребывания в номере
-                    .search-room__filter-house-rules 
-                        .search-room__filter-house-rules-header.text-h3 правила дома
-                        +input-button({type: "checkbox", id: "filter-smoking", label: "Можно курить"})
-                        +input-button({type: "checkbox", id: "filter-pets", label: "Можно с питомцами"})
-                        +input-button({type: "checkbox", id: "filter-add-guests", label: "Можно пригласить гостей (до 10 человек)"})
-                    .search-room__filter-availability
-                        +rich-checkbox-buttons({name: "filter-availability", header: "доступность", labels: [["Широкий коридор", "Ширина коридоров в номере не менее 91 см."], ["Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера."]]})
-                    .search-room__filter-comfort
-                        +dropdown({type: "room", label: "удобства номера"})
-                    .search-room__filter-additional-comfort
-                        +expandable-checkbox-list({name: "filter-additional-comfort", header: "дополнительные удобства", labels: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
-                    
-                .search-room__result.js-search-room__result
-                    .search-room__result-filter.js-search-room__result-filter
-                        span 
-                        span 
-                        span 
-                    h1.text-h1 Номера, которые мы для вас подобрали
-                    .search-room__result-wrapper
-                        - var rooms = [{roomNumber: "888", roomClass: "люкс", price: "9 990₽", reviewsCount: "145", rate: "5", photos: ["888_1.jpg", "888_2.jpg", "888_3.jpg", "888_4.jpg"]}, {roomNumber: "840", price: "9 990₽", reviewsCount: "65", rate: "4", photos: ["840.jpg", "856.jpg", "740.jpg", "982.jpg"]}, {roomNumber: "980", roomClass: "люкс", price: "8 500₽", reviewsCount: "35", rate: "3", photos: ["980_1.jpg", "980_2.jpg", "980_3.jpg", "980_4.jpg"]}, {roomNumber: "856", price: "7 300₽", reviewsCount: "19", rate: "5", photos: ["856_1.jpg", "856_2.jpg", "856_3.jpg", "856_4.jpg"]}, {roomNumber: "740", price: "6 000₽", reviewsCount: "44", rate: "4", photos: ["740_1.jpg", "740_2.jpg", "740_3.jpg", "740_4.jpg"]}, {roomNumber: "982", price: "5 800₽", reviewsCount: "56", rate: "3", photos: ["982_1.jpg", "982_2.jpg", "982_3.jpg", "982_4.jpg"]}, {roomNumber: "678", price: "5 500₽", reviewsCount: "45", rate: "5", photos: ["678_1.jpg", "678_2.jpg", "678_3.jpg", "678_4.jpg"]}, {roomNumber: "450", price: "5 300₽", reviewsCount: "39", rate: "4", photos: ["450_1.jpg", "450_2.jpg", "450_3.jpg", "450_4.jpg"]}, {roomNumber: "350", price: "5 000₽", reviewsCount: "77", rate: "3", photos: ["350_1.jpg", "350_2.jpg", "350_3.jpg", "350_4.jpg"]}, {roomNumber: "666", price: "5 000₽", reviewsCount: "25", rate: "5", photos: ["666_1.jpg", "666_2.jpg", "666_3.jpg", "666_4.jpg"]}, {roomNumber: "444", price: "5 000₽", reviewsCount: "15", rate: "3", photos: ["444_1.jpg", "444_2.jpg", "444_3.jpg", "444_4.jpg"]}, {roomNumber: "352", price: "5 000₽", reviewsCount: "55", rate: "3", photos: ["352_1.jpg", "352_2.jpg", "352_3.jpg", "352_4.jpg"]}]
+  section.search-room__header
+    +header({login: false})
+  
+  section.search-room__main
+    .container
+      .search-room__main-wrapper
+        .search-room__filter.js-search-room__filter
+          .search-room__filter-symbols 
+            .search-room__filter-symbols-reset.js-search-room__filter-symbols-reset &#10006;
+            .search-room__filter-symbols-apply.js-search-room__filter-symbols-apply &#10004;
+          .search-room__filter-date
+            +date-dropdown({id: "filter-date", type: "filter", label: "даты пребывания в отеле"})
+          .search-room__filter-guests
+            +dropdown({id: "filter-guests", type: "guests", label: "гости"})
+          .search-room__filter-price
+            +slider({header: "диапазон цены", min: 1000, max: 15000, step: 100, from: 5000, to: 10000})
+            .search-room__filter-price-text.text-h3_50 Стоимость за сутки пребывания в номере
+          .search-room__filter-house-rules 
+            .search-room__filter-house-rules-header.text-h3 правила дома
+            +input-button({type: "checkbox", id: "filter-smoking", label: "Можно курить"})
+            +input-button({type: "checkbox", id: "filter-pets", label: "Можно с питомцами"})
+            +input-button({type: "checkbox", id: "filter-add-guests", label: "Можно пригласить гостей (до 10 человек)"})
+          .search-room__filter-availability
+            +rich-checkbox-buttons({name: "filter-availability", header: "доступность", labels: [["Широкий коридор", "Ширина коридоров в номере не менее 91 см."], ["Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера."]]})
+          .search-room__filter-comfort
+            +dropdown({type: "room", label: "удобства номера"})
+          .search-room__filter-additional-comfort
+            +expandable-checkbox-list({name: "filter-additional-comfort", header: "дополнительные удобства", labels: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
+            
+        .search-room__result.js-search-room__result
+          .search-room__result-filter.js-search-room__result-filter
+            span 
+            span 
+            span 
+          h1.text-h1 Номера, которые мы для вас подобрали
+          .search-room__result-wrapper
+            - var rooms = [{roomNumber: "888", roomClass: "люкс", price: "9 990₽", reviewsCount: "145", rate: "5", photos: ["888_1.jpg", "888_2.jpg", "888_3.jpg", "888_4.jpg"]}, {roomNumber: "840", price: "9 990₽", reviewsCount: "65", rate: "4", photos: ["840.jpg", "856.jpg", "740.jpg", "982.jpg"]}, {roomNumber: "980", roomClass: "люкс", price: "8 500₽", reviewsCount: "35", rate: "3", photos: ["980_1.jpg", "980_2.jpg", "980_3.jpg", "980_4.jpg"]}, {roomNumber: "856", price: "7 300₽", reviewsCount: "19", rate: "5", photos: ["856_1.jpg", "856_2.jpg", "856_3.jpg", "856_4.jpg"]}, {roomNumber: "740", price: "6 000₽", reviewsCount: "44", rate: "4", photos: ["740_1.jpg", "740_2.jpg", "740_3.jpg", "740_4.jpg"]}, {roomNumber: "982", price: "5 800₽", reviewsCount: "56", rate: "3", photos: ["982_1.jpg", "982_2.jpg", "982_3.jpg", "982_4.jpg"]}, {roomNumber: "678", price: "5 500₽", reviewsCount: "45", rate: "5", photos: ["678_1.jpg", "678_2.jpg", "678_3.jpg", "678_4.jpg"]}, {roomNumber: "450", price: "5 300₽", reviewsCount: "39", rate: "4", photos: ["450_1.jpg", "450_2.jpg", "450_3.jpg", "450_4.jpg"]}, {roomNumber: "350", price: "5 000₽", reviewsCount: "77", rate: "3", photos: ["350_1.jpg", "350_2.jpg", "350_3.jpg", "350_4.jpg"]}, {roomNumber: "666", price: "5 000₽", reviewsCount: "25", rate: "5", photos: ["666_1.jpg", "666_2.jpg", "666_3.jpg", "666_4.jpg"]}, {roomNumber: "444", price: "5 000₽", reviewsCount: "15", rate: "3", photos: ["444_1.jpg", "444_2.jpg", "444_3.jpg", "444_4.jpg"]}, {roomNumber: "352", price: "5 000₽", reviewsCount: "55", rate: "3", photos: ["352_1.jpg", "352_2.jpg", "352_3.jpg", "352_4.jpg"]}]
 
-                        each room in rooms
-                            .search-room__result-card
-                                +room-card({roomNumber: room.roomNumber, roomClass: room.roomClass, price: room.price, reviewsCount: room.reviewsCount, rate: room.rate, photos: room.photos})
+            each room in rooms
+              .search-room__result-card
+                +room-card({roomNumber: room.roomNumber, roomClass: room.roomClass, price: room.price, reviewsCount: room.reviewsCount, rate: room.rate, photos: room.photos})
 
-                    .search-room__result-pagination 
-                        +pagination({pages: 15})
+          .search-room__result-pagination 
+            +pagination({pages: 15})
 
-    section.search-room__footer
-        +footer({mobile: false})
+  section.search-room__footer
+    +footer({mobile: false})

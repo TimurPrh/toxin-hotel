@@ -11,8 +11,8 @@ import '../../blocks/pagination/pagination';
 import './search-room.scss';
 
 function toggleContent() {
-    $('.js-search-room__result').fadeToggle();
-    $('.js-search-room__filter').fadeToggle();
+  $('.js-search-room__result').fadeToggle();
+  $('.js-search-room__filter').fadeToggle();
 }
 
 document.querySelector('.js-search-room__filter-symbols-reset').addEventListener('click', toggleContent);

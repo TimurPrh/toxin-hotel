@@ -1,57 +1,57 @@
 include ../button/button.pug
 
 mixin header({login: login, name: name, activeLink: activeLink})
-    header.header 
-        .container 
-            .header__wrapper.js-header__wrapper
-                .header__logo
-                    a(href="landing-page") 
-                        img(src=require("../../assets/icons/main-logo.svg"), alt="logo")
-                nav.header__nav
-                    ul.header__list 
-                        li
-                            if activeLink == 1
-                                a.header__list-link.header__list-link_active.text-body_50(href="unset") О нас
-                            else
-                                a.header__list-link.text-body_50(href="unset") О нас
-                        li
-                            if activeLink == 2
-                                a.header__list-link.header__list-link_active.text-body_50(href="unset") Услуги
-                            else 
-                                a.header__list-link.text-body_50(href="unset") Услуги
-                            .header__list-arrow
-                        li
-                            if activeLink == 3
-                                a.header__list-link.header__list-link_active.text-body_50(href="unset") Вакансии
-                            else 
-                                a.header__list-link.text-body_50(href="unset") Вакансии
-                        li 
-                            if activeLink == 4
-                                a.header__list-link.header__list-link_active.text-body_50(href="unset") Новости
-                            else 
-                                a.header__list-link.text-body_50(href="unset") Новости
-                        li
-                            if activeLink == 5
-                                a.header__list-link.header__list-link_active.text-body_50(href="unset") Соглашения
-                            else 
-                                a.header__list-link.text-body_50(href="unset") Соглашения
-                            .header__list-arrow
-                        
-                        if (login == true)
-                            li
-                                .header__user
-                                    .header__line 
-                                    a.header__name.header__list-link.text-body_50(href="unset")= name
-                if (login == false)
-                    .header__buttons
-                        .header__buttons-login
-                            .header__buttons-login-set-size
-                                +button({label: "войти", type: "invert", link: "login"})
-                        .header__buttons-register
-                            .header__buttons-register-set-size
-                                +button({label: "зарегистрироваться", type: "filed", link: "registration"})
+  header.header 
+    .container 
+      .header__wrapper.js-header__wrapper
+        .header__logo
+          a(href="landing-page") 
+            img(src=require("../../assets/icons/main-logo.svg"), alt="logo")
+        nav.header__nav
+          ul.header__list 
+            li
+              if activeLink == 1
+                a.header__list-link.header__list-link_active.text-body_50(href="unset") О нас
+              else
+                a.header__list-link.text-body_50(href="unset") О нас
+            li
+              if activeLink == 2
+                a.header__list-link.header__list-link_active.text-body_50(href="unset") Услуги
+              else 
+                a.header__list-link.text-body_50(href="unset") Услуги
+              .header__list-arrow
+            li
+              if activeLink == 3
+                a.header__list-link.header__list-link_active.text-body_50(href="unset") Вакансии
+              else 
+                a.header__list-link.text-body_50(href="unset") Вакансии
+            li 
+              if activeLink == 4
+                a.header__list-link.header__list-link_active.text-body_50(href="unset") Новости
+              else 
+                a.header__list-link.text-body_50(href="unset") Новости
+            li
+              if activeLink == 5
+                a.header__list-link.header__list-link_active.text-body_50(href="unset") Соглашения
+              else 
+                a.header__list-link.text-body_50(href="unset") Соглашения
+              .header__list-arrow
+            
+            if (login == true)
+              li
+                .header__user
+                  .header__line 
+                  a.header__name.header__list-link.text-body_50(href="unset")= name
+        if (login == false)
+          .header__buttons
+            .header__buttons-login
+              .header__buttons-login-set-size
+                +button({label: "войти", type: "invert", link: "login"})
+            .header__buttons-register
+              .header__buttons-register-set-size
+                +button({label: "зарегистрироваться", type: "filed", link: "registration"})
 
-            .header__hamburger.js-header__hamburger 
-                span 
-                span 
-                span 
+      .header__hamburger.js-header__hamburger 
+        span 
+        span 
+        span 

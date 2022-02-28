@@ -16,7 +16,7 @@
     }
   }
 
-  input[type='checkbox'], input[type='radio'], input[type="number"] {
+  input[type='checkbox'], input[type='radio'], input[type='number'] {
     --active: var(--purple-color);
     --active-inner: var(--gradient-color);
     --focus: 0px var(--dark-shade-25);

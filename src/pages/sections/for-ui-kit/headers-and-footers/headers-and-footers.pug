@@ -2,15 +2,15 @@ include ../../../../blocks/kit-section-name/kit-section-name.pug
 include ../../../../blocks/header/header.pug   
 include ../../../../blocks/footer/footer.pug
 section.headers-and-footers
-    .headers-and-footers__title
-        +kit-section-name({title: "Headers and Footers", logo: "logo-dark-grey.svg"})
-    .headers-and-footers__header
-        .headers-and-footers__header-guest
-            +header({login: false, activeLink: 1})
-        .headers-and-footers__header-user
-            +header({login: true, activeLink: 1, name: "Юлий Цезарь"})
-    .headers-and-footers__footer
-        .headers-and-footers__footer-desctop
-            +footer({mobile: false})
-        .headers-and-footers__footer-mobile 
-            +footer({mobile: true})
+  .headers-and-footers__title
+    +kit-section-name({title: "Headers and Footers", logo: "logo-dark-grey.svg"})
+  .headers-and-footers__header
+    .headers-and-footers__header-guest
+      +header({login: false, activeLink: 1})
+    .headers-and-footers__header-user
+      +header({login: true, activeLink: 1, name: "Юлий Цезарь"})
+  .headers-and-footers__footer
+    .headers-and-footers__footer-desctop
+      +footer({mobile: false})
+    .headers-and-footers__footer-mobile 
+      +footer({mobile: true})

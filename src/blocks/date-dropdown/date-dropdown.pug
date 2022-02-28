@@ -1,48 +1,46 @@
 include ../button/button.pug
 mixin date-dropdown({type: type, label: label, labelTo: labelTo, desc: desc, id: id})
-    if (type == "split")
-        .date-dropdown.date-dropdown_split.js-date-dropdown_split(id= `js-${id}` data-date-type = "split") 
+  if (type == "split")
+    .date-dropdown.date-dropdown_split.js-date-dropdown_split(id= `js-${id}` data-date-type = "split") 
+      .date-dropdown__half
+        .date-dropdown__header.text-h3= label
+        .date-dropdown__desc.text-h3_50= desc
+        .date-dropdown__wrapper 
+          .date-dropdown__input
+            .date-dropdown__arrow.js-date-dropdown__arrow
+              .date-dropdown__arrow-line 
+            input.date-dropdown__calendar-input.js-date-dropdown__calendar-input.text-body_25(data-date = "from" placeholder="ДД.ММ.ГГГГ" value=text readonly)
+      .date-dropdown__half
+        .date-dropdown__header.text-h3= labelTo
+        .date-dropdown__desc.text-h3_50= desc
+        .date-dropdown__wrapper 
+          .date-dropdown__input
+            .date-dropdown__arrow.js-date-dropdown__arrow
+              .date-dropdown__arrow-line 
+            input.date-dropdown__calendar-input.js-date-dropdown__calendar-input.text-body_25(data-date = "to" placeholder="ДД.ММ.ГГГГ" value=text readonly)
+      .date-dropdown__list.js-date-dropdown__list 
+        .date-dropdown__calendar.js-date-dropdown__calendar
+        .date-dropdown__btns
+          .date-dropdown__btns-reset.js-date-dropdown__btns-reset
+            +button({type: "icon"})
+          .date-dropdown__btns-apply.js-date-dropdown__btns-apply
+            +button({label: "Применить", type: "icon"})
 
-            .date-dropdown__half
-                .date-dropdown__header.text-h3= label
-                .date-dropdown__desc.text-h3_50= desc
-                .date-dropdown__wrapper 
-                    .date-dropdown__input
-                        .date-dropdown__arrow.js-date-dropdown__arrow
-                            .date-dropdown__arrow-line 
-                        input.date-dropdown__calendar-input.js-date-dropdown__calendar-input.text-body_25(data-date = "from" placeholder="ДД.ММ.ГГГГ" value=text readonly)
-            .date-dropdown__half
-                .date-dropdown__header.text-h3= labelTo
-                .date-dropdown__desc.text-h3_50= desc
-                .date-dropdown__wrapper 
-                    .date-dropdown__input
-                        .date-dropdown__arrow.js-date-dropdown__arrow
-                            .date-dropdown__arrow-line 
-                        input.date-dropdown__calendar-input.js-date-dropdown__calendar-input.text-body_25(data-date = "to" placeholder="ДД.ММ.ГГГГ" value=text readonly)
-            .date-dropdown__list.js-date-dropdown__list 
-                .date-dropdown__calendar.js-date-dropdown__calendar
-                .date-dropdown__btns
-                    .date-dropdown__btns-reset.js-date-dropdown__btns-reset
-                        +button({type: "icon"})
-                    .date-dropdown__btns-apply.js-date-dropdown__btns-apply
-                        +button({label: "Применить", type: "icon"})
-
-    if (type == "filter")
-        .date-dropdown.date-dropdown_filter.js-date-dropdown_filter(id= `js-${id}` data-date-type = "filter") 
-
-            .date-dropdown__header.text-h3= label
-            .date-dropdown__desc.text-h3_50= desc
-            .date-dropdown__wrapper 
-                .date-dropdown__input
-                    .date-dropdown__arrow.js-date-dropdown__arrow
-                        .date-dropdown__arrow-line 
-                    input.date-dropdown__calendar-input.js-date-dropdown__calendar-input.text-body_25(data-date = "range" placeholder="Выберите даты" value=text readonly)
-                .date-dropdown__list.js-date-dropdown__list 
-                    .date-dropdown__calendar.js-date-dropdown__calendar
-                    .date-dropdown__btns
-                        .date-dropdown__btns-reset.js-date-dropdown__btns-reset
-                            +button({type: "icon"})
-                        .date-dropdown__btns-apply.js-date-dropdown__btns-apply
-                            +button({label: "Применить", type: "icon"})
+  if (type == "filter")
+    .date-dropdown.date-dropdown_filter.js-date-dropdown_filter(id= `js-${id}` data-date-type = "filter") 
+      .date-dropdown__header.text-h3= label
+      .date-dropdown__desc.text-h3_50= desc
+      .date-dropdown__wrapper 
+        .date-dropdown__input
+          .date-dropdown__arrow.js-date-dropdown__arrow
+            .date-dropdown__arrow-line 
+          input.date-dropdown__calendar-input.js-date-dropdown__calendar-input.text-body_25(data-date = "range" placeholder="Выберите даты" value=text readonly)
+        .date-dropdown__list.js-date-dropdown__list 
+          .date-dropdown__calendar.js-date-dropdown__calendar
+          .date-dropdown__btns
+            .date-dropdown__btns-reset.js-date-dropdown__btns-reset
+              +button({type: "icon"})
+            .date-dropdown__btns-apply.js-date-dropdown__btns-apply
+              +button({label: "Применить", type: "icon"})
 
             

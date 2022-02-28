@@ -1,11 +1,11 @@
 mixin room-details-list({items}) 
-    .room-details-list
-        .room-details-list__list
-            each item, i in items
-                .room-details-list__item
-                    .room-details-list__img
-                        img(src=require('../../assets/icons/room-details/' + item[2]))
-                    .room-details-list__text
-                        .room-details-list__text-header.text-body= item[0]
-                        .room-details-list__text-desc.text-body= item[1]
-                .room-details-list__line
+  .room-details-list
+    .room-details-list__list
+      each item, i in items
+        .room-details-list__item
+          .room-details-list__img
+            img(src=require('../../assets/icons/room-details/' + item[2]))
+          .room-details-list__text
+            .room-details-list__text-header.text-body= item[0]
+            .room-details-list__text-desc.text-body= item[1]
+        .room-details-list__line
