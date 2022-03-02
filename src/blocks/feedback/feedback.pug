@@ -2,7 +2,7 @@ include ../input-button/input-button.pug
 mixin feedback({name: name, icon: icon, time: time, text: text, likes: likes})
   .feedback
     .feedback__img
-      img(src=require('../../assets/icons/feedback/' + icon))
+      img(src=require('/src/blocks/feedback/icons/' + icon))
     .feedback__person
       .feedback__person-name.text-body= name
       .feedback__person-time.text-body= time

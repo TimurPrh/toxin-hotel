@@ -1,6 +1,9 @@
 @mixin page-init {
   * {
     box-sizing: border-box;
+  }
+
+  html {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;

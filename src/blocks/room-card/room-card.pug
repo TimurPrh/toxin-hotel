@@ -15,7 +15,7 @@ mixin room-card({roomNumber: roomNumber, roomClass: roomClass, price: price, rev
       .room-card__carousel
         each roomPhoto in photos
           .room-card__carousel-img
-            img(src=require('../../assets/img/rooms/' + roomNumber + '/' + roomPhoto))
+            img(src=require('/src/blocks/room-card/img/rooms/' + roomNumber + '/' + roomPhoto))
 
     .room-card__wrapper= header
       .room-card__room

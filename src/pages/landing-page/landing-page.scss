@@ -6,9 +6,9 @@
 .landing-main {
   min-height: 100vh;
   background: center center/cover no-repeat;
-  background-image: url(../../assets/img/main-bg/bg-3.jpg);
-  background-image: url(../../assets/img/main-bg/bg-2.jpg);
-  background-image: url(../../assets/img/main-bg/bg-1.jpg);
+  background-image: url(./img/bg-3.jpg);
+  background-image: url(./img/bg-2.jpg);
+  background-image: url(./img/bg-1.jpg);
   animation: bg-images 30s cubic-bezier(0.8,-2.5,0.8,1) infinite;
 
   display: flex;
@@ -40,15 +40,15 @@
 
 @keyframes bg-images {
   0% {
-    background-image: url(../../assets/img/main-bg/bg-1.jpg);
+    background-image: url(./img/bg-1.jpg);
   }
   33.3% {
-    background-image: url(../../assets/img/main-bg/bg-2.jpg);
+    background-image: url(./img/bg-2.jpg);
   }
   66.6% {
-    background-image: url(../../assets/img/main-bg/bg-3.jpg);
+    background-image: url(./img/bg-3.jpg);
   }
   100% {
-    background-image: url(../../assets/img/main-bg/bg-1.jpg);
+    background-image: url(./img/bg-1.jpg);
   }
 }
