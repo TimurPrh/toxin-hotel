@@ -19,7 +19,7 @@ import './dropdown.scss';
       }
     };
 
-    $(item).find('.js-dropdown__arrow').on('click', handleArrowClick);
+    $(item).find('.js-dropdown__input').on('click', handleArrowClick);
   });
 
   function sumListItems() {

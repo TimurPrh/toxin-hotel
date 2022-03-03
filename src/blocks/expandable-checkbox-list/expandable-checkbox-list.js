@@ -8,5 +8,5 @@ dropdown.each((i, item) => {
     $(item).find('.js-expandable-checkbox-list__list').slideToggle();
   };
 
-  $(item).find('.js-expandable-checkbox-list__arrow').on('click', handleArrowClick);
+  $(item).find('.js-expandable-checkbox-list__header').on('click', handleArrowClick);
 });

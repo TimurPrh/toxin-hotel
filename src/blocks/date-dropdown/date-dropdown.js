@@ -128,4 +128,14 @@ import './date-dropdown.scss';
       dropdownDateInit($(item), airDatepickerFilter[i], dropdownDateFilterId[i]);
     });
   }
+
+  function handleOutsideClick(e) {
+    if (!e.target.closest('.js-date-dropdown_filter') && !e.target.closest('.js-date-dropdown_split')) {
+      $('html').find('.js-date-dropdown__list').each((i, list) => {
+        $(list).slideUp();
+      });
+    }
+  }
+
+  $('html').on('click', handleOutsideClick);
 }());

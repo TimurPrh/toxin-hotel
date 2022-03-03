@@ -44,11 +44,11 @@ mixin header({login: login, name: name, activeLink: activeLink})
                   a.header__name.header__list-link.text-body_50(href="unset")= name
         if (login == false)
           .header__buttons
-            .header__buttons-login
-              .header__buttons-login-set-size
+            .header__buttons-login.header__buttons-login-set-size
+              
                 +button({label: "войти", type: "invert", link: "login"})
-            .header__buttons-register
-              .header__buttons-register-set-size
+            .header__buttons-register.header__buttons-register-set-size
+
                 +button({label: "зарегистрироваться", type: "filed", link: "registration"})
 
       .header__hamburger.js-header__hamburger 

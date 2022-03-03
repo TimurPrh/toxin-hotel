@@ -134,12 +134,7 @@
       flex-direction: column;
       &-login {
         margin: 10px 0;
-      }
-      .button__wrapper-invert {
-        width: 185px !important;
-      }
-      .button_type_filed {
-        width: 185px !important;
+        width: 100%;
       }
     }
     &__hamburger {
