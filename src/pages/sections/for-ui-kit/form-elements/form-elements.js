@@ -6,7 +6,7 @@ import '../../../../blocks/input-button/input-button';
 import '../../../../blocks/rate-button/rate-button';
 import '../../../../blocks/expandable-checkbox-list/expandable-checkbox-list';
 import '../../../../blocks/rich-checkbox-buttons/rich-checkbox-buttons';
-import '../../../../blocks/bullet-list/bullet-list';
+// import '../../../../blocks/bullet-list/bullet-list';
 import '../../../../blocks/room-details-list/room-details-list';
 import '../../../../blocks/feedback/feedback';
 import '../../../../blocks/slider/slider';

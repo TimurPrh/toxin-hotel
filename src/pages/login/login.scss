@@ -6,8 +6,8 @@
 .landing-main {
   min-height: 100vh;
   background: center center/cover no-repeat;
-  background-image: url(./img/bg-1.jpg);
-  background-image: url(./img/bg-4.jpg);
+  background-image: url(./img/pink-room-preview.jpg);
+  background-image: url(./img/grey-room-preview.jpg);
   animation: bg-images 20s cubic-bezier(0.8,-2.5,0.8,1) infinite;
 
   display: flex;
@@ -28,12 +28,12 @@
 
 @keyframes bg-images {
   0% {
-    background-image: url(./img/bg-4.jpg);
+    background-image: url(./img/grey-room-preview.jpg);
   }
   50% {
-    background-image: url(./img/bg-1.jpg);
+    background-image: url(./img/pink-room-preview.jpg);
   }
   100% {
-    background-image: url(./img/bg-4.jpg);
+    background-image: url(./img/grey-room-preview.jpg);
   }
 }
