@@ -1,6 +1,3 @@
-import '../button/button';
-import './header.scss';
-
 const handleHamburgerClick = () => {
   document.querySelector('.js-header__hamburger').classList.toggle('header__hamburger_active');
   if (document.querySelector('.js-header__wrapper').style.left === "0%") {
@@ -10,4 +7,6 @@ const handleHamburgerClick = () => {
   }
 };
 
-document.querySelector('.js-header__hamburger').addEventListener('click', handleHamburgerClick);
+if (document.querySelector('.js-header__hamburger')) {
+  document.querySelector('.js-header__hamburger').addEventListener('click', handleHamburgerClick);
+}

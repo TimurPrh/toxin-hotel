@@ -1,5 +1,3 @@
-import './rate-button.scss';
-
 document.querySelectorAll('.js-rate-button__star').forEach((starElement) => {
   const handleStarClick = (e) => {
     function setStars(elem) {

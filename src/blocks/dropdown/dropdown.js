@@ -1,7 +1,5 @@
 import 'jquery-mask-plugin';
 
-import './dropdown.scss';
-
 (function dropdownFunction() {
   const counter = $('.js-dropdown__item-count');
   const dropdown = $('.js-dropdown');

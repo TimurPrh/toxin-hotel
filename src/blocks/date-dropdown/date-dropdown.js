@@ -1,8 +1,6 @@
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 
-import './date-dropdown.scss';
-
 (function dropdown() {
   const dropdownDateSplit = $('.js-date-dropdown_split');
   const dropdownDateSplitId = [];

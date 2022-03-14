@@ -1,10 +1,6 @@
-import './pagination.scss';
-
-const totalPagesFromDataset = (document.querySelector('.js-pagination').dataset.pages);
-const element = document.querySelector(".js-pagination ul");
-const initialPage = 1;
-
 function createPagination(totalPages, page) {
+  const element = document.querySelector(".js-pagination ul");
+
   let liTag = '';
   let active;
   let beforePage = page - 1;
@@ -54,6 +50,11 @@ function createPagination(totalPages, page) {
   return liTag;
 }
 
-createPagination(totalPagesFromDataset, initialPage);
+if (document.querySelector('.js-pagination')) {
+  const totalPagesFromDataset = (document.querySelector('.js-pagination').dataset.pages);
+  const initialPage = 1;
 
-window.createPagination = createPagination;
+  createPagination(totalPagesFromDataset, initialPage);
+
+  window.createPagination = createPagination;
+}

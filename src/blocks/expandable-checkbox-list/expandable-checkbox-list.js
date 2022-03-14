@@ -1,5 +1,3 @@
-import './expandable-checkbox-list.scss';
-
 const dropdown = $('.js-expandable-checkbox-list');
 
 dropdown.each((i, item) => {

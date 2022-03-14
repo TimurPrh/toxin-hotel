@@ -1,5 +1,3 @@
-import './button.scss';
-
 const wideButton = document.querySelectorAll('.js-button_type_wide');
 const invertButton = document.querySelectorAll('.js-button_type_invert');
 const wideButtonArrow = document.querySelectorAll('.js-button__wrapper .js-button__arrow');

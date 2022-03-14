@@ -1,8 +1,3 @@
-import '../dropdown/dropdown';
-import '../date-dropdown/date-dropdown';
-import '../button/button';
-import './booking-room-card.scss';
-
 function bookingRoomCard() {
   const prices = document.querySelectorAll('.js-booking-room-card__item-price');
   const descriptions = document.querySelectorAll('.js-booking-room-card__item-desc');
@@ -62,4 +57,6 @@ function bookingRoomCard() {
   window.addEventListener("orientationchange", setLineWidth);
 }
 
-window.addEventListener("load", bookingRoomCard);
+if (document.querySelector('.js-booking-room-card__item-price')) {
+  window.addEventListener("load", bookingRoomCard);
+}

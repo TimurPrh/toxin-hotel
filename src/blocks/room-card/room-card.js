@@ -1,9 +1,6 @@
 import 'slick-carousel/slick/slick.min';
 import 'slick-carousel/slick/slick.scss';
 
-import '../rate-button/rate-button';
-import './room-card.scss';
-
 (function roomCard() {
   document.querySelectorAll('.room-card').forEach((card) => {
     $(card).find('.room-card__carousel').slick({

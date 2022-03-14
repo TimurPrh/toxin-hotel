@@ -1,5 +1,3 @@
-import './input-button.scss';
-
 document.querySelectorAll('.js-input-button_like').forEach((item) => {
   const handleLikeClick = (e) => {
     const like = e.target;

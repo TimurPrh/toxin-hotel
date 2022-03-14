@@ -1,31 +1,10 @@
 import '../../libs/range-slider-plugin/range-slider';
 import '../../libs/range-slider-plugin/range-slider.css';
-import './slider.scss';
 
 const $sliderWrapper = $('.js-slider__plugin');
 const slider = document.querySelector('.slider');
 const sliderResult = document.querySelector('.slider__result');
-const {
-  min, max, step, from, to,
-} = JSON.parse(slider.dataset.sliderValues);
 const currentValues = [];
-
-$sliderWrapper.slider({
-  range: true,
-  vertical: false,
-  scale: false,
-  tip: false,
-  bar: true,
-  min,
-  max,
-  step,
-  from,
-  to,
-});
-
-const settings = $sliderWrapper.slider('getSettings');
-currentValues[0] = settings.from;
-currentValues[1] = settings.to;
 
 function separateThousand(x) {
   if (x >= 1000) {
@@ -41,8 +20,6 @@ function updateResult() {
   sliderResult.innerHTML = `${separateThousand(currentValues[0])} - ${separateThousand(currentValues[1])} ₽`;
 }
 
-updateResult(currentValues[0], currentValues[1]);
-
 function fromAndToValuesHandler(event, { inputVal, id }) {
   const dataset = JSON.parse(slider.dataset.sliderValues);
   if (id === 0) {
@@ -56,4 +33,30 @@ function fromAndToValuesHandler(event, { inputVal, id }) {
 
   updateResult();
 }
-$sliderWrapper.on('moveThumbEvent', fromAndToValuesHandler.bind(this));
+
+if (document.querySelector('.js-slider__plugin')) {
+  const {
+    min, max, step, from, to,
+  } = JSON.parse(slider.dataset.sliderValues);
+
+  $sliderWrapper.slider({
+    range: true,
+    vertical: false,
+    scale: false,
+    tip: false,
+    bar: true,
+    min,
+    max,
+    step,
+    from,
+    to,
+  });
+
+  const settings = $sliderWrapper.slider('getSettings');
+  currentValues[0] = settings.from;
+  currentValues[1] = settings.to;
+
+  updateResult(currentValues[0], currentValues[1]);
+
+  $sliderWrapper.on('moveThumbEvent', fromAndToValuesHandler.bind(this));
+}

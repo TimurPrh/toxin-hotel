@@ -52,310 +52,148 @@ const cssLoaders = (extra) => {
   return loaders;
 };
 
-const pagesData = [
-  {
-    template: 'src/pages/landing-page/landing-page.pug',
-    filename: 'landing-page/index.html',
+module.exports = {
+  mode: 'development',
+  entry: {
+    main: './src/index.js',
   },
-  {
-    template: 'src/pages/registration/registration.pug',
-    filename: 'registration/index.html',
+  output: {
+    filename: filename('js'),
+    path: path.resolve(__dirname, 'dist'),
   },
-  {
-    template: 'src/pages/login/login.pug',
-    filename: 'login/index.html',
+  resolve: {
+    extensions: ['.js'],
   },
-  {
-    template: 'src/pages/search-room/search-room.pug',
-    filename: 'search-room/index.html',
+  optimization: optimization(),
+  devServer: {
+    port: 4200,
   },
-  {
-    template: 'src/pages/room-details/room-details.pug',
-    filename: 'room-details/index.html',
-  },
-  {
-    template: 'src/pages/ui-kit/ui-kit.pug',
-    filename: 'ui-kit/index.html',
-  },
-  {
-    template: 'src/index.pug',
-    filename: 'index.html',
-  },
-];
+  devtool: isProd ? false : 'source-map',
+  plugins: [
+    new HTMLWebpackPlugin({
+      inject: true,
+      template: 'src/index.pug',
+      filename: 'index.html',
+      favicon: "src/assets/favicon/favicon.ico",
+    }),
+    new HTMLWebpackPlugin({
+      inject: true,
+      template: 'src/pages/ui-kit/ui-kit.pug',
+      filename: 'ui-kit/index.html',
+      favicon: "src/assets/favicon/favicon.ico",
+    }),
+    new HTMLWebpackPlugin({
+      inject: true,
+      template: 'src/pages/landing-page/landing-page.pug',
+      filename: 'landing-page/index.html',
+      favicon: "src/assets/favicon/favicon.ico",
+    }),
+    new HTMLWebpackPlugin({
+      inject: true,
+      template: 'src/pages/registration/registration.pug',
+      filename: 'registration/index.html',
+      favicon: "src/assets/favicon/favicon.ico",
+    }),
+    new HTMLWebpackPlugin({
+      inject: true,
+      template: 'src/pages/login/login.pug',
+      filename: 'login/index.html',
+      favicon: "src/assets/favicon/favicon.ico",
+    }),
+    new HTMLWebpackPlugin({
+      inject: true,
+      template: 'src/pages/search-room/search-room.pug',
+      filename: 'search-room/index.html',
+      favicon: "src/assets/favicon/favicon.ico",
+    }),
+    new HTMLWebpackPlugin({
+      inject: true,
+      template: 'src/pages/room-details/room-details.pug',
+      filename: 'room-details/index.html',
+      favicon: "src/assets/favicon/favicon.ico",
+    }),
 
-function getPagesConfig(pageData, i) {
-  return ({
-    mode: 'development',
-    entry: {
-      main: './src/index.js',
-    },
-    output: {
-      filename: filename('js'),
-      path: path.join(__dirname, 'dist'),
-    },
-    resolve: {
-      extensions: ['.js'],
-    },
-
-    optimization: optimization(),
-    devServer: {
-      port: 4200,
-    },
-    devtool: isProd ? false : 'source-map',
-    plugins: [
-      new HTMLWebpackPlugin({
-        // inject: true,
-        template: pageData.template,
-        filename: pageData.filename,
-        favicon: "src/assets/favicon/favicon.ico",
-      }),
-      new CleanWebpackPlugin({
-        dry: i !== 0,
-        verbose: false,
-      }),
-      new CopyWebpackPlugin({
-        patterns: [
-          {
-            from: path.resolve(__dirname, 'src/assets/favicon/favicon.ico'),
-            to: path.resolve(__dirname, 'dist'),
-          },
-        ],
-      }),
-
-      new MiniCssExtractPlugin({
-        filename: filename('css'),
-        ignoreOrder: true,
-      }),
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-      }),
-    ],
-    module: {
-      rules: [
+    new CleanWebpackPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
         {
-          test: /\.(png|jpg|svg|gif)$/,
-          type: 'asset/resource',
-          generator: {
-            filename: 'static/[hash][ext]',
-          },
-        },
-        {
-          test: /\.(ttf|woff|woff2|eot)$/,
-          type: 'asset/resource',
-          generator: {
-            filename: 'static/[hash][ext]',
-          },
-        },
-        {
-          test: /\.xml$/,
-          use: ['xml-loader'],
-        },
-        {
-          test: /\.csv$/,
-          use: ['csv-loader'],
-        },
-        {
-          test: /\.css$/i,
-          use: cssLoaders(),
-        },
-        {
-          test: /\.less$/i,
-          use: cssLoaders('less-loader'),
-        },
-        {
-          test: /\.s[ac]ss$/i,
-          use: cssLoaders('sass-loader'),
-        },
-        {
-          test: /\.m?js$/,
-          exclude: /(node_modules)/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env'],
-            },
-          },
-        },
-        {
-          test: /\.m?ts$/,
-          exclude: /(node_modules)/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env', '@babel/preset-typescript'],
-            },
-          },
-        },
-        {
-          test: /\.(pug|jade)$/,
-          loader: 'pug-loader',
-          options: {
-            pretty: true,
-          },
+          from: path.resolve(__dirname, 'src/assets/favicon/favicon.ico'),
+          to: path.resolve(__dirname, 'dist'),
         },
       ],
-    },
-  });
-}
-
-module.exports = pagesData.map((data, i) => getPagesConfig(data, i));
-
-// module.exports = {
-//   mode: 'development',
-//   entry: {
-//     main: './src/index.js',
-//     'ui-kit': './src/pages/ui-kit/ui-kit',
-//     'landing-page': './src/pages/landing-page/landing-page',
-//     registration: './src/pages/registration/registration',
-//     login: './src/pages/login/login',
-//     'search-room': './src/pages/search-room/search-room',
-//     'room-details': './src/pages/room-details/room-details',
-//   },
-//   output: {
-//     filename: filename('js'),
-//     path: path.resolve(__dirname, 'dist'),
-//   },
-//   resolve: {
-//     extensions: ['.js'],
-//   },
-//   optimization: optimization(),
-//   devServer: {
-//     port: 4200,
-//   },
-//   devtool: isProd ? false : 'source-map',
-//   plugins: [
-//     new HTMLWebpackPlugin({
-//       inject: true,
-//       chunks: ['main'],
-//       template: 'src/index.pug',
-//       filename: 'index.html',
-//       favicon: "src/assets/favicon/favicon.ico",
-//     }),
-//     new HTMLWebpackPlugin({
-//       inject: true,
-//       chunks: ['ui-kit'],
-//       template: 'src/pages/ui-kit/ui-kit.pug',
-//       filename: 'ui-kit/index.html',
-//       favicon: "src/assets/favicon/favicon.ico",
-//     }),
-//     new HTMLWebpackPlugin({
-//       inject: true,
-//       chunks: ['landing-page'],
-//       template: 'src/pages/landing-page/landing-page.pug',
-//       filename: 'landing-page/index.html',
-//       favicon: "src/assets/favicon/favicon.ico",
-//     }),
-//     new HTMLWebpackPlugin({
-//       inject: true,
-//       chunks: ['registration'],
-//       template: 'src/pages/registration/registration.pug',
-//       filename: 'registration/index.html',
-//       favicon: "src/assets/favicon/favicon.ico",
-//     }),
-//     new HTMLWebpackPlugin({
-//       inject: true,
-//       chunks: ['login'],
-//       template: 'src/pages/login/login.pug',
-//       filename: 'login/index.html',
-//       favicon: "src/assets/favicon/favicon.ico",
-//     }),
-//     new HTMLWebpackPlugin({
-//       inject: true,
-//       chunks: ['search-room'],
-//       template: 'src/pages/search-room/search-room.pug',
-//       filename: 'search-room/index.html',
-//       favicon: "src/assets/favicon/favicon.ico",
-//     }),
-//     new HTMLWebpackPlugin({
-//       inject: true,
-//       chunks: ['room-details'],
-//       template: 'src/pages/room-details/room-details.pug',
-//       filename: 'room-details/index.html',
-//       favicon: "src/assets/favicon/favicon.ico",
-//     }),
-
-// new CleanWebpackPlugin(),
-// new CopyWebpackPlugin({
-//   patterns: [
-//     {
-//       from: path.resolve(__dirname, 'src/assets/favicon/favicon.ico'),
-//       to: path.resolve(__dirname, 'dist'),
-//     },
-//   ],
-// }),
-//   new MiniCssExtractPlugin({
-//     filename: filename('css'),
-//     ignoreOrder: true,
-//   }),
-//   new webpack.ProvidePlugin({
-//     $: 'jquery',
-//     jQuery: 'jquery',
-//   }),
-// ],
-// module: {
-//   rules: [
-//     {
-//       test: /\.(png|jpg|svg|gif)$/,
-//       type: 'asset/resource',
-//       generator: {
-//         filename: 'static/[hash][ext]',
-//       },
-//     },
-//     {
-//       test: /\.(ttf|woff|woff2|eot)$/,
-//       type: 'asset/resource',
-//       generator: {
-//         filename: 'static/[hash][ext]',
-//       },
-//     },
-//     {
-//       test: /\.xml$/,
-//   use: ['xml-loader'],
-// },
-// {
-//   test: /\.csv$/,
-//   use: ['csv-loader'],
-// },
-// {
-//   test: /\.css$/i,
-//   use: cssLoaders(),
-// },
-// {
-//   test: /\.less$/i,
-//   use: cssLoaders('less-loader'),
-// },
-// {
-//   test: /\.s[ac]ss$/i,
-//   use: cssLoaders('sass-loader'),
-// },
-// {
-//   test: /\.m?js$/,
-//   exclude: /(node_modules)/,
-//   use: {
-//     loader: 'babel-loader',
-//     options: {
-//       presets: ['@babel/preset-env'],
-//     },
-//   },
-// },
-// {
-//   test: /\.m?ts$/,
-//   exclude: /(node_modules)/,
-//         use: {
-//           loader: 'babel-loader',
-//           options: {
-//             presets: ['@babel/preset-env', '@babel/preset-typescript'],
-//           },
-//         },
-//       },
-//       {
-//         test: /\.(pug|jade)$/,
-//         loader: 'pug-loader',
-//         options: {
-//           pretty: true,
-//         },
-//       },
-//     ],
-//   },
-// };
+    }),
+    new MiniCssExtractPlugin({
+      filename: filename('css'),
+      ignoreOrder: true,
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpg|svg|gif)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/[hash][ext]',
+        },
+      },
+      {
+        test: /\.(ttf|woff|woff2|eot)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/[hash][ext]',
+        },
+      },
+      {
+        test: /\.xml$/,
+        use: ['xml-loader'],
+      },
+      {
+        test: /\.csv$/,
+        use: ['csv-loader'],
+      },
+      {
+        test: /\.css$/i,
+        use: cssLoaders(),
+      },
+      {
+        test: /\.less$/i,
+        use: cssLoaders('less-loader'),
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: cssLoaders('sass-loader'),
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+      {
+        test: /\.m?ts$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-typescript'],
+          },
+        },
+      },
+      {
+        test: /\.(pug|jade)$/,
+        loader: 'pug-loader',
+        options: {
+          pretty: true,
+        },
+      },
+    ],
+  },
+};

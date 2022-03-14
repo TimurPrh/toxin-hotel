@@ -1,7 +1,5 @@
 import 'jquery-mask-plugin';
 
-import './text-field.scss';
-
 $(document).ready(() => {
   $('.js-text-field__input-date').mask('00.00.0000');
 

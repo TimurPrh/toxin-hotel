@@ -1,17 +1,11 @@
-@import '/src/assets/styles/montserrat';
+@import './assets/styles/montserrat';
+@import './assets/styles/text-types';
+@import './assets/styles/mixins';
+@include page-init;
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-}
-
-body {
-  // max-width: 1000px;
+.preview-pages {
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 20px;
 }
 
