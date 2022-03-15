@@ -11,37 +11,37 @@ mixin header({login: login, name: name, activeLink: activeLink})
           ul.header__list 
             li
               if activeLink == 1
-                a.header__list-link.header__list-link_active.text-body_50(href="unset") О нас
+                a.header__list-link.header__list-link_active(href="unset") О нас
               else
-                a.header__list-link.text-body_50(href="unset") О нас
+                a.header__list-link(href="unset") О нас
             li
               if activeLink == 2
-                a.header__list-link.header__list-link_active.text-body_50(href="unset") Услуги
+                a.header__list-link.header__list-link_active(href="unset") Услуги
               else 
-                a.header__list-link.text-body_50(href="unset") Услуги
+                a.header__list-link(href="unset") Услуги
               .header__list-arrow
             li
               if activeLink == 3
-                a.header__list-link.header__list-link_active.text-body_50(href="unset") Вакансии
+                a.header__list-link.header__list-link_active(href="unset") Вакансии
               else 
-                a.header__list-link.text-body_50(href="unset") Вакансии
+                a.header__list-link(href="unset") Вакансии
             li 
               if activeLink == 4
-                a.header__list-link.header__list-link_active.text-body_50(href="unset") Новости
+                a.header__list-link.header__list-link_active(href="unset") Новости
               else 
-                a.header__list-link.text-body_50(href="unset") Новости
+                a.header__list-link(href="unset") Новости
             li
               if activeLink == 5
-                a.header__list-link.header__list-link_active.text-body_50(href="unset") Соглашения
+                a.header__list-link.header__list-link_active(href="unset") Соглашения
               else 
-                a.header__list-link.text-body_50(href="unset") Соглашения
+                a.header__list-link(href="unset") Соглашения
               .header__list-arrow
             
             if (login == true)
               li
                 .header__user
                   .header__line 
-                  a.header__name.header__list-link.text-body_50(href="unset")= name
+                  a.header__name.header__list-link(href="unset")= name
         if (login == false)
           .header__buttons
             .header__buttons-login.header__buttons-login-set-size

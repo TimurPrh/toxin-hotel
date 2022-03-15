@@ -1,7 +1,11 @@
 .button {
   background: var(--gradient-color);
   border-radius: 22px;
-  color: #FFFFFF !important;
+  font-weight: bold;
+  font-size: var(--text-h3-font-size);
+  line-height: var(--text-h3-line-height);
+  text-transform: uppercase;
+  color: #FFFFFF;
   
   border: none;
   cursor: pointer;

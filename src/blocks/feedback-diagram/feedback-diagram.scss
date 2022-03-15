@@ -37,6 +37,11 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  li {
+    font-size: var(--text-body-font-size);
+    line-height: var(--text-body-line-height);
+    color: var(--dark-shade-75);
+  }
 }
 .feedback-diagram__figure-key-list li {
   margin: 0;

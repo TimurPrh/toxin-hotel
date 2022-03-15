@@ -9,8 +9,19 @@
       width: 320px;
     }
   }
-  &__desc {
+  &__header {
+    font-weight: bold;
+    font-size: var(--text-h3-font-size);
+    line-height: var(--text-h3-line-height);
+    text-transform: uppercase;
+    color: var(--dark-shade-100);
+  }
+  &__description {
     justify-self: end;
+    font-size: var(--text-h3-font-size);
+    line-height: var(--text-h3-line-height);
+    text-transform: uppercase;
+    color: var(--dark-shade-50);
   }
   &__wrapper {
     margin-top: 4px;
@@ -56,6 +67,11 @@
       border-width: 0 0 2px 2px;
       padding: 4px;
     }
+  }
+  &__calendar-input {
+    font-size: var(--text-body-font-size);
+    line-height: var(--text-body-line-height);
+    color: var(--dark-shade-25);
   }
   &__list {
     display: none;
@@ -121,7 +137,7 @@
       }
     }
   }
-  &__btns {
+  &__buttons {
     margin-top: 17px;
     display: flex;
     justify-content: space-between;

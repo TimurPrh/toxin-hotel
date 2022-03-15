@@ -1,64 +1,64 @@
 include ../button/button.pug
-mixin dropdown({type: type, label: label, desc: desc, id: id})
+mixin dropdown({type: type, label: label, description: description, id: id})
   if (type == "guests") 
     .dropdown.js-dropdown.dropdown_guests.js-dropdown_guests
-      .dropdown__header.text-h3= label
-      .dropdown__desc.text-h3_50= desc
+      .dropdown__header= label
+      .dropdown__description= description
       .dropdown__wrapper.js-dropdown__wrapper 
         .dropdown__input.js-dropdown__input
           .dropdown__arrow.js-dropdown__arrow
             .dropdown__arrow-line 
-          input.text-body_25(placeholder=placeholder value=text readonly)
+          input(placeholder=placeholder value=text readonly)
         .dropdown__list.js-dropdown__list 
           .dropdown__item 
-            .dropdown__item-title.text-h3 взрослые 
+            .dropdown__item-title взрослые 
             .dropdown__item-counter 
               .dropdown__item-minus.js-dropdown__item-minus 
-              .dropdown__item-count.js-dropdown__item-count.text-h3 0
+              .dropdown__item-count.js-dropdown__item-count 0
               .dropdown__item-plus.js-dropdown__item-plus
           .dropdown__item 
-            .dropdown__item-title.text-h3 дети 
+            .dropdown__item-title дети 
             .dropdown__item-counter 
               .dropdown__item-minus.js-dropdown__item-minus 
-              .dropdown__item-count.js-dropdown__item-count.text-h3 0 
+              .dropdown__item-count.js-dropdown__item-count 0 
               .dropdown__item-plus.js-dropdown__item-plus
           .dropdown__item 
-            .dropdown__item-title.text-h3 младенцы 
+            .dropdown__item-title младенцы 
             .dropdown__item-counter 
               .dropdown__item-minus.js-dropdown__item-minus 
-              .dropdown__item-count.js-dropdown__item-count.text-h3 0 
+              .dropdown__item-count.js-dropdown__item-count 0 
               .dropdown__item-plus.js-dropdown__item-plus
-          .dropdown__btns
-            .dropdown__btns-reset.js-dropdown__btns-reset
+          .dropdown__buttons
+            .dropdown__buttons-reset.js-dropdown__buttons-reset
               +button({type: "icon"})
-            .dropdown__btns-apply.js-dropdown__btns-apply
+            .dropdown__buttons-apply.js-dropdown__buttons-apply
               +button({label: "Применить", type: "icon"})
         
   else if (type == "room")
     .dropdown.js-dropdown.dropdown_room.js-dropdown_room
-      .dropdown__header.text-h3= label
-      .dropdown__desc.text-h3_50= desc
+      .dropdown__header= label
+      .dropdown__description= description
       .dropdown__wrapper.js-dropdown__wrapper 
         .dropdown__input.js-dropdown__input
           .dropdown__arrow.js-dropdown__arrow
             .dropdown__arrow-line 
-          input.text-body_25(placeholder=placeholder value=text readonly)
+          input(placeholder=placeholder value=text readonly)
         .dropdown__list.js-dropdown__list 
           .dropdown__item 
-            .dropdown__item-title.text-h3 спальни 
+            .dropdown__item-title спальни 
             .dropdown__item-counter 
               .dropdown__item-minus.js-dropdown__item-minus 
-              .dropdown__item-count.js-dropdown__item-count.text-h3 0
+              .dropdown__item-count.js-dropdown__item-count 0
               .dropdown__item-plus.js-dropdown__item-plus
           .dropdown__item 
-            .dropdown__item-title.text-h3 кровати
+            .dropdown__item-title кровати
             .dropdown__item-counter 
               .dropdown__item-minus.js-dropdown__item-minus 
-              .dropdown__item-count.js-dropdown__item-count.text-h3 0 
+              .dropdown__item-count.js-dropdown__item-count 0 
               .dropdown__item-plus.js-dropdown__item-plus
           .dropdown__item 
-            .dropdown__item-title.text-h3 ванные комнаты 
+            .dropdown__item-title ванные комнаты 
             .dropdown__item-counter 
               .dropdown__item-minus.js-dropdown__item-minus 
-              .dropdown__item-count.js-dropdown__item-count.text-h3 0 
+              .dropdown__item-count.js-dropdown__item-count 0 
               .dropdown__item-plus.js-dropdown__item-plus

@@ -5,6 +5,13 @@
     margin: 0;
     margin-left: 30px;
   }
+  &__item-header {
+    font-weight: bold;
+    font-size: var(--text-h3-font-size);
+    line-height: var(--text-h3-line-height);
+    text-transform: uppercase;
+    color: var(--dark-shade-100);
+  }
   &__wrapper {
     margin-top: 64px;
     min-width: 1159px;

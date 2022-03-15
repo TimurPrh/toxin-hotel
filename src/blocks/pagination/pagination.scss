@@ -76,7 +76,10 @@
       }
     }
   }
-  &__desc {
+  &__description {
+    font-size: var(--text-body-font-size);
+    line-height: var(--text-body-line-height);
+    color: var(--dark-shade-75);
     margin-top: 10px;
     text-align: center;
   }

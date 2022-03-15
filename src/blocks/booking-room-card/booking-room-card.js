@@ -1,6 +1,6 @@
 function bookingRoomCard() {
   const prices = document.querySelectorAll('.js-booking-room-card__item-price');
-  const descriptions = document.querySelectorAll('.js-booking-room-card__item-desc');
+  const descriptions = document.querySelectorAll('.js-booking-room-card__item-description');
   const sumText = document.querySelector('.js-booking-room-card__sum-text');
   const sumNumber = document.querySelector('.js-booking-room-card__sum-number');
   const sumLine = document.querySelector('.js-booking-room-card__sum-line');
@@ -14,11 +14,11 @@ function bookingRoomCard() {
     sum += parseInt(price.innerHTML.replace(/&nbsp;/g, ''), 10);
   });
 
-  descriptions.forEach((desc) => {
-    const discountIndex = desc.innerHTML.indexOf('скидка');
+  descriptions.forEach((description) => {
+    const discountIndex = description.innerHTML.indexOf('скидка');
     if (discountIndex !== -1) {
-      const discountIndexEnd = desc.innerHTML.indexOf('₽', discountIndex);
-      discount += parseInt(desc.innerHTML.slice(discountIndex + 7, discountIndexEnd).replace(/&nbsp;/g, ''), 10);
+      const discountIndexEnd = description.innerHTML.indexOf('₽', discountIndex);
+      discount += parseInt(description.innerHTML.slice(discountIndex + 7, discountIndexEnd).replace(/&nbsp;/g, ''), 10);
     }
   });
 

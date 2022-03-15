@@ -10,38 +10,38 @@ mixin footer({mobile: mobile})
                 a(href="landing-page")  
                   .footer__about-logo 
                     img(src=require("/src/blocks/footer/icons/main-logo.svg"), alt="logo")
-                .footer__about-text.text-body Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                .footer__about-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
 
               nav.footer__nav
-                .footer__nav-header.text-h3 навигация
+                .footer__nav-header навигация
                 ul.footer__nav-list
                   each link in ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
                     li 
-                        a.footer__nav-link.text-body_50(href="unset")= link
+                        a.footer__nav-link(href="unset")= link
 
               nav.footer__nav
-                .footer__nav-header.text-h3 о нас
+                .footer__nav-header о нас
                 ul.footer__nav-list
                   each link in ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
                     li 
-                      a.footer__nav-link.text-body_50(href="unset")= link
+                      a.footer__nav-link(href="unset")= link
 
               nav.footer__nav
-                .footer__nav-header.text-h3 Служба поддержки
+                .footer__nav-header Служба поддержки
                 ul.footer__nav-list
                   each link in ['Соглашения', 'Сообщества', 'Связь с нами']
                     li 
-                      a.footer__nav-link.text-body_50(href="unset")= link
+                      a.footer__nav-link(href="unset")= link
 
               form.footer__subscribe
-                .footer__subscribe-header.text-h3 Подписка
-                .footer__subscribe-text.text-body Получайте специальные предложения и новости сервиса
+                .footer__subscribe-header Подписка
+                .footer__subscribe-text Получайте специальные предложения и новости сервиса
                 .footer__subscribe-input
                   +text-field({id: "subscribe_field", placeholder: "Email", arrow: true})
       .footer__copyright-outer 
         .container
           .footer__copyright 
-            .footer__copyright-text.text-body Copyright © 2018 Toxin отель. Все права защищены.
+            .footer__copyright-text Copyright © 2018 Toxin отель. Все права защищены.
             .footer__copyright-icons 
               .footer__copyright-icon 
                 img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")
@@ -54,7 +54,7 @@ mixin footer({mobile: mobile})
         .footer__mobile-logo 
           a(href="landing-page") 
             img(src=require("/src/blocks/footer/icons/main-logo.svg"), alt="logo")
-        .footer__true-mobile-text.text-body Copyright © 2018 Toxin отель. Все права защищены.
+        .footer__true-mobile-text Copyright © 2018 Toxin отель. Все права защищены.
         .footer__true-mobile-icons 
           .footer__true-mobile-icon 
             img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")
@@ -68,7 +68,7 @@ mixin footer({mobile: mobile})
         .footer__mobile-logo 
           a(href="landing-page") 
             img(src=require("/src/blocks/footer/icons/main-logo.svg"), alt="logo")
-        .footer__mobile-text.text-body Copyright © 2018 Toxin отель. Все права защищены.
+        .footer__mobile-text Copyright © 2018 Toxin отель. Все права защищены.
         .footer__mobile-icons 
           .footer__mobile-icon 
             img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")

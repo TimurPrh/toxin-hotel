@@ -2,8 +2,20 @@
   height: 48px;
   display: grid;
   grid-template-columns: auto auto;
+  &__header {
+    font-weight: bold;
+    font-size: var(--text-h3-font-size);
+    line-height: var(--text-h3-line-height);
+    text-transform: uppercase;
+    color: var(--dark-shade-100);
+  }
   &__result {
     justify-self: end;
+    font-weight: normal;
+    font-size: var(--text-h3-font-size);
+    line-height: var(--text-h3-line-height);
+    text-transform: uppercase;
+    color: var(--dark-shade-50);
   }
   &__plugin {
     height: 6px;

@@ -32,9 +32,9 @@ import 'air-datepicker/air-datepicker.css';
     }
 
     if ($(elem).find('input').val()) {
-      $(elem).find('.js-date-dropdown__btns-reset button').html('очистить');
+      $(elem).find('.js-date-dropdown__buttons-reset button').html('очистить');
     } else {
-      $(elem).find('.js-date-dropdown__btns-reset button').html('');
+      $(elem).find('.js-date-dropdown__buttons-reset button').html('');
     }
   }
 
@@ -103,7 +103,7 @@ import 'air-datepicker/air-datepicker.css';
 
     $elem.find('.js-date-dropdown__arrow').on('click', handleArrowClick);
 
-    $elem.find('.js-date-dropdown__btns-apply button').on('click', handleApplyClick);
+    $elem.find('.js-date-dropdown__buttons-apply button').on('click', handleApplyClick);
 
     $elem.find('.air-datepicker').appendTo(`#${id} .js-date-dropdown__calendar`);
     $elem.find('.air-datepicker-nav--title').addClass('text-h2');
@@ -113,7 +113,7 @@ import 'air-datepicker/air-datepicker.css';
 
     $elem.find('input').on('input', renderResetButton.bind(elem));
 
-    $elem.find('.js-date-dropdown__btns-reset button').on('click', handleResetClick);
+    $elem.find('.js-date-dropdown__buttons-reset button').on('click', handleResetClick);
   }
 
   if (dropdownDateSplit) {

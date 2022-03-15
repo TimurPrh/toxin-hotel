@@ -18,15 +18,15 @@ section.form-elements
     .form-elements__wrapper 
         .form-elements__fst-col
           .form-elements__text-field
-            +text-field({id: "test_field_1", label: "text field", desc: "default", placeholder: "Email"})
+            +text-field({id: "test_field_1", label: "text field", description: "default", placeholder: "Email"})
           .form-elements__text-field
-            +text-field({id: "test_field_2", label: "text field", desc: "hover / focus", text: "This is pretty awesome"})
+            +text-field({id: "test_field_2", label: "text field", description: "hover / focus", text: "This is pretty awesome"})
 
           .form-elements__dropdown
             +dropdown({id: "dropdown_1", type: "guests", label: "dropdown"})
 
           .form-elements__text-field
-            +text-field({id: "test_field_3", label: "masked text field", desc: "default", mask: true})
+            +text-field({id: "test_field_3", label: "masked text field", description: "default", mask: true})
 
           .form-elements__date-dropdown
             +date-dropdown({id: "split_date_1", type: "split", label: "date Dropdown", labelTo: "date Dropdown"})
@@ -37,9 +37,9 @@ section.form-elements
             +text-field({id: "test_field_4", label: "subscription text field", placeholder: "Email", arrow: true})
           
           .form-elements__dropdown.form-elements__dropdown_slim
-            +dropdown({id: "dropdown_3", type: "room", label: "dropdown", desc: "default"})
+            +dropdown({id: "dropdown_3", type: "room", label: "dropdown", description: "default"})
           .form-elements__dropdown.form-elements__dropdown_slim
-            +dropdown({type: "room", label: "dropdown", desc: "expanded"})
+            +dropdown({type: "room", label: "dropdown", description: "expanded"})
 
           div
             .form-elements__expandable-checkbox-list
@@ -49,32 +49,32 @@ section.form-elements
 
         .form-elements__snd-col
           .form-elements__checkbox-buttons
-            .text-h3 Checkbox Buttons
+            .form-elements__item-header Checkbox Buttons
             .form-elements__checkbox-buttons-list   
               +input-button({type: "checkbox", id: "smoking", label: "Можно курить"})
               +input-button({type: "checkbox", id: "pets", label: "Можно с питомцами"})
               +input-button({type: "checkbox", id: "guests", label: "Можно пригласить гостей (до 10 человек)"})
 
           .form-elements__radio-buttons
-            .text-h3 Radio Buttons
+            .form-elements__item-header Radio Buttons
             .form-elements__radio-buttons-list
               +input-button({type: "radio", name:"gender", id:"gender_male", label: "Мужчина"})
               +input-button({type: "radio", name:"gender", id:"gender_female", label: "Женщина"})
 
           .form-elements__toggle-buttons
-            .text-h3 Toggle
+            .form-elements__item-header Toggle
             .form-elements__toggle-buttons-list
               +input-button({type: "switch", id:"special_offer_1", label: "Получать спецпредложения"})
               +input-button({type: "switch", id:"special_offer_2", label: "Получать спецпредложения"})
 
           .form-elements__like-buttons
-            .text-h3 like button
+            .form-elements__item-header like button
             .form-elements__like-buttons-list
               +input-button({type: "like", id: "like_1", label: "2"})
               +input-button({type: "like", id: "like_2", label: "12"})
 
           .form-elements__rate-buttons
-            .text-h3 rate button
+            .form-elements__item-header rate button
             .form-elements__rate-buttons-list
               +rate-button({id: "rate_1", rate: "3"})
               +rate-button({id: "rate_2", rate: "4"})
@@ -90,7 +90,7 @@ section.form-elements
           .form-elements__slider
             +slider({header: "Range Slider", min: 1000, max: 18000, step: 100, from: 5000, to: 10000})
           .form-elements__buttons
-            .text-h3 buttons
+            .form-elements__item-header buttons
             .form-elements__buttons-wrapper 
               .form-elements__buttons-margin-right.form-elements__buttons-set-size
                 +button({label: "CLICK ME", type: "filed"})
@@ -108,7 +108,7 @@ section.form-elements
             +button({label: "перейти к оплате", type: "wide"})
 
           .form-elements__pagination
-            .text-h3 pagination
+            .form-elements__item-header pagination
             +pagination({pages: 15})
 
           .form-elements__dropdown

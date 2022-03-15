@@ -55,9 +55,9 @@ import 'jquery-mask-plugin';
       }
 
       if (sum > 0) {
-        $(item).find('.js-dropdown__btns-reset button').html('очистить');
+        $(item).find('.js-dropdown__buttons-reset button').html('очистить');
       } else {
-        $(item).find('.js-dropdown__btns-reset button').html('');
+        $(item).find('.js-dropdown__buttons-reset button').html('');
       }
 
       const handleResetClick = () => {
@@ -77,9 +77,9 @@ import 'jquery-mask-plugin';
         });
       };
 
-      $(item).find('.js-dropdown__btns-reset button').on('click', handleResetClick);
+      $(item).find('.js-dropdown__buttons-reset button').on('click', handleResetClick);
 
-      $(item).find('.js-dropdown__btns-apply button').on('click', handleApplyClick);
+      $(item).find('.js-dropdown__buttons-apply button').on('click', handleApplyClick);
     });
     dropdownRoom.each((i, item) => {
       const bedrooms = parseInt($(item).find('.js-dropdown__item-count').eq(0).html(), 10);
@@ -122,9 +122,9 @@ import 'jquery-mask-plugin';
       }
 
       if (sum > 0) {
-        $(item).find('.js-dropdown__btns-reset button').html('очистить');
+        $(item).find('.js-dropdown__buttons-reset button').html('очистить');
       } else {
-        $(item).find('.js-dropdown__btns-reset button').html('');
+        $(item).find('.js-dropdown__buttons-reset button').html('');
       }
 
       const handleResetClick = () => {
@@ -139,9 +139,9 @@ import 'jquery-mask-plugin';
         $(item).find('.js-dropdown__list').slideUp();
       };
 
-      $(item).find('.js-dropdown__btns-reset button').on('click', handleResetClick);
+      $(item).find('.js-dropdown__buttons-reset button').on('click', handleResetClick);
 
-      $(item).find('.js-dropdown__btns-apply button').on('click', handleApplyClick);
+      $(item).find('.js-dropdown__buttons-apply button').on('click', handleApplyClick);
     });
   }
   sumListItems();

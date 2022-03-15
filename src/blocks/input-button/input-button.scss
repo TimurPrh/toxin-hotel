@@ -85,11 +85,19 @@
     }
   }
   .input-button__label {
+    font-size: var(--text-body-font-size);
+    line-height: var(--text-body-line-height);
+    color: var(--dark-shade-75);
     display: inline-block;
     cursor: pointer;
     padding-left: 10px;
+    &_opacity_50 {
+      color: var(--dark-shade-50);
+    }
   }
   .input-button__label-header {
+    font-size: var(--text-body-font-size);
+    color: var(--dark-shade-75);
     font-weight: bold;
     line-height: 18px;
     margin-bottom: 5px;
@@ -98,6 +106,7 @@
     padding-left: 10px;
   }
   .input-button__label-subheader {
+    color: var(--dark-shade-50);
     font-size: 12px;
     line-height: 14px;
     display: inline-block;
@@ -155,6 +164,8 @@
       }
     }
     &.input-button_like {
+      line-height: var(--text-body-line-height);
+      color: var(--dark-shade-25);
       min-width: 40px;
       border-radius: 10px;
       &_active {

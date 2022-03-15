@@ -21,10 +21,23 @@
   &__person {
     &-name {
       font-weight: bold;
+      font-size: var(--text-body-font-size);
+      line-height: var(--text-body-line-height);
+      color: var(--dark-shade-75);
+    }
+    &-time {
+      font-size: var(--text-body-font-size);
+      line-height: var(--text-body-line-height);
+      color: var(--dark-shade-75);
     }
   }
   &__like {
     justify-self: center;
     width: 40px;
+  }
+  &__text {
+    font-size: var(--text-body-font-size);
+    line-height: var(--text-body-line-height);
+    color: var(--dark-shade-75);
   }
 }

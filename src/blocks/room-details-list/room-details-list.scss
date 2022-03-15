@@ -17,6 +17,15 @@
     padding-left: 10px;
     &-header {
       font-weight: bold;
+      font-size: var(--text-body-font-size);
+      line-height: var(--text-body-line-height);
+      color: var(--dark-shade-75);
+    }
+    &-description {
+      font-size: var(--text-body-font-size);
+      line-height: var(--text-body-line-height);
+      color: var(--dark-shade-75);
+
     }
   }
   &__line {

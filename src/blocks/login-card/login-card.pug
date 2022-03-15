@@ -4,7 +4,7 @@ include ../button/button.pug
 
 mixin login-card({header: header})
   .login-card
-    .login-card__header.text-h1= header
+    .login-card__header= header
     .login-card__login
       +text-field({id: "email_2", placeholder: "Email"})
     .login-card__password
@@ -12,6 +12,6 @@ mixin login-card({header: header})
     .login-card__login-button 
       +button({label: "войти", type: "wide"})
     .login-card__registration
-      .login-card__registration-text.text-body Нет аккаунта на Toxin?
+      .login-card__registration-text Нет аккаунта на Toxin?
       .login-card__registration-button
         +button({label: "создать", type: "invert", link: "registration"})

@@ -4,9 +4,9 @@ mixin feedback({name: name, icon: icon, time: time, text: text, likes: likes})
     .feedback__img
       img(src=require('/src/blocks/feedback/icons/' + icon))
     .feedback__person
-      .feedback__person-name.text-body= name
-      .feedback__person-time.text-body= time
+      .feedback__person-name= name
+      .feedback__person-time= time
 
     .feedback__like
       +input-button({type: "like", id: "like_3", label: likes})
-    .feedback__text.text-body= text
+    .feedback__text= text
