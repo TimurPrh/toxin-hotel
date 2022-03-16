@@ -15,9 +15,18 @@ import 'jquery-mask-plugin';
       } else {
         dropdownItem.querySelector('.js-dropdown__wrapper').style.borderRadius = '4px';
       }
+
+      $('html').trigger('closeDropdownRequest', { target: item });
+    };
+
+    const handleCloseDropdownRequest = (e, { target }) => {
+      if (target !== item) {
+        $(item).find('.js-dropdown__list').slideUp(0);
+      }
     };
 
     $(item).find('.js-dropdown__input').on('click', handleArrowClick);
+    $('html').on('closeDropdownRequest', handleCloseDropdownRequest);
   });
 
   function sumListItems() {

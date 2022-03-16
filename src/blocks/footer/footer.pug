@@ -43,11 +43,11 @@ mixin footer({mobile: mobile})
           .footer__copyright 
             .footer__copyright-text Copyright © 2018 Toxin отель. Все права защищены.
             .footer__copyright-icons 
-              .footer__copyright-icon 
+              a.footer__copyright-icon(href="https://twitter.com") 
                 img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")
-              .footer__copyright-icon
+              a.footer__copyright-icon(href="https://facebook.com")
                 img(src=require("/src/blocks/footer/icons/social/facebook.svg"), alt="facebook")
-              .footer__copyright-icon
+              a.footer__copyright-icon(href="https://instagram.com")
                 img(src=require("/src/blocks/footer/icons/social/instagram.svg"), alt="instagram")
 
       .footer__true-mobile
@@ -56,11 +56,11 @@ mixin footer({mobile: mobile})
             img(src=require("/src/blocks/footer/icons/main-logo.svg"), alt="logo")
         .footer__true-mobile-text Copyright © 2018 Toxin отель. Все права защищены.
         .footer__true-mobile-icons 
-          .footer__true-mobile-icon 
+          a.footer__true-mobile-icon(href="https://twitter.com") 
             img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")
-          .footer__true-mobile-icon
+          a.footer__true-mobile-icon(href="https://facebook.com")
             img(src=require("/src/blocks/footer/icons/social/facebook.svg"), alt="facebook")
-          .footer__true-mobile-icon
+          a.footer__true-mobile-icon(href="https://instagram.com")
             img(src=require("/src/blocks/footer/icons/social/instagram.svg"), alt="instagram")
 
     else 
@@ -70,10 +70,10 @@ mixin footer({mobile: mobile})
             img(src=require("/src/blocks/footer/icons/main-logo.svg"), alt="logo")
         .footer__mobile-text Copyright © 2018 Toxin отель. Все права защищены.
         .footer__mobile-icons 
-          .footer__mobile-icon 
+          a.footer__mobile-icon(href="https://twitter.com") 
             img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")
-          .footer__mobile-icon
+          a.footer__mobile-icon(href="https://facebook.com")
             img(src=require("/src/blocks/footer/icons/social/facebook.svg"), alt="facebook")
-          .footer__mobile-icon
+          a.footer__mobile-icon(href="https://instagram.com")
             img(src=require("/src/blocks/footer/icons/social/instagram.svg"), alt="instagram")
 

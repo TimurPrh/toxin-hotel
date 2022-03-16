@@ -1,7 +1,7 @@
 include ../button/button.pug
 mixin date-dropdown({type: type, label: label, labelTo: labelTo, description: description, id: id})
   if (type == "split")
-    .date-dropdown.date-dropdown_split.js-date-dropdown_split(id= `js-${id}` data-date-type = "split") 
+    .date-dropdown.js-date-dropdown.date-dropdown_split.js-date-dropdown_split(id= `js-${id}` data-date-type = "split") 
       .date-dropdown__half
         .date-dropdown__header= label
         .date-dropdown__description= description
@@ -27,7 +27,7 @@ mixin date-dropdown({type: type, label: label, labelTo: labelTo, description: de
             +button({label: "Применить", type: "icon"})
 
   if (type == "filter")
-    .date-dropdown.date-dropdown_filter.js-date-dropdown_filter(id= `js-${id}` data-date-type = "filter") 
+    .date-dropdown.js-date-dropdown.date-dropdown_filter.js-date-dropdown_filter(id= `js-${id}` data-date-type = "filter") 
       .date-dropdown__header= label
       .date-dropdown__description= description
       .date-dropdown__wrapper 

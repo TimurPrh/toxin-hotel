@@ -89,8 +89,17 @@ import 'air-datepicker/air-datepicker.css';
 
   function dropdownDateInit(elem, datePicker, id) {
     const $elem = $(elem);
-    const handleArrowClick = () => {
+    const handleArrowClick = (e) => {
+      const $html = $('html');
+
       $elem.find('.js-date-dropdown__list').slideToggle();
+      $html.trigger('closeDropdownRequest', { target: undefined });
+
+      $html.find('.js-date-dropdown__list').each((i, list) => {
+        if (e.target.closest('.js-date-dropdown') !== list.closest('.js-date-dropdown')) {
+          $(list).slideUp(0);
+        }
+      });
     };
     const handleApplyClick = () => {
       $elem.find('.js-date-dropdown__list').slideUp();

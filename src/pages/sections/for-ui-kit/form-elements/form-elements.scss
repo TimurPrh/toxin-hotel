@@ -121,6 +121,9 @@
   &__expandable-checkbox-list {
     margin-top: 20px;
     width: 266px;
+    &-wrapper {
+      min-height: 284px;
+    }
     &:first-child {
       margin-top: 157px;
     }
