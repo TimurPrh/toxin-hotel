@@ -32,6 +32,10 @@
 }
 .feedback-diagram__figure-key {
   margin: auto 0 0 30px;
+
+  @media (max-width: 359px) {
+    margin: auto 0 0 15px;
+  }
 }
 .feedback-diagram__figure-key-list {
   margin: 0;
@@ -66,10 +70,4 @@
 }
 .feedback-diagram__shape-circle_color_dark-blue {
   background: linear-gradient(180deg, var(--grey-color) 0%, var(--dark-blue-color) 100%);
-}
-
-@media (max-width: 359px) {
-  .feedback-diagram__figure-key {
-    margin: auto 0 0 15px;
-  }
 }

@@ -168,10 +168,8 @@
       }
     }
   }
-}
 
-@media (max-width: 991px) {
-  .footer {
+  @media (max-width: 991px) {
     &__main-outer {
         display: none;
     }

@@ -1,10 +1,18 @@
-const dropdown = $('.js-expandable-checkbox-list');
+class ExpandableCheckboxList {
+  initialize() {
+    this.dropdown = $('.js-expandable-checkbox-list');
 
-dropdown.each((i, item) => {
-  const handleArrowClick = () => {
-    $(item).find('.js-expandable-checkbox-list__arrow-line').toggleClass('expandable-checkbox-list__arrow-line_active');
-    $(item).find('.js-expandable-checkbox-list__list').slideToggle();
-  };
+    this.dropdown.each((i, item) => {
+      const handleArrowClick = () => {
+        $(item).find('.js-expandable-checkbox-list__arrow-line').toggleClass('expandable-checkbox-list__arrow-line_active');
+        $(item).find('.js-expandable-checkbox-list__list').slideToggle();
+      };
 
-  $(item).find('.js-expandable-checkbox-list__header').on('click', handleArrowClick);
-});
+      $(item).find('.js-expandable-checkbox-list__header').on('click', handleArrowClick);
+    });
+  }
+}
+
+const expandableCheckboxList = new ExpandableCheckboxList();
+
+expandableCheckboxList.initialize();

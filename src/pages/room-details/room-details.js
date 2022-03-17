@@ -1,30 +1,36 @@
 import 'slick-carousel/slick/slick.min';
 import 'slick-carousel/slick/slick.scss';
 
-(function roomDetails() {
-  const $carousel = $('.js-room-details__photos');
-
-  const sliderSettings = {
-    arrows: false,
-    dots: false,
-    infinite: true,
-    slidesToShow: 1,
-  };
-
-  function toggleSlider() {
-    if (document.documentElement.clientWidth <= 768 && !$carousel.hasClass('slick-initialized')) {
-      $carousel.slick(sliderSettings);
+class RoomDetails {
+  toggleSlider() {
+    if (document.documentElement.clientWidth <= 768 && !this.carousel.hasClass('slick-initialized')) {
+      this.carousel.slick(this.sliderSettings);
     }
-    if (document.documentElement.clientWidth > 768 && $carousel.hasClass('slick-initialized')) {
-      $carousel.slick('unslick');
+    if (document.documentElement.clientWidth > 768 && this.carousel.hasClass('slick-initialized')) {
+      this.carousel.slick('unslick');
     }
   }
 
-  const handleResizeWindow = () => {
-    toggleSlider();
-  };
+  initialize() {
+    this.carousel = $('.js-room-details__photos');
 
-  toggleSlider();
+    this.sliderSettings = {
+      arrows: false,
+      dots: false,
+      infinite: true,
+      slidesToShow: 1,
+    };
 
-  $(window).on('resize', handleResizeWindow);
-}());
+    const handleResizeWindow = () => {
+      this.toggleSlider();
+    };
+
+    this.toggleSlider();
+
+    $(window).on('resize', handleResizeWindow);
+  }
+}
+
+const roomDetails = new RoomDetails();
+
+roomDetails.initialize();

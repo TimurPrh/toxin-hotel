@@ -1,22 +1,40 @@
-const handleHamburgerClick = () => {
-  document.querySelector('.js-header__hamburger').classList.toggle('header__hamburger_active');
-  if (document.querySelector('.js-header__wrapper').style.left === "0%") {
-    document.querySelector('.js-header__wrapper').style.left = "-100%";
-  } else {
-    document.querySelector('.js-header__wrapper').style.left = "0%";
+class Header {
+  getElements() {
+    this.wrapper = document.querySelector('.js-header__wrapper');
+    this.hamburger = document.querySelector('.js-header__hamburger');
+
+    this.arrows = document.querySelectorAll('.js-header__list-arrow');
+    this.arrow = document.querySelector('.js-header__list-arrow');
   }
-};
 
-if (document.querySelector('.js-header__hamburger')) {
-  document.querySelector('.js-header__hamburger').addEventListener('click', handleHamburgerClick);
+  initialize() {
+    this.getElements();
+
+    const handleHamburgerClick = () => {
+      this.hamburger.classList.toggle('header__hamburger_active');
+      if (this.wrapper.style.left === "0%") {
+        this.wrapper.style.left = "-100%";
+      } else {
+        this.wrapper.style.left = "0%";
+      }
+    };
+
+    if (this.hamburger) {
+      this.hamburger.addEventListener('click', handleHamburgerClick);
+    }
+
+    const handleHeaderArrowClick = (e) => {
+      $(e.target.parentNode.nextElementSibling).slideToggle();
+    };
+
+    if (this.arrow) {
+      this.arrows.forEach((arrow) => {
+        arrow.addEventListener('click', handleHeaderArrowClick);
+      });
+    }
+  }
 }
 
-const handleHeaderArrowClick = (e) => {
-  $(e.target.parentNode.nextElementSibling).slideToggle();
-};
+const header = new Header();
 
-if (document.querySelector('.js-header__list-arrow')) {
-  document.querySelectorAll('.js-header__list-arrow').forEach((arrow) => {
-    arrow.addEventListener('click', handleHeaderArrowClick);
-  });
-}
+header.initialize();

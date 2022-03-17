@@ -7,6 +7,10 @@
     grid-template-columns: auto auto;
     .date-dropdown__list {
       width: 320px;
+
+      @media (max-width: 340px) {
+        width: 100%;
+      }
     }
   }
   &__header {
@@ -49,6 +53,10 @@
       &::placeholder {
         color: var(--dark-shade-75);
       }
+
+      @media (max-width: 475px) {
+        padding: 13px 5px;
+      }
     }
   }
   &__arrow {
@@ -86,6 +94,10 @@
     border: 1px solid var(--dark-shade-25);
     border-radius: 4px;
     background: #FFFFFF;
+
+    @media (max-width: 475px) {
+      padding: 15px 4px 18px 4px;
+    }
   }
   &__prev-arrow {
     position: relative;
@@ -148,6 +160,18 @@
     --adp-day-cell-height: 40px;
     --adp-background-color-hover: unset;
     --adp-background-color-active: unset;
+
+    @media (max-width: 475px) {
+      --adp-width: 100%;
+      --adp-day-cell-width: calc(100% / 7) !important;
+      --adp-day-cell-height: 40px !important;
+      &-body--day-names {
+        justify-content: center;
+      }
+      &-body--cells {
+        justify-content: center;
+      }
+    }
   }
   .air-datepicker-nav {
     border: none;
@@ -265,10 +289,4 @@
   }
 }
 
-@media (max-width: 340px) {
-  .date-dropdown_filter {
-    .date-dropdown__list {
-      width: 100%;
-    }
-  }
-}
+

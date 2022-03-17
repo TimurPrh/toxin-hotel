@@ -1,14 +1,26 @@
-(function feedbackDiagram() {
-  if (document.querySelector('.feedback-diagram')) {
-    const disappointedSegment = document.querySelector('.js-feedback-diagram__segment-disappointed');
-    const acceptableSegment = document.querySelector('.js-feedback-diagram__segment-acceptable');
-    const goodSegment = document.querySelector('.js-feedback-diagram__segment-good');
-    const amazingSegment = document.querySelector('.js-feedback-diagram__segment-amazing');
+class FeedbackDiagram {
+  getElements() {
+    this.feedbackDiagram = document.querySelector('.feedback-diagram');
 
-    const feedbackTotalNumberField = document.querySelector('.js-feedback-diagram__text-number');
-    const feedbackTotalNumberText = document.querySelector('.js-feedback-diagram__text-label');
+    this.disappointedSegment = document.querySelector('.js-feedback-diagram__segment-disappointed');
+    this.acceptableSegment = document.querySelector('.js-feedback-diagram__segment-acceptable');
+    this.goodSegment = document.querySelector('.js-feedback-diagram__segment-good');
+    this.amazingSegment = document.querySelector('.js-feedback-diagram__segment-amazing');
 
-    const feedbackCount = JSON.parse(document.querySelector('.feedback-diagram').dataset.feedback);
+    this.feedbackTotalNumberField = document.querySelector('.js-feedback-diagram__text-number');
+    this.feedbackTotalNumberText = document.querySelector('.js-feedback-diagram__text-label');
+  }
+
+  render() {
+    function isUnitNumber() {
+      return (this.feedbackTotalNumber === 1 || (this.feedbackTotalNumber > 20 && this.feedbackTotalNumber % 10 === 1));
+    }
+
+    function isMultipleNumber() {
+      return (this.feedbackTotalNumber >= 2 && this.feedbackTotalNumber <= 4) || (this.feedbackTotalNumber > 20 && (this.feedbackTotalNumber % 10 >= 2 && this.feedbackTotalNumber % 10 <= 4));
+    }
+
+    const feedbackCount = JSON.parse(this.feedbackDiagram.dataset.feedback);
     let feedbackTotalNumber = 0;
     let notZeroFeedbackCount = 0;
 
@@ -31,14 +43,14 @@
 
     if (feedbackCount.disappointed > 0) {
       rate1DashArray = (100 * feedbackCount.disappointed) / feedbackTotalNumber - 0.5;
-      disappointedSegment.setAttribute("stroke-width", "1");
+      this.disappointedSegment.setAttribute("stroke-width", "1");
       if (notZeroFeedbackCount === 1) {
-        disappointedSegment.setAttribute("stroke-dasharray", `100 0`);
+        this.disappointedSegment.setAttribute("stroke-dasharray", `100 0`);
       } else {
-        disappointedSegment.setAttribute("stroke-dasharray", `${rate1DashArray} ${100 - rate1DashArray}`);
+        this.disappointedSegment.setAttribute("stroke-dasharray", `${rate1DashArray} ${100 - rate1DashArray}`);
       }
 
-      disappointedSegment.setAttribute("stroke-dashoffset", `${rate1DashOffset}`);
+      this.disappointedSegment.setAttribute("stroke-dashoffset", `${rate1DashOffset}`);
       rate1DashArray += 0.5;
     }
 
@@ -48,14 +60,14 @@
     }
     if (feedbackCount.acceptable > 0) {
       rate2DashArray = (100 * feedbackCount.acceptable) / feedbackTotalNumber - 0.5;
-      acceptableSegment.setAttribute("stroke-width", "1");
+      this.acceptableSegment.setAttribute("stroke-width", "1");
       if (notZeroFeedbackCount === 1) {
-        acceptableSegment.setAttribute("stroke-dasharray", `100 0`);
+        this.acceptableSegment.setAttribute("stroke-dasharray", `100 0`);
       } else {
-        acceptableSegment.setAttribute("stroke-dasharray", `${rate2DashArray} ${100 - rate2DashArray}`);
+        this.acceptableSegment.setAttribute("stroke-dasharray", `${rate2DashArray} ${100 - rate2DashArray}`);
       }
 
-      acceptableSegment.setAttribute("stroke-dashoffset", `${rate2DashOffset}`);
+      this.acceptableSegment.setAttribute("stroke-dashoffset", `${rate2DashOffset}`);
       rate2DashArray += 0.5;
     }
 
@@ -65,14 +77,14 @@
     }
     if (feedbackCount.good > 0) {
       rate3DashArray = (100 * feedbackCount.good) / feedbackTotalNumber - 0.5;
-      goodSegment.setAttribute("stroke-width", "1");
+      this.goodSegment.setAttribute("stroke-width", "1");
       if (notZeroFeedbackCount === 1) {
-        goodSegment.setAttribute("stroke-dasharray", `100 0`);
+        this.goodSegment.setAttribute("stroke-dasharray", `100 0`);
       } else {
-        goodSegment.setAttribute("stroke-dasharray", `${rate3DashArray} ${100 - rate3DashArray}`);
+        this.goodSegment.setAttribute("stroke-dasharray", `${rate3DashArray} ${100 - rate3DashArray}`);
       }
 
-      goodSegment.setAttribute("stroke-dashoffset", `${rate3DashOffset}`);
+      this.goodSegment.setAttribute("stroke-dashoffset", `${rate3DashOffset}`);
       rate3DashArray += 0.5;
     }
 
@@ -82,33 +94,36 @@
     }
     if (feedbackCount.amazing > 0) {
       rate4DashArray = (100 * feedbackCount.amazing) / feedbackTotalNumber - 0.5;
-      amazingSegment.setAttribute("stroke-width", "1");
+      this.amazingSegment.setAttribute("stroke-width", "1");
       if (notZeroFeedbackCount === 1) {
-        amazingSegment.setAttribute("stroke-dasharray", `100 0`);
+        this.amazingSegment.setAttribute("stroke-dasharray", `100 0`);
       } else {
-        amazingSegment.setAttribute("stroke-dasharray", `${rate4DashArray} ${100 - rate4DashArray}`);
+        this.amazingSegment.setAttribute("stroke-dasharray", `${rate4DashArray} ${100 - rate4DashArray}`);
       }
 
-      amazingSegment.setAttribute("stroke-dashoffset", `${rate4DashOffset}`);
+      this.amazingSegment.setAttribute("stroke-dashoffset", `${rate4DashOffset}`);
       rate4DashArray += 0.5;
     }
 
-    feedbackTotalNumberField.innerHTML = feedbackTotalNumber;
-
-    function isUnitNumber() {
-      return (feedbackTotalNumber === 1 || (feedbackTotalNumber > 20 && feedbackTotalNumber % 10 === 1));
-    }
-
-    function isMultipleNumber() {
-      return (feedbackTotalNumber >= 2 && feedbackTotalNumber <= 4) || (feedbackTotalNumber > 20 && (feedbackTotalNumber % 10 >= 2 && feedbackTotalNumber % 10 <= 4));
-    }
+    this.feedbackTotalNumberField.innerHTML = feedbackTotalNumber;
 
     if (isUnitNumber()) {
-      feedbackTotalNumberText.innerHTML = "голос";
+      this.feedbackTotalNumberText.innerHTML = "голос";
     } else if (isMultipleNumber()) {
-      feedbackTotalNumberText.innerHTML = "голоса";
+      this.feedbackTotalNumberText.innerHTML = "голоса";
     } else if (feedbackTotalNumber > 4) {
-      feedbackTotalNumberText.innerHTML = "голосов";
+      this.feedbackTotalNumberText.innerHTML = "голосов";
     }
   }
-}());
+
+  initialize() {
+    this.getElements();
+    if (this.feedbackDiagram) {
+      this.render();
+    }
+  }
+}
+
+const feedbackDiagram = new FeedbackDiagram();
+
+feedbackDiagram.initialize();

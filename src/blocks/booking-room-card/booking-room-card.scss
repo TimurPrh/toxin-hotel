@@ -123,10 +123,8 @@
   &__button {
     margin-top: 22px;
   }
-}
 
-@media (max-width: 400px) {
-  .booking-room-card {
+  @media (max-width: 400px) {
     padding: 40px 15px 30px 15px;
     &__item {
       &-description {

@@ -100,10 +100,8 @@
       margin-top: 20px;
     }
   }
-}
 
-@media (max-width: 1160px) {
-  .room-details {
+  @media (max-width: 1160px) {
     &__wrapper {
       padding: 70px 0 40px;
       display: grid;
@@ -118,10 +116,8 @@
       column-gap: 20px;
     }
   }
-}
-
-@media (max-width: 768px) {
-  .room-details {
+  
+  @media (max-width: 768px) {
     &__photos {
       display: block;
       width: 100%;
@@ -130,20 +126,18 @@
     &__left {
       column-gap: 15px;
     }
+    .slick-track {
+      display: flex !important;
+    }
+    .slick-slide {
+      height: inherit !important;
+    }
+    .slick-list {
+      height: inherit !important;
+    }
   }
-  .slick-track {
-    display: flex !important;
-  }
-  .slick-slide {
-    height: inherit !important;
-  }
-  .slick-list {
-    height: inherit !important;
-  }
-}
-
-@media (max-width: 650px) {
-  .room-details {
+  
+  @media (max-width: 650px) {
     &__left {
       display: flex;
       flex-direction: column;
