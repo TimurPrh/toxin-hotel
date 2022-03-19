@@ -5,7 +5,8 @@ include ../button/button.pug
 mixin booking-room-card({roomNumber: roomNumber, roomClass: roomClass, price: price})
   form.booking-room-card 
     .booking-room-card__header  
-      .booking-room-card__room-number-wrapper № 
+      .booking-room-card__room-number-wrapper 
+        span.booking-room-card__room-number-symbol №
         span.booking-room-card__room-number= roomNumber
         span.booking-room-card__room-class= roomClass
       .booking-room-card__room-price-wrapper 

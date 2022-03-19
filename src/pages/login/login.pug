@@ -4,12 +4,12 @@ block content
   include ../../blocks/header/header.pug
   include ../../blocks/login-card/login-card.pug
   include ../../blocks/footer/footer.pug
-  section.landing-main
-    .landing-header 
+  section.landing-login-main
+    .landing-login-header 
       +header({login: false})
     .container
-      .landing-main__login
+      .landing-login-main__login
         +login-card({header: "Войти"})
 
-  section.landing-footer
+  section.landing-login-footer
     +footer({mobile: false})

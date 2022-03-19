@@ -57,11 +57,11 @@ class BookingRoomCard {
   }
 
   initialize() {
-    if (!this.prices) {
+    this.getElements();
+
+    if (!this.prices[0]) {
       return;
     }
-
-    this.getElements();
 
     const sumObject = this.calculateSum();
 

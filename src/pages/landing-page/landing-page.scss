@@ -1,10 +1,10 @@
 .landing-main {
   min-height: 100vh;
   background: center center/cover no-repeat;
+  background-image: url(./img/pink-room-preview.jpg);
   background-image: url(./img/green-room-preview.jpg);
   background-image: url(./img/room-with-big-sofa-preview.jpg);
-  background-image: url(./img/pink-room-preview.jpg);
-  animation: bg-images 30s cubic-bezier(0.8,-2.5,0.8,1) infinite;
+  animation: landing-background-images 30s cubic-bezier(0.8,-2.5,0.8,1) infinite;
 
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@
   }
 }
 
-@keyframes bg-images {
+@keyframes landing-background-images {
   0% {
     background-image: url(./img/pink-room-preview.jpg);
   }

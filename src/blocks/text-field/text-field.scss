@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: auto auto;
   row-gap: 5px;
-  &_header {
+  &__header {
     font-weight: bold;
     font-size: var(--text-h3-font-size);
     line-height: var(--text-h3-line-height);

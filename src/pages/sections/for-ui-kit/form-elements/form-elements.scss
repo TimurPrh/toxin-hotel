@@ -3,7 +3,7 @@
   min-height: 1823px;
   &__header {
     margin: 0;
-    margin-left: 30px;
+    margin-left: 60px;
   }
   &__item-header {
     font-weight: bold;
@@ -13,7 +13,7 @@
     color: var(--dark-shade-100);
   }
   &__wrapper {
-    margin-top: 64px;
+    margin-top: 65px;
     min-width: 1159px;
     display: grid;
     grid-template-columns: 320px 374px 320px;
@@ -55,7 +55,7 @@
       width: 265px;
     }
     &:nth-child(8) {
-      margin-top: 100px;
+      margin-top: 101px;
     }
   }
   &__date-dropdown {
@@ -66,7 +66,6 @@
     }
   }
   &__checkbox-buttons {
-    margin-top: 1px;
     width: 222px;
     &-list > div {
       margin-top: 10px;
@@ -76,7 +75,7 @@
     }
   }
   &__radio-buttons {
-    margin-top: 38px;
+    margin-top: 40px;
     width: 220px;
     &-list {
       margin-top: 14px;
@@ -96,7 +95,7 @@
     }
   }
   &__like-buttons {
-    margin-top: 45px;
+    margin-top: 44px;
     width: 90px;
     &-list {
       margin-top: 16px;
@@ -107,11 +106,11 @@
     }
   }
   &__rate-buttons {
-    margin-top: 42px;
+    margin-top: 40px;
     width: 264px;
     &-list {
       margin-left: 2px;
-      margin-top: 14px;
+      margin-top: 18px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(120px, auto));
       column-gap: 20px;
@@ -137,7 +136,7 @@
     width: 260px;
   }
   &__room-details-list{
-    margin-top: 97px;
+    margin-top: 98px;
     width: 291px;
   }
   &__feedback {
@@ -151,7 +150,7 @@
     margin-top: 40px;
     width: 320px;
     &-wrapper {
-      margin-top: 28px;
+      margin-top: 29px;
       display: flex;
       &:nth-child(2) {
         margin-top: 16px;
@@ -169,7 +168,7 @@
     }
   }
   &__pagination {
-    margin-top: 40px;
+    margin-top: 41px;
     max-width: 360px;
     .pagination {
       margin-top: 16px;

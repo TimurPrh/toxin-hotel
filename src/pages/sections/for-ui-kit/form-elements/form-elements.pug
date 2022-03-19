@@ -13,7 +13,7 @@ include ../../../../blocks/button/button.pug
 include ../../../../blocks/pagination/pagination.pug
 section.form-elements 
   .form-elements__header 
-    +kit-section-name({title: "Form Elements", logo: "logo-light-grey.svg"})
+    +kit-section-name({title: "Form Elements", logo: "logo-dark-grey.svg"})
   .container
     .form-elements__wrapper 
         .form-elements__fst-col
@@ -26,7 +26,7 @@ section.form-elements
             +dropdown({id: "dropdown_1", type: "guests", label: "dropdown"})
 
           .form-elements__text-field
-            +text-field({id: "test_field_3", label: "masked text field", description: "default", mask: true})
+            +text-field({id: "test_field_3", label: "masked text field", mask: true})
 
           .form-elements__date-dropdown
             +date-dropdown({id: "split_date_1", type: "split", label: "date Dropdown", labelTo: "date Dropdown"})

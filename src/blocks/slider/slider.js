@@ -10,7 +10,7 @@ class Slider {
   }
 
   updateResult() {
-    this.sliderResult.innerHTML = `${Slider.separateThousand(this.currentValues[0])} - ${Slider.separateThousand(this.currentValues[1])} ₽`;
+    this.sliderResult.innerHTML = `${Slider.separateThousand(this.currentValues[0])} ₽ - ${Slider.separateThousand(this.currentValues[1])} ₽`;
   }
 
   static separateThousand(x) {
@@ -40,7 +40,7 @@ class Slider {
       this.updateResult();
     };
 
-    if (this.$sliderWrapper) {
+    if (this.$sliderWrapper[0]) {
       const {
         min, max, step, from, to,
       } = JSON.parse(this.slider.dataset.sliderValues);

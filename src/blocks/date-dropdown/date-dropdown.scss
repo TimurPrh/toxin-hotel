@@ -173,12 +173,27 @@
       }
     }
   }
+  .air-datepicker-cell {
+    font-size: var(--text-h3-font-size);
+    line-height: var(--text-h3-line-height);
+    text-transform: uppercase;
+    color: var(--dark-shade-50);
+  }
   .air-datepicker-nav {
     border: none;
     padding: 0;
     margin-bottom: 25px;
   }
+  .air-datepicker-nav--title{
+    font-weight: bold;
+    font-size: var(--text-h2-font-size);
+    line-height: var(--text-h2-line-height);
+    color: var(--dark-shade-100);
+  }
   .air-datepicker-body--day-name {
+    font-weight: bold;
+    font-size: var(--text-h3-font-size);
+    line-height: var(--text-h3-line-height);
     text-transform: unset;
     color: var(--purple-color);
   }
@@ -193,6 +208,9 @@
     color: var(--dark-shade-50);
   }
   .air-datepicker-body--cells .-other-month- {
+    font-size: var(--text-h3-font-size);
+    line-height: var(--text-h3-line-height);
+    text-transform: uppercase;
     color: var(--dark-shade-25);
   }
   .air-datepicker-body--cells .-focus- {

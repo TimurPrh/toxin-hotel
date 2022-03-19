@@ -64,6 +64,13 @@
 
   &__subscribe {
       width: 260px;
+      &-header {
+        font-weight: bold;
+        font-size: var(--text-h3-font-size);
+        line-height: var(--text-h3-line-height);
+        text-transform: uppercase;
+        color: var(--dark-shade-100);
+      }
       &-text {
           margin-top: 18px;
           font-size: var(--text-body-font-size);

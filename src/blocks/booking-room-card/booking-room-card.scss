@@ -13,11 +13,18 @@
   }
   &__room {
     &-number {
+      margin-left: 4px;
       &-wrapper {
         margin: 0;
         font-weight: bold;
         font-size: var(--text-h1-font-size);
         line-height: var(--text-h1-line-height);
+        color: var(--dark-shade-100);
+      }
+      &-symbol {
+        font-weight: bold;
+        font-size: var(--text-body-font-size);
+        line-height: var(--text-body-line-height);
         color: var(--dark-shade-100);
       }
     }
@@ -121,7 +128,7 @@
     }
   }
   &__button {
-    margin-top: 22px;
+    margin-top: 20px;
   }
 
   @media (max-width: 400px) {
