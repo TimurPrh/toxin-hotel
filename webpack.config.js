@@ -29,12 +29,12 @@ const optimization = () => {
   return config;
 };
 
-const filename = (ext) => {
+const filename = (ext, folder) => {
   let name;
   if (ext === 'html') {
-    name = isDev ? `[name]/index.${ext}` : `[name]/index.${ext}`;
+    name = isDev ? `[name]/index.${ext}` : `[name]/index.[hash].${ext}`;
   } else {
-    name = isDev ? `[name]/[name].${ext}` : `[name]/[name].${ext}`;
+    name = isDev ? `[name]/[name].${ext}` : `[name]/[name].[hash].${ext}`;
   }
   return name;
 };
@@ -74,51 +74,44 @@ module.exports = {
       inject: true,
       template: 'src/index.pug',
       filename: 'index.html',
-      favicon: "src/assets/favicon/favicon.ico",
     }),
     new HTMLWebpackPlugin({
       inject: true,
       template: 'src/pages/ui-kit/ui-kit.pug',
       filename: 'ui-kit/index.html',
-      favicon: "src/assets/favicon/favicon.ico",
     }),
     new HTMLWebpackPlugin({
       inject: true,
       template: 'src/pages/landing-page/landing-page.pug',
       filename: 'landing-page/index.html',
-      favicon: "src/assets/favicon/favicon.ico",
     }),
     new HTMLWebpackPlugin({
       inject: true,
       template: 'src/pages/registration/registration.pug',
       filename: 'registration/index.html',
-      favicon: "src/assets/favicon/favicon.ico",
     }),
     new HTMLWebpackPlugin({
       inject: true,
       template: 'src/pages/login/login.pug',
       filename: 'login/index.html',
-      favicon: "src/assets/favicon/favicon.ico",
     }),
     new HTMLWebpackPlugin({
       inject: true,
       template: 'src/pages/search-room/search-room.pug',
       filename: 'search-room/index.html',
-      favicon: "src/assets/favicon/favicon.ico",
     }),
     new HTMLWebpackPlugin({
       inject: true,
       template: 'src/pages/room-details/room-details.pug',
       filename: 'room-details/index.html',
-      favicon: "src/assets/favicon/favicon.ico",
     }),
 
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/assets/favicon/favicon.ico'),
-          to: path.resolve(__dirname, 'dist'),
+          from: path.resolve(__dirname, 'src/assets/favicon'),
+          to: path.resolve(__dirname, 'dist/favicon'),
         },
       ],
     }),
