@@ -14,9 +14,9 @@ include ../../../../blocks/pagination/pagination.pug
 section.form-elements 
   .form-elements__header 
     +kit-section-name({title: "Form Elements", logo: "logo-dark-grey.svg"})
-  .container
+  .form-elements__container
     .form-elements__wrapper 
-        .form-elements__fst-col
+        .form-elements__first-column
           .form-elements__text-field
             +text-field({id: "test_field_1", label: "text field", description: "default", placeholder: "Email"})
           .form-elements__text-field
@@ -30,15 +30,15 @@ section.form-elements
 
           .form-elements__date-dropdown
             +date-dropdown({id: "split_date_1", type: "split", label: "date Dropdown", labelTo: "date Dropdown"})
-          .form-elements__date-dropdown.form-elements__date-dropdown_slim
+          .form-elements__date-dropdown.form-elements__date-dropdown_size_small
             +date-dropdown({id: "filter_date_1", type: "filter", label: "filter date dropdown"})
 
-          .form-elements__text-field.form-elements__text-field_slim
+          .form-elements__text-field.form-elements__text-field_size_small
             +text-field({id: "test_field_4", label: "subscription text field", placeholder: "Email", arrow: true})
           
-          .form-elements__dropdown.form-elements__dropdown_slim
+          .form-elements__dropdown.form-elements__dropdown_size_small
             +dropdown({id: "dropdown_3", type: "room", label: "dropdown", description: "default"})
-          .form-elements__dropdown.form-elements__dropdown_slim
+          .form-elements__dropdown.form-elements__dropdown_size_small
             +dropdown({type: "room", label: "dropdown", description: "expanded"})
 
           .form-elements__expandable-checkbox-list-wrapper
@@ -47,7 +47,7 @@ section.form-elements
             .form-elements__expandable-checkbox-list
               +expandable-checkbox-list({name: "checkbox_list_2", header: "expandable checkbox list", labels: ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь"]})
 
-        .form-elements__snd-col
+        .form-elements__second-column
           .form-elements__checkbox-buttons
             .form-elements__item-header Checkbox Buttons
             .form-elements__checkbox-buttons-list   
@@ -85,7 +85,7 @@ section.form-elements
           .form-elements__rich-checkbox-buttons
             +rich-checkbox-buttons({name: "rich-checkbox", header: "rich checkbox buttons", labels: [["Широкий коридор", "Ширина коридоров в номере не менее 91 см."], ["Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера."]]})
 
-        .form-elements__trd-col
+        .form-elements__third-column
 
           .form-elements__slider
             +slider({header: "Range Slider", min: 1000, max: 18000, step: 100, from: 5000, to: 10000})
@@ -117,10 +117,10 @@ section.form-elements
           .form-elements__bullet-list
             +bullet-list({header: "bullet list", labels: ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]})
 
-        .form-elements__fourth-col
+        .form-elements__fourth-column
           .form-elements__room-details-list
             +room-details-list({items: [["Комфорт", "Шумопоглощающие стены", "insert-emoticon-min.svg"], ["Удобство", "Окно в каждой из спален", "location-city-min.svg"]]})
 
-        .form-elements__fifth-col
+        .form-elements__fifth-column
           .form-elements__feedback
             +feedback({name: "Мурад Сарафанов", icon: "murad.png", time: "5 дней назад", text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", likes: "11"})

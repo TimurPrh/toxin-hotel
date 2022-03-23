@@ -5,9 +5,9 @@ block content
   include ../../blocks/login-card/login-card.pug
   include ../../blocks/footer/footer.pug
   section.landing-login-main
-    .landing-login-header 
+    .landing-login-main__header 
       +header({login: false})
-    .container
+    .landing-login-main__container
       .landing-login-main__login
         +login-card({header: "Войти"})
 

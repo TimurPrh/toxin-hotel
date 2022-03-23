@@ -1,4 +1,9 @@
+@import '/src/assets/styles/mixins';
+
 .footer {
+  &__container {
+    @include container-init;
+  }
   &__main {
     display: flex;
     justify-content: space-between;

@@ -5,9 +5,9 @@ block content
   include ../../blocks/selection-card/selection-card.pug
   include ../../blocks/footer/footer.pug
   section.landing-main
-    .landing-header 
+    .landing-main__header 
       +header({login: false})
-    .container
+    .landing-main__container
       .landing-main__wrapper
         .landing-main__selection-card 
           +selection-card({header: "Найдём номера под ваши пожелания", dateDropdownId: "find_dates"})

@@ -1,6 +1,11 @@
+@import '/src/assets/styles/mixins';
+
 .color-and-types {
   padding-top: 30px;
   min-height: 900px;
+  &__container {
+    @include container-init;
+  }
   &__header {
     margin: 0;
     margin-left: 60px;

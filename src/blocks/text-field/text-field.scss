@@ -1,3 +1,5 @@
+@import '/src/assets/styles/mixins';
+
 .text-field {
   position: relative;
   display: grid;
@@ -22,6 +24,7 @@
     height: 44px;
     width: 100%;
     input {
+      @include font-init;
       font-size: var(--text-body-font-size);
       line-height: var(--text-body-line-height);
       color: var(--dark-shade-25);

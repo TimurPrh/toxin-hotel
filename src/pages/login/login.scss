@@ -1,3 +1,5 @@
+@import '/src/assets/styles/mixins';
+
 .landing-login-main {
   min-height: 100vh;
   background: center center/cover no-repeat;
@@ -7,7 +9,8 @@
 
   display: flex;
   flex-direction: column;
-  .container {
+  &__container {
+    @include container-init;
     width: 100%;
     flex: 1;
   }

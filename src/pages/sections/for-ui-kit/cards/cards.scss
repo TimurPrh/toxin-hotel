@@ -1,7 +1,12 @@
+@import '/src/assets/styles/mixins';
+
 .cards {
   min-height: 1350px;
   padding-top: 30px;
   background: #E5E5E5;
+  &__container {
+    @include container-init;
+  }
   &__wrapper {
     margin-top: 72px;
     min-width: 1159px;

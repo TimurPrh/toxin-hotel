@@ -1,5 +1,10 @@
+@import '/src/assets/styles/mixins';
+
 .room-details {
   background: #FFFFFF;
+  &__container {
+    @include container-init;
+  }
   &__photos {
     width: 100%;
     display: grid;

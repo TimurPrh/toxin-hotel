@@ -1,4 +1,9 @@
+@import '/src/assets/styles/mixins';
+
 .search-room {
+  &__container {
+    @include container-init;
+  }
   &__main {
     background: #FFFFFF;
     &-wrapper {

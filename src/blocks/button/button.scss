@@ -1,4 +1,7 @@
+@import '/src/assets/styles/mixins';
+
 .button {
+  @include font-init;
   background: var(--gradient-color);
   border-radius: 22px;
   font-weight: bold;

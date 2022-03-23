@@ -1,3 +1,5 @@
+@import '/src/assets/styles/mixins';
+
 .dropdown {
   display: grid;
   grid-template-columns: auto auto;
@@ -27,6 +29,7 @@
     height: 44px;
     width: 100%;
     input {
+      @include font-init;
       padding: 13px 13px;
       padding-right: 34px;
       width: 100%;

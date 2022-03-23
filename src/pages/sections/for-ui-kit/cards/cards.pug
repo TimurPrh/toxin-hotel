@@ -7,19 +7,19 @@ include ../../../../blocks/room-card/room-card.pug
 section.cards 
   .color-and-types__header 
         +kit-section-name({title: "Cards", logo: "logo-dark-grey.svg"})
-  .container  
+  .cards__container  
     .cards__wrapper 
-      .cards__fst-col
+      .cards__first-column
         .cards__selection-card
           +selection-card({header: "Найдём номера под ваши пожелания", dateDropdownId: "split_date_2"})
         .cards__registration-card 
           +registration-card({header: "Регистрация аккаунта"})
-      .cards__snd-col
+      .cards__second-column
         .cards__booking-room-card
           +booking-room-card({roomNumber: "888", roomClass: "люкс", price: "9 990₽"})
         .cards__login-card
           +login-card({header: "Войти"})
-      .cards__thrd-col
+      .cards__third-column
         .cards__calendar
           +date-dropdown({id: "filter_date_2", type: "filter", label: ""})
         .cards__room-card
