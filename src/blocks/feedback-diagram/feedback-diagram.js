@@ -12,12 +12,12 @@ class FeedbackDiagram {
   }
 
   render() {
-    function isUnitNumber() {
-      return (this.feedbackTotalNumber === 1 || (this.feedbackTotalNumber > 20 && this.feedbackTotalNumber % 10 === 1));
+    function isUnitNumber(number) {
+      return (number === 1 || (number > 20 && number % 10 === 1));
     }
 
-    function isMultipleNumber() {
-      return (this.feedbackTotalNumber >= 2 && this.feedbackTotalNumber <= 4) || (this.feedbackTotalNumber > 20 && (this.feedbackTotalNumber % 10 >= 2 && this.feedbackTotalNumber % 10 <= 4));
+    function isMultipleNumber(number) {
+      return (number >= 2 && number <= 4) || (number > 20 && (number % 10 >= 2 && number % 10 <= 4));
     }
 
     const feedbackCount = JSON.parse(this.feedbackDiagram.dataset.feedback);
@@ -107,9 +107,9 @@ class FeedbackDiagram {
 
     this.feedbackTotalNumberField.innerHTML = feedbackTotalNumber;
 
-    if (isUnitNumber()) {
+    if (isUnitNumber(feedbackTotalNumber)) {
       this.feedbackTotalNumberText.innerHTML = "голос";
-    } else if (isMultipleNumber()) {
+    } else if (isMultipleNumber(feedbackTotalNumber)) {
       this.feedbackTotalNumberText.innerHTML = "голоса";
     } else if (feedbackTotalNumber > 4) {
       this.feedbackTotalNumberText.innerHTML = "голосов";
