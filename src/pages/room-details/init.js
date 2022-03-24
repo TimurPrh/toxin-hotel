@@ -1,4 +1,4 @@
-import RoomDetails from "./room-details";
+import RoomDetails from "./RoomDetails";
 
 const roomDetails = new RoomDetails();
 
