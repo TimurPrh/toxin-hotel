@@ -67,6 +67,4 @@ class Pagination {
   }
 }
 
-const pagination = new Pagination();
-
-pagination.initialize();
+export default Pagination;

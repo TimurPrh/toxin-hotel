@@ -155,6 +155,4 @@ class DateDropdown {
   }
 }
 
-const dateDropdown = new DateDropdown();
-
-dateDropdown.initialize();
+export default DateDropdown;

@@ -16,6 +16,4 @@ class SearchRoom {
   }
 }
 
-const searchRoom = new SearchRoom();
-
-searchRoom.initialize();
+export default SearchRoom;

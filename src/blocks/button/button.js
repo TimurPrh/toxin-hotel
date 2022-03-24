@@ -53,6 +53,4 @@ class Button {
   }
 }
 
-const button = new Button();
-
-button.initialize();
+export default Button;

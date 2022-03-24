@@ -17,11 +17,11 @@
   }
 
   input[type='checkbox'], input[type='radio'], input[type='number'] {
-    --active: var(--purple-color);
+    --active: var(--primary-color);
     --active-inner: var(--gradient-color);
     --focus: 0px var(--dark-shade-25);
     --border: var(--dark-shade-25);
-    --border-hover: var(--purple-color);
+    --border-hover: var(--primary-color);
     --background: inherit;
     --disabled: inherit;
     --disabled-inner: inherit;
@@ -181,7 +181,7 @@
       }
 
       &_active ~ label {
-        color: var(--purple-color);
+        color: var(--primary-color);
       }
       
       &:disabled {

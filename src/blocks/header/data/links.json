@@ -1,0 +1,50 @@
+{
+  "links": [
+    {
+      "href": "unset",
+      "label": "О нас"
+    },
+    {
+      "label": "Услуги",
+      "subLinks": [
+        {
+          "href": "unset",
+          "label": "Услуги ссылка 1"
+        },
+        {
+          "href": "unset",
+          "label": "Услуги ссылка 2"
+        },
+        {
+          "href": "unset",
+          "label": "Услуги ссылка 3"
+        }
+      ]
+    },
+    {
+      "href": "unset",
+      "label": "Вакансии"
+    },
+    {
+      "href": "unset",
+      "label": "Новости"
+    },
+    {
+      "label": "Соглашения",
+      "subLinks": [
+        {
+          "href": "unset",
+          "label": "Соглашения ссылка 1"
+        },
+        {
+          "href": "unset",
+          "label": "Соглашения ссылка 2"
+        },
+        {
+          "href": "unset",
+          "label": "Соглашения ссылка 3"
+        }
+      ]
+    }
+  ]
+}

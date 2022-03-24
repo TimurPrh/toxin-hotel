@@ -124,6 +124,4 @@ class FeedbackDiagram {
   }
 }
 
-const feedbackDiagram = new FeedbackDiagram();
-
-feedbackDiagram.initialize();
+export default FeedbackDiagram;

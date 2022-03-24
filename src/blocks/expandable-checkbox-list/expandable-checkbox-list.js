@@ -13,6 +13,4 @@ class ExpandableCheckboxList {
   }
 }
 
-const expandableCheckboxList = new ExpandableCheckboxList();
-
-expandableCheckboxList.initialize();
+export default ExpandableCheckboxList;

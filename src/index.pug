@@ -4,15 +4,7 @@ block content
   section.preview-pages 
     h1 Toxin Hotel start page
     ul.preview-pages__project-pages
-      li 
-        a(href="ui-kit") UI kit
-      li
-        a(href="landing-page") Landing Page
-      li
-        a(href="login") Login Page
-      li
-        a(href="registration") Registration Page
-      li
-        a(href="search-room") Search room
-      li
-        a(href="room-details") Room details
+      - const file = require('/src/project-pages.json')
+      each label, link in file
+        li 
+          a(href=link)= label

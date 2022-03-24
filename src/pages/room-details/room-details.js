@@ -31,6 +31,4 @@ class RoomDetails {
   }
 }
 
-const roomDetails = new RoomDetails();
-
-roomDetails.initialize();
+export default RoomDetails;

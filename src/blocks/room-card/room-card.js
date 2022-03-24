@@ -52,6 +52,4 @@ class RoomCard {
   }
 }
 
-const roomCard = new RoomCard();
-
-roomCard.initialize();
+export default RoomCard;

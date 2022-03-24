@@ -49,6 +49,7 @@
     "jquery": "^3.6.0",
     "jquery-mask-plugin": "^1.14.16",
     "normalize.css": "^8.0.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "timurprh-range-slider": "^1.0.0"
   }
 }

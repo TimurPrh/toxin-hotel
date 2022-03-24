@@ -8,7 +8,7 @@
   }
 }
 .feedback-diagram__text {
-  fill: var(--purple-color);
+  fill: var(--primary-color);
   transform: translateY(0.25em);
 }
 .feedback-diagram__text-number {
@@ -63,10 +63,10 @@
   background: linear-gradient(180deg, var(--yellow-color) 0%, var(--orange-color) 100%);
 }
 .feedback-diagram__shape-circle_color_green {
-  background: linear-gradient(180deg, var(--green-color) 0%, var(--aqua-color) 100%);
+  background: linear-gradient(180deg, var(--secondary-color) 0%, var(--aqua-color) 100%);
 }
 .feedback-diagram__shape-circle_color_purple {
-  background: linear-gradient(180deg, var(--purple-color) 0%, var(--blue-color) 100%);
+  background: linear-gradient(180deg, var(--primary-color) 0%, var(--blue-color) 100%);
 }
 .feedback-diagram__shape-circle_color_dark-blue {
   background: linear-gradient(180deg, var(--grey-color) 0%, var(--dark-blue-color) 100%);

@@ -39,6 +39,4 @@ class RateButton {
   }
 }
 
-const rateButton = new RateButton();
-
-rateButton.initialize();
+export default RateButton;

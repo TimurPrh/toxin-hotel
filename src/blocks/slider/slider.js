@@ -1,5 +1,5 @@
-import '../../libs/range-slider-plugin/range-slider';
-import '../../libs/range-slider-plugin/range-slider.css';
+import 'timurprh-range-slider/range-slider';
+import 'timurprh-range-slider/range-slider.css';
 
 class Slider {
   getElements() {
@@ -69,6 +69,4 @@ class Slider {
   }
 }
 
-const slider = new Slider();
-
-slider.initialize();
+export default Slider;

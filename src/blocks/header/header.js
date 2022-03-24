@@ -36,6 +36,4 @@ class Header {
   }
 }
 
-const header = new Header();
-
-header.initialize();
+export default Header;

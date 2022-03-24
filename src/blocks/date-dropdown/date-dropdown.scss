@@ -114,14 +114,14 @@
         top: 50%;
         left: 34%;
         transform: translate(-50%, -50%);
-        background-color: var(--purple-color);
+        background-color: var(--primary-color);
       }
       &:nth-child(2) {
         position: absolute;
         top: 50%;
         left: 29%;
         transform: translate(-50%, -50%) rotate(-45deg);
-        border: solid var(--purple-color);
+        border: solid var(--primary-color);
         border-width: 2px 0 0 2px;
         padding: 4px;
       }
@@ -139,14 +139,14 @@
         top: 50%;
         left: 66%;
         transform: translate(-50%, -50%);
-        background-color: var(--purple-color);
+        background-color: var(--primary-color);
       }
       &:nth-child(2) {
         position: absolute;
         top: 50%;
         left: 71%;
         transform: translate(-50%, -50%) rotate(-45deg);
-        border: solid var(--purple-color);
+        border: solid var(--primary-color);
         border-width: 0 2px 2px 0;
         padding: 4px;
       }
@@ -198,7 +198,7 @@
     font-size: var(--text-h3-font-size);
     line-height: var(--text-h3-line-height);
     text-transform: unset;
-    color: var(--purple-color);
+    color: var(--primary-color);
   }
   .air-datepicker--content {
     padding: 0;

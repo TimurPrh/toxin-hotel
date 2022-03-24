@@ -199,6 +199,4 @@ class Dropdown {
   }
 }
 
-const dropdown = new Dropdown();
-
-dropdown.initialize();
+export default Dropdown;

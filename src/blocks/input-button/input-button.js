@@ -19,6 +19,4 @@ class InputButton {
   }
 }
 
-const inputButton = new InputButton();
-
-inputButton.initialize();
+export default InputButton;

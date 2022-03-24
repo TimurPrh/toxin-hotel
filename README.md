@@ -18,3 +18,4 @@
 - jquery-mask-plugin  
 - normalize.css  
 - slick-carousel  
+- timurprh-range-slider  

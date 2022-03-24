@@ -21,6 +21,4 @@ class TextField {
   }
 }
 
-const textField = new TextField();
-
-textField.initialize();
+export default TextField;

@@ -76,6 +76,4 @@ class BookingRoomCard {
   }
 }
 
-const bookingRoomCard = new BookingRoomCard();
-
-bookingRoomCard.initialize();
+export default BookingRoomCard;

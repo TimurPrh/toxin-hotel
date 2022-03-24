@@ -67,14 +67,14 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: var(--purple-color);
+        background-color: var(--primary-color);
       }
       &:nth-child(2) {
         position: absolute;
         top: 50%;
         left: 54%;
         transform: translate(-50%, -50%) rotate(-45deg);
-        border: solid var(--purple-color);
+        border: solid var(--primary-color);
         border-width: 0 2px 2px 0;
         padding: 4px;
       }
