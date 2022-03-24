@@ -7,8 +7,8 @@
   background-image: url(./img/grey-room-preview.jpg);
   animation: registration-background-images 20s cubic-bezier(0.8,-2.5,0.8,1) infinite;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: min-content;
   &__container {
     @include container-init;
     width: 100%;

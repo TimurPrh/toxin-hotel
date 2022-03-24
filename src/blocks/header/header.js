@@ -30,6 +30,7 @@ class Header {
     if (this.arrow) {
       this.arrows.forEach((arrow) => {
         arrow.addEventListener('click', handleHeaderArrowClick);
+        arrow.previousElementSibling.addEventListener('click', handleHeaderArrowClick);
       });
     }
   }

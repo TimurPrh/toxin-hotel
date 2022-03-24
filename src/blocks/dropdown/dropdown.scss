@@ -103,7 +103,7 @@
       color: var(--dark-shade-100);
     }
     &-minus {
-      cursor: pointer;
+      
       position: relative;
       width: 30px;
       height: 30px;
@@ -120,6 +120,7 @@
         background-color: var(--dark-shade-25);
       }
       &_active {
+        cursor: pointer;
         border-color: var(--dark-shade-50);
         &::before {
           background-color: var(--dark-shade-50);
@@ -127,7 +128,6 @@
       }
     }
     &-plus {
-      cursor: pointer;
       position: relative;
       width: 30px;
       height: 30px;
@@ -154,6 +154,7 @@
         background-color: var(--dark-shade-25);
       }
       &_active {
+        cursor: pointer;
         border-color: var(--dark-shade-50);
         &::before {
           background-color: var(--dark-shade-50);

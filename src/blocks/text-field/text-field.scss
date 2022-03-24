@@ -44,6 +44,11 @@
         color: var(--dark-shade-25);
       }
     }
+    &_with-arrow {
+      input {
+        padding-right: 34px;
+      }
+    }
   }
   &__arrow {
     display: none;

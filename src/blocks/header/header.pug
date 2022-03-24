@@ -18,14 +18,14 @@ mixin header({login: login, name: name, activeLink: activeLink})
             li
               .header__list-item
                 if activeLink == 2
-                  a.header__list-link.header__list-link_active(href="unset") Услуги
+                  .header__list-link.header__list-link_active Услуги
                 else 
-                  a.header__list-link(href="unset") Услуги
+                  .header__list-link Услуги
                 .header__list-arrow.js-header__list-arrow
               ul.header__dropdown
-                each dropdownLink in ["Услуги ссылка 1", "Услуги ссылка 2", "Услуги ссылка 3"]
+                each dropdownLink in [["Услуги ссылка 1", "unset"], ["Услуги ссылка 2", "unset"], ["Услуги ссылка 3", "unset"]]
                   li.header__dropdown-item 
-                    a.header__dropdown-link(href="unset")= dropdownLink
+                    a.header__dropdown-link(href=dropdownLink[1])= dropdownLink[0]
             li
               .header__list-item
                 if activeLink == 3
@@ -41,14 +41,14 @@ mixin header({login: login, name: name, activeLink: activeLink})
             li
               .header__list-item
                 if activeLink == 5
-                  a.header__list-link.header__list-link_active(href="unset") Соглашения
+                  .header__list-link.header__list-link_active Соглашения
                 else 
-                  a.header__list-link(href="unset") Соглашения
+                  .header__list-link Соглашения
                 .header__list-arrow.js-header__list-arrow
               ul.header__dropdown
-                each dropdownLink in ["Соглашения ссылка 1", "Соглашения ссылка 2", "Соглашения ссылка 3"]
+                each dropdownLink in [["Соглашения ссылка 1", "unset"], ["Соглашения ссылка 2", "unset"], ["Соглашения ссылка 3", "unset"]]
                   li.header__dropdown-item 
-                    a.header__dropdown-link(href="unset")= dropdownLink
+                    a.header__dropdown-link(href=dropdownLink[1])= dropdownLink[0]
             
             if (login == true)
               li
