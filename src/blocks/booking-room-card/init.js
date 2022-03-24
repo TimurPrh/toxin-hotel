@@ -1,4 +1,4 @@
-import BookingRoomCard from "./booking-room-card";
+import BookingRoomCard from "./BookingRoomCard";
 
 const bookingRoomCard = new BookingRoomCard();
 

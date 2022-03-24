@@ -1,4 +1,4 @@
-import ExpandableCheckboxList from "./expandable-checkbox-list";
+import ExpandableCheckboxList from "./ExpandableCheckboxList";
 
 const expandableCheckboxList = new ExpandableCheckboxList();
 

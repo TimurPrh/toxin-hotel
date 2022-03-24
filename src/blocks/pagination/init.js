@@ -1,4 +1,4 @@
-import Pagination from "./pagination";
+import Pagination from "./Pagination";
 
 const pagination = new Pagination();
 

@@ -1,4 +1,4 @@
-import RateButton from "./rate-button";
+import RateButton from "./RateButton";
 
 const rateButton = new RateButton();
 

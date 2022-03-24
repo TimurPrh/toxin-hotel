@@ -1,4 +1,4 @@
-import DateDropdown from "./date-dropdown";
+import DateDropdown from "./DateDropdown";
 
 const dateDropdown = new DateDropdown();
 

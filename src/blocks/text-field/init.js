@@ -1,4 +1,4 @@
-import TextField from "./text-field";
+import TextField from "./TextField";
 
 const textField = new TextField();
 
