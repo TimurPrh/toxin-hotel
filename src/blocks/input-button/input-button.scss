@@ -1,3 +1,5 @@
+@import '/src/assets/styles/mixins';
+
 .input-button {
   position: relative;
   display: grid;
@@ -8,7 +10,7 @@
   &_wide {
     grid-template-columns: 40px auto;
   }
-  &_one-col {
+  &_one-column {
     grid-template-columns: auto;
     input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
       -webkit-appearance: none;
@@ -164,6 +166,7 @@
       }
     }
     &.input-button_like {
+      @include font-init;
       line-height: var(--text-body-line-height);
       color: var(--dark-shade-25);
       min-width: 40px;

@@ -70,7 +70,7 @@ class BookingRoomCard {
     this.setLineWidth();
 
     if (this.prices) {
-      window.addEventListener("resize", this.setLineWidth);
+      window.addEventListener("onresize", this.setLineWidth);
       window.addEventListener("orientationchange", this.setLineWidth);
     }
   }

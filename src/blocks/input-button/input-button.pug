@@ -18,6 +18,6 @@ mixin input-button({type: type, label: label, labelHeader: labelHeader, id: id, 
       input.input-button__input.input-button_switch(id= id name= name type="checkbox")
       label.input-button__label(for=id)= label
   else if (type == "like")
-    .input-button.input-button_one-col
+    .input-button.input-button_one-column
       input.input-button__input.input-button_like.js-input-button_like(id= id name= name type="number" value= label readonly)
       include ./icons/favorite-black-24dp.svg
