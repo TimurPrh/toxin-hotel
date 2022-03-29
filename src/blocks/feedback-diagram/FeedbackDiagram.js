@@ -43,14 +43,14 @@ class FeedbackDiagram {
 
     if (feedbackCount.disappointed > 0) {
       rate1DashArray = (100 * feedbackCount.disappointed) / feedbackTotalNumber - 0.5;
-      this.disappointedSegment.setAttribute("stroke-width", "1");
+      this.disappointedSegment.setAttribute('stroke-width', '1');
       if (notZeroFeedbackCount === 1) {
-        this.disappointedSegment.setAttribute("stroke-dasharray", `100 0`);
+        this.disappointedSegment.setAttribute('stroke-dasharray', '100 0');
       } else {
-        this.disappointedSegment.setAttribute("stroke-dasharray", `${rate1DashArray} ${100 - rate1DashArray}`);
+        this.disappointedSegment.setAttribute('stroke-dasharray', `${rate1DashArray} ${100 - rate1DashArray}`);
       }
 
-      this.disappointedSegment.setAttribute("stroke-dashoffset", `${rate1DashOffset}`);
+      this.disappointedSegment.setAttribute('stroke-dashoffset', `${rate1DashOffset}`);
       rate1DashArray += 0.5;
     }
 
@@ -60,14 +60,14 @@ class FeedbackDiagram {
     }
     if (feedbackCount.acceptable > 0) {
       rate2DashArray = (100 * feedbackCount.acceptable) / feedbackTotalNumber - 0.5;
-      this.acceptableSegment.setAttribute("stroke-width", "1");
+      this.acceptableSegment.setAttribute('stroke-width', '1');
       if (notZeroFeedbackCount === 1) {
-        this.acceptableSegment.setAttribute("stroke-dasharray", `100 0`);
+        this.acceptableSegment.setAttribute('stroke-dasharray', '100 0');
       } else {
-        this.acceptableSegment.setAttribute("stroke-dasharray", `${rate2DashArray} ${100 - rate2DashArray}`);
+        this.acceptableSegment.setAttribute('stroke-dasharray', `${rate2DashArray} ${100 - rate2DashArray}`);
       }
 
-      this.acceptableSegment.setAttribute("stroke-dashoffset", `${rate2DashOffset}`);
+      this.acceptableSegment.setAttribute('stroke-dashoffset', `${rate2DashOffset}`);
       rate2DashArray += 0.5;
     }
 
@@ -77,14 +77,14 @@ class FeedbackDiagram {
     }
     if (feedbackCount.good > 0) {
       rate3DashArray = (100 * feedbackCount.good) / feedbackTotalNumber - 0.5;
-      this.goodSegment.setAttribute("stroke-width", "1");
+      this.goodSegment.setAttribute('stroke-width', '1');
       if (notZeroFeedbackCount === 1) {
-        this.goodSegment.setAttribute("stroke-dasharray", `100 0`);
+        this.goodSegment.setAttribute('stroke-dasharray', '100 0');
       } else {
-        this.goodSegment.setAttribute("stroke-dasharray", `${rate3DashArray} ${100 - rate3DashArray}`);
+        this.goodSegment.setAttribute('stroke-dasharray', `${rate3DashArray} ${100 - rate3DashArray}`);
       }
 
-      this.goodSegment.setAttribute("stroke-dashoffset", `${rate3DashOffset}`);
+      this.goodSegment.setAttribute('stroke-dashoffset', `${rate3DashOffset}`);
       rate3DashArray += 0.5;
     }
 
@@ -94,25 +94,25 @@ class FeedbackDiagram {
     }
     if (feedbackCount.amazing > 0) {
       rate4DashArray = (100 * feedbackCount.amazing) / feedbackTotalNumber - 0.5;
-      this.amazingSegment.setAttribute("stroke-width", "1");
+      this.amazingSegment.setAttribute('stroke-width', '1');
       if (notZeroFeedbackCount === 1) {
-        this.amazingSegment.setAttribute("stroke-dasharray", `100 0`);
+        this.amazingSegment.setAttribute('stroke-dasharray', '100 0');
       } else {
-        this.amazingSegment.setAttribute("stroke-dasharray", `${rate4DashArray} ${100 - rate4DashArray}`);
+        this.amazingSegment.setAttribute('stroke-dasharray', `${rate4DashArray} ${100 - rate4DashArray}`);
       }
 
-      this.amazingSegment.setAttribute("stroke-dashoffset", `${rate4DashOffset}`);
+      this.amazingSegment.setAttribute('stroke-dashoffset', `${rate4DashOffset}`);
       rate4DashArray += 0.5;
     }
 
     this.feedbackTotalNumberField.innerHTML = feedbackTotalNumber;
 
     if (isUnitNumber(feedbackTotalNumber)) {
-      this.feedbackTotalNumberText.innerHTML = "голос";
+      this.feedbackTotalNumberText.innerHTML = 'голос';
     } else if (isMultipleNumber(feedbackTotalNumber)) {
-      this.feedbackTotalNumberText.innerHTML = "голоса";
+      this.feedbackTotalNumberText.innerHTML = 'голоса';
     } else if (feedbackTotalNumber > 4) {
-      this.feedbackTotalNumberText.innerHTML = "голосов";
+      this.feedbackTotalNumberText.innerHTML = 'голосов';
     }
   }
 

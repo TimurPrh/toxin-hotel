@@ -14,7 +14,7 @@ class RateButton {
         let star = e.target.closest('.js-rate-button__star');
 
         star.parentElement.childNodes.forEach((starDiv) => {
-          if (starDiv.nodeName === "DIV" && starDiv.classList.contains('rate-button__star_active')) {
+          if (starDiv.nodeName === 'DIV' && starDiv.classList.contains('rate-button__star_active')) {
             setStarsFlag = false;
           }
         });
@@ -27,7 +27,7 @@ class RateButton {
           }
         } else {
           star.parentElement.childNodes.forEach((starDiv) => {
-            if (starDiv.nodeName === "DIV") {
+            if (starDiv.nodeName === 'DIV') {
               starDiv.classList.remove('rate-button__star_active');
             }
           });

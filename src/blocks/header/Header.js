@@ -12,10 +12,10 @@ class Header {
 
     const handleHamburgerClick = () => {
       this.hamburger.classList.toggle('header__hamburger_active');
-      if (this.wrapper.style.left === "0%") {
-        this.wrapper.style.left = "-100%";
+      if (this.wrapper.style.left === '0%') {
+        this.wrapper.style.left = '-100%';
       } else {
-        this.wrapper.style.left = "0%";
+        this.wrapper.style.left = '0%';
       }
     };
 

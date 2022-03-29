@@ -10,7 +10,7 @@ class Slider {
   }
 
   updateResult() {
-    this.sliderResult.innerHTML = `${Slider.separateThousand(this.currentValues[0])} ₽ - ${Slider.separateThousand(this.currentValues[1])} ₽`;
+    this.sliderResult.innerHTML = `${Slider.separateThousand(this.currentValues[0])}₽ - ${Slider.separateThousand(this.currentValues[1])}₽`;
   }
 
   static separateThousand(x) {

@@ -1,7 +1,7 @@
 class Pagination {
   getElements() {
     this.pagination = document.querySelector('.js-pagination');
-    this.paginationList = document.querySelector(".js-pagination ul");
+    this.paginationList = document.querySelector('.js-pagination ul');
   }
 
   createPagination(totalPages, page) {
@@ -33,9 +33,9 @@ class Pagination {
           pageLength += 1;
         }
         if (page === pageLength) {
-          active = "pagination__item_active";
+          active = 'pagination__item_active';
         } else {
-          active = "";
+          active = '';
         }
         liTag += `<li class="pagination__item ${active}" onclick="createPagination(${totalPages}, ${pageLength})">${pageLength}</li>`;
       }

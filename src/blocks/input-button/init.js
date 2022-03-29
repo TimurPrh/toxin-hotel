@@ -1,4 +1,4 @@
-import InputButton from "./InputButton";
+import InputButton from './InputButton';
 
 const inputButton = new InputButton();
 

@@ -1,4 +1,4 @@
-import SearchRoom from "./SearchRoom";
+import SearchRoom from './SearchRoom';
 
 const searchRoom = new SearchRoom();
 

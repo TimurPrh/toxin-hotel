@@ -1,4 +1,4 @@
-import FeedbackDiagram from "./FeedbackDiagram";
+import FeedbackDiagram from './FeedbackDiagram';
 
 const feedbackDiagram = new FeedbackDiagram();
 

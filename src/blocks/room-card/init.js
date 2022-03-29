@@ -1,4 +1,4 @@
-import RoomCard from "./RoomCard";
+import RoomCard from './RoomCard';
 
 const roomCard = new RoomCard();
 
