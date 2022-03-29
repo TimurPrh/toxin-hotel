@@ -50,9 +50,9 @@ class DateDropdown {
         navTitles: {
           days: 'MMMM yyyy',
         },
-        prevHtml: '<div class="date-dropdown__prev-arrow">'
-                                  + '<div class="date-dropdown__prev-arrow-line"></div>'
-                                  + '<div class="date-dropdown__prev-arrow-line"></div>'
+        prevHtml: '<div class="date-dropdown__previous-arrow">'
+                                  + '<div class="date-dropdown__previous-arrow-line"></div>'
+                                  + '<div class="date-dropdown__previous-arrow-line"></div>'
                               + '</div>',
         nextHtml: '<div class="date-dropdown__next-arrow">'
                                   + '<div class="date-dropdown__next-arrow-line"></div>'
@@ -77,9 +77,9 @@ class DateDropdown {
         },
         dateFormat: 'd MMM',
         multipleDatesSeparator: ' - ',
-        prevHtml: '<div class="date-dropdown__prev-arrow">'
-                                  + '<div class="date-dropdown__prev-arrow-line"></div>'
-                                  + '<div class="date-dropdown__prev-arrow-line"></div>'
+        prevHtml: '<div class="date-dropdown__previous-arrow">'
+                                  + '<div class="date-dropdown__previous-arrow-line"></div>'
+                                  + '<div class="date-dropdown__previous-arrow-line"></div>'
                               + '</div>',
         nextHtml: '<div class="date-dropdown__next-arrow">'
                                   + '<div class="date-dropdown__next-arrow-line"></div>'
@@ -119,16 +119,10 @@ class DateDropdown {
         datePicker.clear();
       };
 
-      $elem.find('.js-date-dropdown__arrow').on('click', handleArrowClick);
-
-      $elem.find('.js-date-dropdown__buttons-apply button').on('click', handleApplyClick);
-
       $elem.find('.air-datepicker').appendTo(`#${id} .js-date-dropdown__calendar`);
-      $elem.find('.air-datepicker-nav--title').addClass('text-h2');
-      $elem.find('.air-datepicker-body--day-name').addClass('text-h3');
-      $elem.find('.air-datepicker-cell').addClass('text-h3_50');
-      $elem.find('.air-datepicker-cell -other-month-').addClass('text-h3_25');
 
+      $elem.find('.js-date-dropdown__arrow').on('click', handleArrowClick);
+      $elem.find('.js-date-dropdown__buttons-apply button').on('click', handleApplyClick);
       $elem.find('.js-date-dropdown__buttons-reset button').on('click', handleResetClick);
     }
 
@@ -144,7 +138,11 @@ class DateDropdown {
     }
 
     function handleOutsideClick(e) {
-      if (!e.target.closest('.js-date-dropdown_filter') && !e.target.closest('.js-date-dropdown_split')) {
+      function isClickOutsideCalendar(element) {
+        return (!e.target.closest('.js-date-dropdown_filter') && !e.target.closest('.js-date-dropdown_split') && !e.target.classList.contains('air-datepicker-cell'));
+      }
+
+      if (isClickOutsideCalendar(e.target)) {
         $('html').find('.js-date-dropdown__list').each((i, list) => {
           $(list).slideUp();
         });

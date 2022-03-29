@@ -82,7 +82,7 @@
   &__calendar-input {
     font-size: var(--text-body-font-size);
     line-height: var(--text-body-line-height);
-    color: var(--dark-shade-25);
+    color: var(--dark-shade-75);
   }
   &__list {
     display: none;
@@ -102,7 +102,7 @@
       padding: 15px 4px 18px 4px;
     }
   }
-  &__prev-arrow {
+  &__previous-arrow {
     position: relative;
     width: inherit;
     height: inherit;
@@ -249,7 +249,7 @@
     position: relative;
     font-weight: bold;
     color: #FFFFFF;
-    background: none;
+    background: none !important;
     &::before {
       content: '';
       position: absolute;
@@ -260,8 +260,11 @@
       background: var(--gradient-color);
     }
   }
+  .-in-range-.air-datepicker-cell.-day-.-other-month-, .-in-range-.air-datepicker-cell.-year-.-other-decade- {
+    color: var(--dark-shade-25);
+  }
   .air-datepicker-body--cells .-in-range- {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%) !important;
   }
   .air-datepicker-body--cells .-range-from- {
     &::after {
