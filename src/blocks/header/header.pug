@@ -11,7 +11,7 @@ mixin header({login: login, name: name, activeLink: activeLink})
           ul.header__list 
             - const data = require('/src/blocks/header/data/links.json')
             each link, linkIndex in data.links
-              li
+              li.header__list-item-wrapper
                 .header__list-item
                   if activeLink == linkIndex + 1 && link.href
                     a.header__list-link.header__list-link_active(href=link.href)= link.label
@@ -47,4 +47,4 @@ mixin header({login: login, name: name, activeLink: activeLink})
 
       .header__hamburger.js-header__hamburger 
         - for (var x = 0; x < 3; x++)
-          span 
+          span.header__hamburger-line

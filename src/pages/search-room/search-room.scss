@@ -110,7 +110,7 @@
         transform: translateY(-50%);
         width: 30px;
         margin-left: calc(100% - 30px);
-        span {
+        &-filter-line {
           display: block;
           height: 4px;
           margin: 0 auto;

@@ -29,10 +29,10 @@
       font-weight: bold !important;
       color: #FFFFFF !important;
     }
-    &_dots {
+    &_type_dots {
       cursor: unset;
     }
-    &_prev {
+    &_type_previous {
       position: relative;
       background: var(--secondary-gradient-color);
       &:before {
@@ -56,7 +56,7 @@
         padding: 4px;
       }
     }
-    &_next {
+    &_type_next {
       position: relative;
       background: var(--secondary-gradient-color);
       &:before {

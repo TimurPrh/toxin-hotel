@@ -3,7 +3,7 @@ mixin feedback-diagram({disappointed: disappointed, acceptable: acceptable, good
     - var radius = 15.91549430918954
     - var vcx = 16.5
     - var vcy = 16.5
-    figure
+    figure.feedback-diagram__figure
       .feedback-diagram__figure-content
         svg(height= "100%" viewBox="0 0 33 33")
           linearGradient(id="purpleGradientCircle" gradientTransform="rotate(90)")
@@ -33,15 +33,15 @@ mixin feedback-diagram({disappointed: disappointed, acceptable: acceptable, good
 
       figcaption.feedback-diagram__figure-key
         ul.feedback-diagram__figure-key-list(aria-hidden="true" role="presentation")
-          li
+          li.feedback-diagram__figure-key-list-item
             span.feedback-diagram__shape-circle.feedback-diagram__shape-circle_color_orange
             | Великолепно
-          li
+          li.feedback-diagram__figure-key-list-item
             span.feedback-diagram__shape-circle.feedback-diagram__shape-circle_color_green
             | Хорошо
-          li
+          li.feedback-diagram__figure-key-list-item
             span.feedback-diagram__shape-circle.feedback-diagram__shape-circle_color_purple
             | Удовлетворительно
-          li
+          li.feedback-diagram__figure-key-list-item
             span.feedback-diagram__shape-circle.feedback-diagram__shape-circle_color_dark-blue
             | Разочарован

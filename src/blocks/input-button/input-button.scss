@@ -18,7 +18,7 @@
     }
   }
 
-  input[type='checkbox'], input[type='radio'], input[type='number'] {
+  &__input_type_checkbox, &__input_type_switch, &__input_type_radio, &__input_type_like {
     --active: var(--primary-color);
     --active-inner: var(--gradient-color);
     --focus: 0px var(--dark-shade-25);
@@ -76,7 +76,7 @@
     &:focus {
       box-shadow: 0 0 0 var(--focus);
     }
-    &:not(.input-button_switch):not(.input-button_like) {
+    &:not(.input-button__input_type_switch):not(.input-button__input_type_like) {
       width: 20px;
       &:after {
         opacity: var(--o, 0);
@@ -86,44 +86,15 @@
       }
     }
   }
-  .input-button__label {
-    font-size: var(--text-body-font-size);
-    line-height: var(--text-body-line-height);
-    color: var(--dark-shade-75);
-    display: inline-block;
-    cursor: pointer;
-    padding-left: 10px;
-    &_opacity_50 {
-      color: var(--dark-shade-50);
-    }
-  }
-  .input-button__label-header {
-    font-size: var(--text-body-font-size);
-    color: var(--dark-shade-75);
-    font-weight: bold;
-    line-height: 18px;
-    margin-bottom: 5px;
-    display: inline-block;
-    cursor: pointer;
-    padding-left: 10px;
-  }
-  .input-button__label-subheader {
-    color: var(--dark-shade-50);
-    font-size: 12px;
-    line-height: 14px;
-    display: inline-block;
-    cursor: pointer;
-    padding-left: 10px;
-  }
-  input[type='radio'] {
+  &__input_type_radio {
     &:checked {
       & + label {
         color: rgba(31, 32, 65, 0.75);
       }
     }
   }
-  input[type='checkbox'], input[type='number'] {
-    &:not(.input-button_switch):not(.input-button_like) {
+  &__input_type_checkbox, &__input_type_switch, &__input_type_like {
+    &:not(.input-button__input_type_switch):not(.input-button__input_type_like) {
       border-radius: 4px;
       &:after {
         width: 4px;
@@ -141,7 +112,7 @@
         --r: 45deg;
       }
     }
-    &.input-button_switch {
+    &.input-button__input_type_switch {
       width: 40px;
       border-radius: 10px;
       &:after {
@@ -165,12 +136,15 @@
         }
       }
     }
-    &.input-button_like {
+    &.input-button__input_type_like {
       @include font-init;
       line-height: var(--text-body-line-height);
       color: var(--dark-shade-25);
       min-width: 40px;
       border-radius: 10px;
+      padding: 0;
+      padding-left: 20px;
+      font-size: 10px;
       &_active {
         --b: var(--background);
         --bc: var(--active);
@@ -196,7 +170,7 @@
       }
     }
   }
-  input[type='radio'] {
+  &__input_type_radio {
     border-radius: 50%;
     &:after {
       width: 12px;
@@ -211,10 +185,34 @@
       --s: .5;
     }
   }
-  input[type='number'] {
-    padding: 0;
-    padding-left: 20px;
-    font-size: 10px;
+  &__label {
+    font-size: var(--text-body-font-size);
+    line-height: var(--text-body-line-height);
+    color: var(--dark-shade-75);
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 10px;
+    &_opacity_50 {
+      color: var(--dark-shade-50);
+    }
+  }
+  &__label-header {
+    font-size: var(--text-body-font-size);
+    color: var(--dark-shade-75);
+    font-weight: bold;
+    line-height: 18px;
+    margin-bottom: 5px;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 10px;
+  }
+  &__label-subheader {
+    color: var(--dark-shade-50);
+    font-size: 12px;
+    line-height: 14px;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 10px;
   }
   svg {
     position: absolute;

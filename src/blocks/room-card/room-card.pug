@@ -15,7 +15,7 @@ mixin room-card({roomNumber: roomNumber, roomClass: roomClass, price: price, rev
       .room-card__carousel
         each roomPhoto in photos
           .room-card__carousel-img
-            img(src=require('/src/blocks/room-card/img/rooms/' + roomNumber + '/' + roomPhoto))
+            img.room-card__carousel-img-tag(src=require('/src/blocks/room-card/img/rooms/' + roomNumber + '/' + roomPhoto))
 
     .room-card__wrapper= header
       .room-card__room
@@ -33,7 +33,7 @@ mixin room-card({roomNumber: roomNumber, roomClass: roomClass, price: price, rev
           if (reviewsCount == 0)
             |  Нет отзывов
           else if (reviewsCount > 0)
-            span= reviewsCount 
+            span.room-card__rate-reviews-count= reviewsCount 
             if (reviewsCount == 1 || (reviewsCount > 20 && reviewsCount%10 == 1))
               |  Отзыв
             else if ((reviewsCount >= 2 && reviewsCount <= 4) || (reviewsCount > 20 && (reviewsCount%10 >= 2 && reviewsCount%10 <= 4)))

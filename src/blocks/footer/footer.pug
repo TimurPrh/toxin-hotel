@@ -9,29 +9,29 @@ mixin footer({mobile: mobile})
             .footer__about 
               a(href="landing-page")  
                 .footer__about-logo 
-                  img(src=require("/src/blocks/footer/icons/main-logo.svg"), alt="logo")
+                  img.footer__about-logo-img(src=require("/src/blocks/footer/icons/main-logo.svg"), alt="logo")
               .footer__about-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
 
-            nav.footer__nav
-              .footer__nav-header навигация
-              ul.footer__nav-list
+            nav.footer__navigation
+              .footer__navigation-header навигация
+              ul.footer__navigation-list
                 each link in ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
-                  li 
-                      a.footer__nav-link(href="unset")= link
+                  li.footer__navigation-list-item
+                      a.footer__navigation-link(href="unset")= link
 
-            nav.footer__nav
-              .footer__nav-header о нас
-              ul.footer__nav-list
+            nav.footer__navigation
+              .footer__navigation-header о нас
+              ul.footer__navigation-list
                 each link in ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
-                  li 
+                  li.footer__nav-list-item
                     a.footer__nav-link(href="unset")= link
 
-            nav.footer__nav
-              .footer__nav-header Служба поддержки
-              ul.footer__nav-list
+            nav.footer__navigation
+              .footer__navigation-header Служба поддержки
+              ul.footer__navigation-list
                 each link in ['Соглашения', 'Сообщества', 'Связь с нами']
-                  li 
-                    a.footer__nav-link(href="unset")= link
+                  li.footer__navigation-list-item
+                    a.footer__navigation-link(href="unset")= link
 
             form.footer__subscribe
               .footer__subscribe-header Подписка
@@ -44,24 +44,24 @@ mixin footer({mobile: mobile})
             .footer__copyright-text Copyright © 2018 Toxin отель. Все права защищены.
             .footer__copyright-icons 
               a.footer__copyright-icon(href="https://twitter.com") 
-                img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")
+                img.footer__copyright-icon-img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")
               a.footer__copyright-icon(href="https://facebook.com")
-                img(src=require("/src/blocks/footer/icons/social/facebook.svg"), alt="facebook")
+                img.footer__copyright-icon-img(src=require("/src/blocks/footer/icons/social/facebook.svg"), alt="facebook")
               a.footer__copyright-icon(href="https://instagram.com")
-                img(src=require("/src/blocks/footer/icons/social/instagram.svg"), alt="instagram")
+                img.footer__copyright-icon-img(src=require("/src/blocks/footer/icons/social/instagram.svg"), alt="instagram")
 
       .footer__true-mobile
         .footer__mobile-logo 
           a(href="landing-page") 
-            img(src=require("/src/blocks/footer/icons/main-logo.svg"), alt="logo")
+            img.footer__mobile-logo-img(src=require("/src/blocks/footer/icons/main-logo.svg"), alt="logo")
         .footer__true-mobile-text Copyright © 2018 Toxin отель. Все права защищены.
         .footer__true-mobile-icons 
           a.footer__true-mobile-icon(href="https://twitter.com") 
-            img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")
+            img.footer__true-mobile-icon-img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")
           a.footer__true-mobile-icon(href="https://facebook.com")
-            img(src=require("/src/blocks/footer/icons/social/facebook.svg"), alt="facebook")
+            img.footer__true-mobile-icon-img(src=require("/src/blocks/footer/icons/social/facebook.svg"), alt="facebook")
           a.footer__true-mobile-icon(href="https://instagram.com")
-            img(src=require("/src/blocks/footer/icons/social/instagram.svg"), alt="instagram")
+            img.footer__true-mobile-icon-img(src=require("/src/blocks/footer/icons/social/instagram.svg"), alt="instagram")
 
     else 
       .footer__mobile
@@ -71,9 +71,9 @@ mixin footer({mobile: mobile})
         .footer__mobile-text Copyright © 2018 Toxin отель. Все права защищены.
         .footer__mobile-icons 
           a.footer__mobile-icon(href="https://twitter.com") 
-            img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")
+            img.footer__mobile-icon-img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")
           a.footer__mobile-icon(href="https://facebook.com")
-            img(src=require("/src/blocks/footer/icons/social/facebook.svg"), alt="facebook")
+            img.footer__mobile-icon-img(src=require("/src/blocks/footer/icons/social/facebook.svg"), alt="facebook")
           a.footer__mobile-icon(href="https://instagram.com")
-            img(src=require("/src/blocks/footer/icons/social/instagram.svg"), alt="instagram")
+            img.footer__mobile-icon-img(src=require("/src/blocks/footer/icons/social/instagram.svg"), alt="instagram")
 

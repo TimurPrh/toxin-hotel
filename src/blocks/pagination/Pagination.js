@@ -10,12 +10,12 @@ class Pagination {
     let beforePage = page - 1;
     let afterPage = page + 1;
     if (page > 1) {
-      liTag += `<li class="pagination__item pagination__item_prev" onclick="createPagination(${totalPages}, ${page - 1})"></li>`;
+      liTag += `<li class="pagination__item pagination__item_type_previous" onclick="createPagination(${totalPages}, ${page - 1})"></li>`;
     }
     if (page > 2) {
       liTag += `<li class="pagination__item" onclick="createPagination(${totalPages}, 1)">1</li>`;
       if (page > 3) {
-        liTag += `<li class="pagination__item pagination__item_dots">...</li>`;
+        liTag += `<li class="pagination__item pagination__item_type_dots">...</li>`;
       }
     }
 
@@ -43,12 +43,12 @@ class Pagination {
 
     if (page < totalPages - 1) {
       if (page < totalPages - 2) {
-        liTag += `<li class="pagination__item pagination__item_dots">...</li>`;
+        liTag += `<li class="pagination__item pagination__item_type_dots">...</li>`;
       }
       liTag += `<li class="pagination__item" onclick="createPagination(${totalPages}, ${totalPages})">${totalPages}</li>`;
     }
     if (page < totalPages) {
-      liTag += `<li class="pagination__item pagination__item_next" onclick="createPagination(${totalPages}, ${page + 1})"></li>`;
+      liTag += `<li class="pagination__item pagination__item_type_next" onclick="createPagination(${totalPages}, ${page + 1})"></li>`;
     }
     this.paginationList.innerHTML = liTag;
   }
