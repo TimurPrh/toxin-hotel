@@ -28,14 +28,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &-text {
-      font-size: var(--text-body-font-size);
-      line-height: var(--text-body-line-height);
-      color: #000000;
-    }
-    &-button {
-      width: 99px;
-      height: 44px;
-    }
+  }
+  &__registration-text {
+    font-size: var(--text-body-font-size);
+    line-height: var(--text-body-line-height);
+    color: #000000;
+  }
+  &__registration-button {
+    width: 99px;
+    height: 44px;
   }
 }

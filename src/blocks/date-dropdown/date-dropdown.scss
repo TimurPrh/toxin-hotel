@@ -69,15 +69,15 @@
     bottom: 0;
     width: 44px;
     height: 44px;
-    &-line {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-45deg);
-      border: solid var(--dark-shade-25);
-      border-width: 0 0 2px 2px;
-      padding: 4px;
-    }
+  }
+  &__arrow-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    border: solid var(--dark-shade-25);
+    border-width: 0 0 2px 2px;
+    padding: 4px;
   }
   &__calendar-input {
     font-size: var(--text-body-font-size);
@@ -106,50 +106,50 @@
     position: relative;
     width: inherit;
     height: inherit;
-    &-line {
-      &:nth-child(1) {
-        position: absolute;
-        height: 2px;
-        width: 14px;
-        top: 50%;
-        left: 34%;
-        transform: translate(-50%, -50%);
-        background-color: var(--primary-color);
-      }
-      &:nth-child(2) {
-        position: absolute;
-        top: 50%;
-        left: 29%;
-        transform: translate(-50%, -50%) rotate(-45deg);
-        border: solid var(--primary-color);
-        border-width: 2px 0 0 2px;
-        padding: 4px;
-      }
+  }
+  &__previous-arrow-line {
+    &:nth-child(1) {
+      position: absolute;
+      height: 2px;
+      width: 14px;
+      top: 50%;
+      left: 34%;
+      transform: translate(-50%, -50%);
+      background-color: var(--primary-color);
+    }
+    &:nth-child(2) {
+      position: absolute;
+      top: 50%;
+      left: 29%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      border: solid var(--primary-color);
+      border-width: 2px 0 0 2px;
+      padding: 4px;
     }
   }
   &__next-arrow {
     position: relative;
     width: inherit;
     height: inherit;
-    &-line {
-      &:nth-child(1) {
-        position: absolute;
-        height: 2px;
-        width: 14px;
-        top: 50%;
-        left: 66%;
-        transform: translate(-50%, -50%);
-        background-color: var(--primary-color);
-      }
-      &:nth-child(2) {
-        position: absolute;
-        top: 50%;
-        left: 71%;
-        transform: translate(-50%, -50%) rotate(-45deg);
-        border: solid var(--primary-color);
-        border-width: 0 2px 2px 0;
-        padding: 4px;
-      }
+  }
+  &__next-arrow-line {
+    &:nth-child(1) {
+      position: absolute;
+      height: 2px;
+      width: 14px;
+      top: 50%;
+      left: 66%;
+      transform: translate(-50%, -50%);
+      background-color: var(--primary-color);
+    }
+    &:nth-child(2) {
+      position: absolute;
+      top: 50%;
+      left: 71%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      border: solid var(--primary-color);
+      border-width: 0 2px 2px 0;
+      padding: 4px;
     }
   }
   &__buttons {
@@ -287,27 +287,3 @@
     }
   }
 }
-
-@media (max-width: 475px) {
-  .date-dropdown {
-    &__list {
-      padding: 15px 4px 18px 4px;
-    }
-    &__calendar-input {
-      padding: 13px 5px;
-    }
-  }
-  .air-datepicker {
-    --adp-width: 100%;
-    --adp-day-cell-width: calc(100% / 7) !important;
-    --adp-day-cell-height: 40px !important;
-    &-body--day-names {
-      justify-content: center;
-    }
-    &-body--cells {
-      justify-content: center;
-    }
-  }
-}
-
-

@@ -7,14 +7,14 @@
   }
   &__header {
     margin-top: 62px;
-    &-user {
+    &_type_for-user {
       margin-top: 40px;
     }
   }
   &__footer {
     margin-top: 40px;
-  }
-  &__footer-for-mobile {
-    margin-top: 40px;
+    &_type_for-mobile {
+      margin-top: 40px;
+    }
   }
 }

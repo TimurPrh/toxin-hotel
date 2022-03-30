@@ -55,17 +55,17 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-  }
-  &__shape-circle_color_orange {
-    background: linear-gradient(180deg, var(--yellow-color) 0%, var(--orange-color) 100%);
-  }
-  &__shape-circle_color_green {
-    background: linear-gradient(180deg, var(--secondary-color) 0%, var(--aqua-color) 100%);
-  }
-  &__shape-circle_color_purple {
-    background: linear-gradient(180deg, var(--primary-color) 0%, var(--blue-color) 100%);
-  }
-  &__shape-circle_color_dark-blue {
-    background: linear-gradient(180deg, var(--grey-color) 0%, var(--dark-blue-color) 100%);
+    &_color_orange {
+      background: linear-gradient(180deg, var(--yellow-color) 0%, var(--orange-color) 100%);
+    }
+    &_color_green {
+      background: linear-gradient(180deg, var(--secondary-color) 0%, var(--aqua-color) 100%);
+    }
+    &_color_purple {
+      background: linear-gradient(180deg, var(--primary-color) 0%, var(--blue-color) 100%);
+    }
+    &_color_dark-blue {
+      background: linear-gradient(180deg, var(--grey-color) 0%, var(--dark-blue-color) 100%);
+    }
   }
 }

@@ -7,7 +7,7 @@ mixin header({login: login, name: name, activeLink: activeLink})
         .header__logo
           a(href="landing-page") 
             img(src=require("/src/blocks/header/icons/main-logo.svg"), alt="logo")
-        nav.header__nav
+        nav.header__navigation
           ul.header__list 
             - const data = require('/src/blocks/header/data/links.json')
             each link, linkIndex in data.links

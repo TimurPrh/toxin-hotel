@@ -3,10 +3,10 @@ import 'slick-carousel/slick/slick.scss';
 
 class RoomCard {
   initialize() {
-    this.roomCards = document.querySelectorAll('.room-card');
+    this.roomCards = document.querySelectorAll('.js-room-card');
 
     this.roomCards.forEach((card) => {
-      $(card).find('.room-card__carousel').slick({
+      $(card).find('.js-room-card__carousel').slick({
         arrows: false,
         infinite: true,
         slidesToShow: 1,
@@ -15,31 +15,31 @@ class RoomCard {
       });
 
       const handlePreviousClick = () => {
-        $(card).find('.room-card__carousel').slick('slickPrev');
+        $(card).find('.js-room-card__carousel').slick('slickPrev');
       };
 
       const handleNextClick = () => {
-        $(card).find('.room-card__carousel').slick('slickNext');
+        $(card).find('.js-room-card__carousel').slick('slickNext');
       };
 
-      card.querySelector('.room-card__photos-prev').addEventListener('click', handlePreviousClick);
+      card.querySelector('.js-room-card__photos-previous').addEventListener('click', handlePreviousClick);
 
-      card.querySelector('.room-card__photos-next').addEventListener('click', handleNextClick);
+      card.querySelector('.js-room-card__photos-next').addEventListener('click', handleNextClick);
 
       let changeSlideFlag = true;
 
       const handleCarouselChange = () => {
-        card.querySelectorAll('.room-card__photos-dot').forEach((dot) => {
+        card.querySelectorAll('.js-room-card__photos-dot').forEach((dot) => {
           dot.classList.remove('room-card__photos-dot_active');
         });
-        card.querySelectorAll('.room-card__photos-dot')[$(card).find('.room-card__carousel').slick('slickCurrentSlide')].classList.add('room-card__photos-dot_active');
+        card.querySelectorAll('.js-room-card__photos-dot')[$(card).find('.js-room-card__carousel').slick('slickCurrentSlide')].classList.add('room-card__photos-dot_active');
         changeSlideFlag = true;
       };
 
-      card.querySelectorAll('.room-card__photos-dot').forEach((dot, index) => {
+      card.querySelectorAll('.js-room-card__photos-dot').forEach((dot, index) => {
         const handleDotClick = () => {
           if (changeSlideFlag) {
-            $(card).find('.room-card__carousel').slick('slickGoTo', index);
+            $(card).find('.js-room-card__carousel').slick('slickGoTo', index);
             changeSlideFlag = false;
           }
         };
@@ -47,7 +47,7 @@ class RoomCard {
         dot.addEventListener('click', handleDotClick);
       });
 
-      $(card).find('.room-card__carousel').on('afterChange', handleCarouselChange);
+      $(card).find('.js-room-card__carousel').on('afterChange', handleCarouselChange);
     });
   }
 }

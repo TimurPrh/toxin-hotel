@@ -1,18 +1,18 @@
 include ../rate-button/rate-button.pug
 
 mixin room-card({roomNumber: roomNumber, roomClass: roomClass, price: price, reviewsCount: reviewsCount, rate: rate, photos: photos})
-  .room-card 
+  .room-card.js-room-card 
     .room-card__photos 
-      .room-card__photos-prev
-      .room-card__photos-next
+      .room-card__photos-previous.js-room-card__photos-previous
+      .room-card__photos-next.js-room-card__photos-next
       - var dotsWidth = 11 * photos.length
       .room-card__photos-dots(style="width:" + dotsWidth + "px")
         - for (var x = 0; x < photos.length; x++)
           if (x == 0)
-            .room-card__photos-dot.room-card__photos-dot_active
+            .room-card__photos-dot.js-room-card__photos-dot.room-card__photos-dot_active
           else 
-            .room-card__photos-dot
-      .room-card__carousel
+            .room-card__photos-dot.js-room-card__photos-dot
+      .room-card__carousel.js-room-card__carousel
         each roomPhoto in photos
           .room-card__carousel-img
             img.room-card__carousel-img-tag(src=require('/src/blocks/room-card/img/rooms/' + roomNumber + '/' + roomPhoto))

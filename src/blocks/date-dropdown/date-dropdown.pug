@@ -2,22 +2,15 @@ include ../button/button.pug
 mixin date-dropdown({type: type, label: label, labelTo: labelTo, description: description, id: id})
   if (type == "split")
     .date-dropdown.js-date-dropdown.date-dropdown_split.js-date-dropdown_split(id= `js-${id}` data-date-type = "split") 
-      .date-dropdown__half
-        .date-dropdown__header= label
-        .date-dropdown__description= description
-        .date-dropdown__wrapper 
-          .date-dropdown__input
-            .date-dropdown__arrow.js-date-dropdown__arrow
-              .date-dropdown__arrow-line 
-            input.date-dropdown__calendar-input.js-date-dropdown__calendar-input(data-date = "from" placeholder="ДД.ММ.ГГГГ" value=text readonly)
-      .date-dropdown__half
-        .date-dropdown__header= labelTo
-        .date-dropdown__description= description
-        .date-dropdown__wrapper 
-          .date-dropdown__input
-            .date-dropdown__arrow.js-date-dropdown__arrow
-              .date-dropdown__arrow-line 
-            input.date-dropdown__calendar-input.js-date-dropdown__calendar-input(data-date = "to" placeholder="ДД.ММ.ГГГГ" value=text readonly)
+      each inputType in [{"header": label, "dataDate": "from"}, {"header": labelTo, "dataDate": "to"}]
+        .date-dropdown__half
+          .date-dropdown__header= inputType.header
+          .date-dropdown__description= description
+          .date-dropdown__wrapper 
+            .date-dropdown__input
+              .date-dropdown__arrow.js-date-dropdown__arrow
+                .date-dropdown__arrow-line 
+              input.date-dropdown__calendar-input.js-date-dropdown__calendar-input(data-date= inputType.dataDate placeholder="ДД.ММ.ГГГГ" value=text readonly)
       .date-dropdown__list.js-date-dropdown__list 
         .date-dropdown__calendar.js-date-dropdown__calendar
         .date-dropdown__buttons

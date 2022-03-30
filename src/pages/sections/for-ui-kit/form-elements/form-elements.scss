@@ -1,11 +1,11 @@
 @import '/src/assets/styles/mixins';
 
 .form-elements {
+  padding: 30px 0px;
+  min-height: 1823px;
   &__container {
     @include container-init;
   }
-  padding: 30px 0px;
-  min-height: 1823px;
   &__header {
     margin: 0;
     margin-left: 60px;
@@ -72,65 +72,65 @@
   }
   &__checkbox-buttons {
     width: 222px;
-    &-list > div {
-      margin-top: 10px;
-    }
-    &-list > div:first-child {
-      margin-top: 16px;
-    }
+  }
+  &__checkbox-buttons-list > div {
+    margin-top: 10px;
+  }
+  &__checkbox-buttons-list > div:first-child {
+    margin-top: 16px;
   }
   &__radio-buttons {
     margin-top: 40px;
     width: 220px;
-    &-list {
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: auto auto;
-      column-gap: 20px;
-    }
+  }
+  &__radio-buttons-list {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
   }
   &__toggle-buttons {
     margin-top: 42px;
     width: 260px;
-    &-list > div {
-      margin-top: 14px;
-    }
-    &-list > div:first-child {
-      margin-top: 16px;
-    }
+  }
+  &__toggle-buttons-list > div {
+    margin-top: 14px;
+  }
+  &__toggle-buttons-list > div:first-child {
+    margin-top: 16px;
   }
   &__like-buttons {
     margin-top: 44px;
     width: 90px;
-    &-list {
-      margin-top: 16px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(40px, auto));
-      column-gap: 10px;
-      row-gap: 10px;
-    }
+  }
+  &__like-buttons-list {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, auto));
+    column-gap: 10px;
+    row-gap: 10px;
   }
   &__rate-buttons {
     margin-top: 40px;
     width: 264px;
-    &-list {
-      margin-left: 2px;
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, auto));
-      column-gap: 20px;
-      row-gap: 10px;
-    }
+  }
+  &__rate-buttons-list {
+    margin-left: 2px;
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+    column-gap: 20px;
+    row-gap: 10px;
   }
   &__expandable-checkbox-list {
     margin-top: 20px;
     width: 266px;
-    &-wrapper {
-      min-height: 284px;
-    }
     &:first-child {
       margin-top: 157px;
     }
+  }
+  &__expandable-checkbox-list-wrapper {
+    min-height: 284px;
   }
   &__rich-checkbox-buttons {
     margin-top: 255px;
@@ -154,30 +154,30 @@
   &__buttons {
     margin-top: 40px;
     width: 320px;
-    &-wrapper {
-      margin-top: 29px;
-      display: flex;
-      &:nth-child(2) {
-        margin-top: 16px;
-      }   
+  }
+  &__buttons-wrapper {
+    margin-top: 29px;
+    display: flex;
+    &:nth-child(2) {
+      margin-top: 16px;
     }
-    & > .button__wrapper {
-      margin-top: 28px;
-    }
-    &-margin-right {
-      margin-right: 20px;
-    }
-    &-set-size {
-      width: 99px;
-      height: 44px;
-    }
+  }
+  &__buttons > .button__wrapper {
+    margin-top: 28px;
+  }
+  &__buttons-margin-right {
+    margin-right: 20px;
+  }
+  &__buttons-set-size {
+    width: 99px;
+    height: 44px;
   }
   &__pagination {
     margin-top: 41px;
     max-width: 360px;
-    .pagination {
-      margin-top: 16px;
-      margin-left: -77px;
-    }
+  }
+  &__pagination-block {
+    margin-top: 16px;
+    margin-left: -77px;
   }
 }

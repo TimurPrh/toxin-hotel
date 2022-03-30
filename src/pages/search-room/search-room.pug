@@ -27,13 +27,18 @@ block content
           .search-room__filter-guests
             +dropdown({id: "filter-guests", type: "guests", label: "гости"})
           .search-room__filter-price
-            +slider({header: "диапазон цены", min: 1000, max: 15000, step: 100, from: 5000, to: 10000})
+            .search-room__filter-price-slider
+              +slider({header: "диапазон цены", min: 1000, max: 15000, step: 100, from: 5000, to: 10000})
             .search-room__filter-price-text Стоимость за сутки пребывания в номере
           .search-room__filter-house-rules 
             .search-room__filter-house-rules-header правила дома
-            +input-button({type: "checkbox", id: "filter-smoking", label: "Можно курить"})
-            +input-button({type: "checkbox", id: "filter-pets", label: "Можно с питомцами"})
-            +input-button({type: "checkbox", id: "filter-add-guests", label: "Можно пригласить гостей (до 10 человек)"})
+            ul.search-room__filter-house-rules-list
+              .search-room__filter-house-rules-list-item
+                +input-button({type: "checkbox", id: "filter-smoking", label: "Можно курить"})
+              .search-room__filter-house-rules-list-item
+                +input-button({type: "checkbox", id: "filter-pets", label: "Можно с питомцами"})
+              .search-room__filter-house-rules-list-item
+                +input-button({type: "checkbox", id: "filter-add-guests", label: "Можно пригласить гостей (до 10 человек)"})
           .search-room__filter-availability
             +rich-checkbox-buttons({name: "filter-availability", header: "доступность", labels: [["Широкий коридор", "Ширина коридоров в номере не менее 91 см."], ["Помощник для инвалидов", "На 1 этаже вас встретит специалист  и проводит до номера."]]})
           .search-room__filter-comfort

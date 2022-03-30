@@ -53,14 +53,14 @@
   &__wrapper {
     height: 100%;
     position: relative;
-    &-invert {
-      height: 100%;
-      width: 100%;
-      border-radius: 22px;
-      background: var(--gradient-color);
-      &_hover {
-        background: var(--gradient-color-opacity);
-      }
+  }
+  &__wrapper-invert {
+    height: 100%;
+    width: 100%;
+    border-radius: 22px;
+    background: var(--gradient-color);
+    &_hover {
+      background: var(--gradient-color-opacity);
     }
   }
   &__arrow {
@@ -70,25 +70,25 @@
     bottom: 0;
     width: 44px;
     height: 44px;
-    &-line {
-      &:nth-child(1) {
-        position: absolute;
-        height: 2px;
-        width: 16px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #FFFFFF;
-      }
-      &:nth-child(2) {
-        position: absolute;
-        top: 50%;
-        left: 54%;
-        transform: translate(-50%, -50%) rotate(-45deg);
-        border: solid #FFFFFF;
-        border-width: 0 2px 2px 0;
-        padding: 4px;
-      }
+  }
+  &__arrow-line {
+    &:nth-child(1) {
+      position: absolute;
+      height: 2px;
+      width: 16px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #FFFFFF;
+    }
+    &:nth-child(2) {
+      position: absolute;
+      top: 50%;
+      left: 54%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      border: solid #FFFFFF;
+      border-width: 0 2px 2px 0;
+      padding: 4px;
     }
   }
   &_size_m {

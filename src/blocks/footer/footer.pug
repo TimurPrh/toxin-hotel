@@ -1,6 +1,7 @@
 include ../text-field/text-field.pug
 
 mixin footer({mobile: mobile})
+  - var data = require('/src/blocks/footer/data/social-links.json')
   footer.footer
     if (!mobile)
       .footer__main-outer 
@@ -43,12 +44,9 @@ mixin footer({mobile: mobile})
           .footer__copyright 
             .footer__copyright-text Copyright © 2018 Toxin отель. Все права защищены.
             .footer__copyright-icons 
-              a.footer__copyright-icon(href="https://twitter.com") 
-                img.footer__copyright-icon-img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")
-              a.footer__copyright-icon(href="https://facebook.com")
-                img.footer__copyright-icon-img(src=require("/src/blocks/footer/icons/social/facebook.svg"), alt="facebook")
-              a.footer__copyright-icon(href="https://instagram.com")
-                img.footer__copyright-icon-img(src=require("/src/blocks/footer/icons/social/instagram.svg"), alt="instagram")
+              each link in data.links
+                a.footer__copyright-icon(href= link.href) 
+                  img.footer__copyright-icon-img(src=require("/src/blocks/footer/icons/social/" + link.fileName), alt= link.name)
 
       .footer__true-mobile
         .footer__mobile-logo 
@@ -56,12 +54,9 @@ mixin footer({mobile: mobile})
             img.footer__mobile-logo-img(src=require("/src/blocks/footer/icons/main-logo.svg"), alt="logo")
         .footer__true-mobile-text Copyright © 2018 Toxin отель. Все права защищены.
         .footer__true-mobile-icons 
-          a.footer__true-mobile-icon(href="https://twitter.com") 
-            img.footer__true-mobile-icon-img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")
-          a.footer__true-mobile-icon(href="https://facebook.com")
-            img.footer__true-mobile-icon-img(src=require("/src/blocks/footer/icons/social/facebook.svg"), alt="facebook")
-          a.footer__true-mobile-icon(href="https://instagram.com")
-            img.footer__true-mobile-icon-img(src=require("/src/blocks/footer/icons/social/instagram.svg"), alt="instagram")
+          each link in data.links
+            a.footer__true-mobile-icon(href= link.href) 
+              img.footer__true-mobile-icon-img(src=require("/src/blocks/footer/icons/social/" + link.fileName), alt= link.name)
 
     else 
       .footer__mobile
@@ -70,10 +65,6 @@ mixin footer({mobile: mobile})
             img(src=require("/src/blocks/footer/icons/main-logo.svg"), alt="logo")
         .footer__mobile-text Copyright © 2018 Toxin отель. Все права защищены.
         .footer__mobile-icons 
-          a.footer__mobile-icon(href="https://twitter.com") 
-            img.footer__mobile-icon-img(src=require("/src/blocks/footer/icons/social/twitter.svg"), alt="twitter")
-          a.footer__mobile-icon(href="https://facebook.com")
-            img.footer__mobile-icon-img(src=require("/src/blocks/footer/icons/social/facebook.svg"), alt="facebook")
-          a.footer__mobile-icon(href="https://instagram.com")
-            img.footer__mobile-icon-img(src=require("/src/blocks/footer/icons/social/instagram.svg"), alt="instagram")
-
+          each link in data.links
+            a.footer__mobile-icon(href= link.href) 
+              img.footer__mobile-icon-img(src=require("/src/blocks/footer/icons/social/" + link.fileName), alt= link.name)
