@@ -38,6 +38,9 @@
     max-width: 300px;
     text-align: right;
   }
+  @media (max-width: 991px) {
+    min-height: 100vh;
+  }
 }
 
 @keyframes landing-background-images {
