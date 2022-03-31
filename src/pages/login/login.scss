@@ -1,7 +1,7 @@
 @import '/src/assets/styles/mixins';
 
 .landing-login-main {
-  min-height: 100vh;
+  min-height: 772px;
   background: center center/cover no-repeat;
   background-image: url(./img/pink-room-preview.jpg);
   background-image: url(./img/grey-room-preview.jpg);
@@ -15,7 +15,7 @@
     flex: 1;
   }
   &__login {
-    padding: 20px 0;
+    padding: 21px 0 20px;
     display: flex;
     height: 100%;
     width: 100%;

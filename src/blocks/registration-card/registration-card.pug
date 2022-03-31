@@ -2,7 +2,7 @@ include ../text-field/text-field.pug
 include ../input-button/input-button.pug
 include ../button/button.pug
 
-mixin registration-card({header: header})
+mixin registration-card({header: header, buttonText: buttonText})
   form.registration-card
     .registration-card__header= header
     .registration-card__person 
@@ -21,7 +21,7 @@ mixin registration-card({header: header})
     .registration-card__special
       +input-button({type: "switch", id:"special_offer_3", label: "Получать спецпредложения"})
     .registration-card__pay-button 
-      +button({label: "перейти к оплате", type: "wide"})
+      +button({label: buttonText, type: "wide"})
     .registration-card__account
       .registration-card__account-text Уже есть аккаунт на Toxin
       .registration-card__account-button
